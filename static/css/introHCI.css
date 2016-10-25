@@ -1,0 +1,20 @@
+/* applies to anything of class "example-class-selector" */
+.example-class-selector {
+	margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+	/* Colors are in hexadecimal: http://www.colorpicker.com/ */	
+	color: #CC00AA;
+}
+
+body {
+     /* Background Image taken from Cocorini, cocorini.tumblr.com/patterns */
+     background-image: url("http://31.media.tumblr.com/60258e73e78ddd833e85bd49fac2a5a8/tumblr_mt67noIbPl1ru3nbdo4_r1_100.png");
+     background-color: #FFCA6E;
+}
+
+#Title {
+     text-transform: uppercase;
+}
