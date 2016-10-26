@@ -1,15 +1,20 @@
+/*Applies background image and color of website */
 body {
-
     /* Background Image taken from Cocorini, cocorini.tumblr.com/patterns */
     background-image: url("http://31.media.tumblr.com/60258e73e78ddd833e85bd49fac2a5a8/tumblr_mt67noIbPl1ru3nbdo4_r1_100.png");
     background-color: #FFCA6E;
 
     /* Setting margins for all content */
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: auto;
+    padding: auto;
 }
 
+/* Applies universal font to all text */
+* {
+	font-family: "Agency FB", "Times New Roman", Serif;
+}
+
+/* Applies universal color to all hyperlinks */
 a {
 	color: #FFFFFF;
 }
@@ -36,18 +41,17 @@ a:hover{
 #Title {
 	/* Creates filled border */
 	background-color: #FFCA6E;
+	vertical-align: bottom;
+
 	border-style: solid;
 	border-color: #FFCA6E;
 	border-radius: 40px 25px;
-	border-width: 13px;
+	border-width: 9px;
 
 	/* Sets title font */
     text-transform: uppercase;
-    font-family: Impact, Courier, monospace;
+    letter-spacing: 10px;
     font-size: 60px;
-    font-style: normal;
-
-    vertical-align: bottom;
 }
 
 /* Adjusts Size*/
