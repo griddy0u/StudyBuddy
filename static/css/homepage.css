@@ -13,7 +13,7 @@ body {
 
 /* Applies universal font to all text */
 * {
-	font-family: "Agency FB", "Times New Roman", Serif;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 /* Applies universal color to all hyperlinks */
@@ -40,12 +40,10 @@ a:hover{
 	text-align: center;
 }
 
-/* */
+/* Styles the StudyBuddy title */
 #Title {
 	/* Creates filled border */
 	background-color: #FFCA6E;
-	vertical-align: bottom;
-
 	border-style: solid;
 	border-color: #FFCA6E;
 	border-radius: 40px 25px;
@@ -53,8 +51,10 @@ a:hover{
 
 	/* Sets title font */
 	text-transform: uppercase;
-	letter-spacing: 8px;
+	vertical-align: bottom;
+	letter-spacing: 6px;
 	font-size: 60px;
+	font-style: italic;
 }
 
 /* Adjusts Size*/
@@ -64,13 +64,13 @@ a:hover{
 	height: 120px;
 }
 
+
 /* Aligns User/SignOut to right */
 #TopRight {
 	position: absolute;
 	right: 10px;
 	padding-top: 25px;
 	padding-right: 20px;
-
 	text-align: center;
 }
 
@@ -110,10 +110,10 @@ a:hover{
 	clear: both;
 	position: absolute;
 	height: 60px;
-	width: auto;
+	width: 99%;
+	min-width: 90%;
 	top: 107px;
-	left: 5px;
-	right: 5px;
+	left: 7.5px;
 	background-color: #FFCA6E;
 	border-style: solid;
 	border-color: black;
@@ -145,9 +145,9 @@ a:hover{
 
 #FriendsList {
 	position: absolute;
-	width: 22%;
+	width: 346px;
 	top: 170px;
-	bottom: 1%;
+	bottom: 10px;
 
 	background-color: white;
 	border: 5px solid black;
@@ -157,7 +157,8 @@ a:hover{
 #FriendsMessage {
 	position: absolute;
 	height: auto;
-	width: 100%;
+	top: 10px;
+	width: 330px;
 	text-align: center;
 
 	font-size: 30px;
@@ -189,11 +190,10 @@ a:hover{
 #MainBox {
 	position: absolute;
 	height: auto;
-	width: 76.5%;
 	top: 170px;
-	right: 0%;
-	bottom: 1%;
-	margin-right: 10px;
+	left: 360px;
+	right: 10px;
+	bottom: 10px;
 
 	border: 5px solid black;
 	border-radius: 16px;

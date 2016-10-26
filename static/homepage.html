@@ -17,13 +17,11 @@
 	<div id="Top">
 
 		<!-- Links to Homepage, Title and Corgi Logo -->
-		<span id="TopLeft">
-			<a href="" id="Title">StudyBuddy</a>
-
-			<!-- REPLACE STUDYBUDDY TITLE WITH DRAWN PICTURE LATER (Maybe)
-				 Title + Corgi Logo both lead to Homepage -->
-			<a href="">
-				<img src="http://i.imgur.com/8nF4920.png" id="TitleLogo"></a>
+		<span>
+			<a href="" id="TopLeft">
+				<span id="Title">StudyBuddy</span>
+				<img src="http://i.imgur.com/8nF4920.png" id="TitleLogo">
+			</a>
 		</span>
 
 		<!-- Shows signed in user and their profile picture -->
@@ -32,9 +30,7 @@
 				Welcome Home!
 
 				<!-- User Name and Profile Picture, LINK to Profile Page -->
-				<a href="">
-					<img src="http://i.imgur.com/mGhsq0V.png" id="UserPhoto">
-				</a>
+				<img src="http://i.imgur.com/mGhsq0V.png" id="UserPhoto">
 				<a href="" id="UserName">Corgi</a>
 			</span>
 
@@ -66,9 +62,9 @@
 			You have no friends, why not try getting some?
 			<p>(When the feature becomes available!)</p>
 		</span>
-		<div id="AddFriendButton">
+		<button  type="button" onclick="alert('Sorry, No Adding Friends At This Time')" id="AddFriendButton">
 			+ Add Friend
-		</div>	
+		</button>
 	</div>
 
 	<!-- MAIN BOX -->
