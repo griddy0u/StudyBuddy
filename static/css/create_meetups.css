@@ -79,8 +79,6 @@ a:hover{
 }
 
 #user_photo{
-  background-color: black;
-  border: 0px solid black;
   width: 75px;
   height: 75px;
 }
@@ -115,7 +113,6 @@ a:hover{
 #right_menu_bar{
   float: right;
   right: 20px;
-
   padding-right: 20px;
 }
 
@@ -126,4 +123,74 @@ a:hover{
 
 #friends{
   color: #FFFFFF;
+}
+
+
+#main_center{
+  position: absolute;
+  left: 30%;
+  width: 25%;
+  height: 75%;
+  text-align: center;
+}
+#location{
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+#location_text{
+  margin-top: 40px;
+}
+#map{
+  height: 45%;
+  width: 100%;
+}
+
+#date{
+  margin-top: 20px;
+}
+#time{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#main_right{
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  right: 0px;
+  width: 45%;
+  height: 75%;
+  text-align: center;
+}
+button{
+  margin-top: 20px;
+  background-color: #FFCA6E;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 5px;
+  color: #FFFFFF;
+  font-size: 25px;
+}
+button:hover{
+  color: #000000;
+}
+#location_info{
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: auto;
+  padding-right: auto;
+  height: 70%;
+  width: 80%;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#location_info div span{
+  margin: 10px;
+  font-size: 36px;
+  font-style: oblique;
 }
