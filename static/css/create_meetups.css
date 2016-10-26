@@ -2,16 +2,15 @@ body{
   background-image:url("http://31.media.tumblr.com/60258e73e78ddd833e85bd49fac2a5a8/tumblr_mt67noIbPl1ru3nbdo4_r1_100.png");
   background-color: #FFCA6E;
 
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
   margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
   padding: auto;
 }
 
 /* Applies universal font to all text */
 * {
-  font-family: "Agency FB", "Times New Roman", Serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 /* Applies universal color to all hyperlinks */
@@ -26,12 +25,12 @@ a:hover{
 }
 
 #top{
-  margin-bottom: 0px;
-  padding-bottom: 0px;
 }
 
 #top_left{
-  float: left;
+  position: absolute;
+  left: 10px;
+  width: 675px;
   text-align: center;
 }
 
@@ -47,7 +46,7 @@ a:hover{
 
   /* Sets title font */
   text-transform: uppercase;
-  letter-spacing: 10px;
+  letter-spacing: 8px;
   font-size: 60px;
 }
 
@@ -58,23 +57,20 @@ a:hover{
 }
 
 #top_right{
-  float: right;
+  position: absolute;
+  left: 760px;
+  width: 500px;
+  margin-top: 25px;
 
-  padding-top: 25px;
-  padding-right: 20px;
-
-  text-align: center;
 }
 
 #user, #bar{
   vertical-align: bottom;
-
   font-size: 30px;
 }
 
 #user_name{
   vertical-align: bottom;
-
   color: #000000;
 }
 
@@ -84,9 +80,9 @@ a:hover{
 }
 
 #sign_out{
-  vertical-align: -15px;
-  color: black;
-  font-size: 16px;
+  vertical-align: -18px;
+  color: #000000;
+  font-size: 18px;
 }
 
 #user_name:hover, #sign_out:hover {
@@ -95,24 +91,31 @@ a:hover{
 
 #menu_bar{
   clear: both;
-
+  position: absolute;
+  height: 60px;
+  width: 1280px;
+  top: 107px;
+  left: 5px;
   background-color: #FFCA6E;
   border-style: solid;
   border-color: #000000;
   border-radius: 16px;
   border-width: 5px;
 
-  font-size: 30px;
+  font-size: 35px;
+  z-index: -1;
 }
 
 #left_menu_bar{
-  padding-left: 200px;
+  position: absolute;
+  left: 160px;
+  color: #FFFFFF;
   text-align: center;
 }
 
 #right_menu_bar{
-  float: right;
-  right: 20px;
+  position: absolute;
+  left: 800px;
   padding-right: 20px;
 }
 
@@ -124,26 +127,70 @@ a:hover{
 #friends{
   color: #FFFFFF;
 }
+#friends_list{
+  position: absolute;
+  width: 450px;
+  top: 170px;
+  height: 550px;
 
+  background-color: white;
+  border: 5px solid #000000;
+  border-radius: 16px;
+}
+#friends_message{
+  position: absolute;
+  height: 200px;
+  width: 400px;
+  text-align: center;
 
+  font-size: 30px;
+}
+
+#friends_message p{
+  font-size: 20px;
+}
+
+#friends_instruction{
+  position: absolute;
+  top: 440px;
+  height: 100px;
+  width: 440px;
+  background-color: #A0D8EB;
+
+  border-top: 5px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 0px 0px 10px 10px;
+
+  text-align: center;
+  font-size: 35px;
+}
 #main_center{
   position: absolute;
-  left: 30%;
-  width: 25%;
-  height: 75%;
+  top: 167px;
+  left: 450px;
+  width: 400px;
+  height: 600px;
+  margin: auto;
+  padding: auto;
   text-align: center;
 }
 #location{
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  width: 250px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 #location_text{
   margin-top: 40px;
 }
 #map{
-  height: 45%;
-  width: 100%;
+  margin: auto;
+  padding: auto;
+  height: 300px;
+  width: 300px;
 }
 
 #date{
@@ -157,21 +204,37 @@ a:hover{
   margin: 0px;
   padding: 0px;
   position: absolute;
-  right: 0px;
-  width: 45%;
-  height: 75%;
+  top: 167px;
+  left: 800px;
+  width: 500px;
+  height: 600px;
   text-align: center;
 }
-button{
+
+#home_button{
+  width: 150px;
   margin-top: 20px;
-  background-color: #FFCA6E;
+  background-color: red;
   border-style: solid;
   border-color: #000000;
   border-width: 5px;
   color: #FFFFFF;
   font-size: 25px;
 }
-button:hover{
+#submit_button{
+  width: 300px;
+  margin-top: 20px;
+  background-color: #FFCA6E;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 5px;
+  color: #FFFFFF;
+  font-size: 35px;
+}
+#home_button:hover{
+  color: #000000;
+}
+#submit_button:hover{
   color: #000000;
 }
 #location_info{
@@ -180,17 +243,19 @@ button:hover{
   margin-left: auto;
   padding-left: auto;
   padding-right: auto;
-  height: 70%;
-  width: 80%;
+  height: 350px;
+  width: 350px;
   border-style: solid;
   border-color: #000000;
   border-width: 5px;
   text-align: center;
-  vertical-align: middle;
 }
 
 #location_info div span{
   margin: 10px;
   font-size: 36px;
-  font-style: oblique;
+}
+
+#stats_header{
+  text-decoration: underline;
 }

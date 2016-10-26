@@ -32,7 +32,7 @@
           <a href="">
             <img src="http://i.imgur.com/mGhsq0V.png" id="user_photo">
           </a>
-          <a href="" id="user_name">User Name</a>
+          <a href="" id="user_name">Corgi</a>
         </span>
         <span id="bar">|</span>
         <a href="" id="sign_out">Sign Out</a>
@@ -54,13 +54,18 @@
 
     <!-- MAIN BODY -->
     <div id="main_body">
-      <div id="main_left">
-
+      <div id="friends_list">
+        <span id="friends_message">
+          You have no friends, why not try getting some?
+          <p>(When the feature becomes available!)</p>
+        </span>
+        <div id="friends_instruction">Select Friends Above</div>
       </div>
-
       <div id="main_center">
-        <textarea cols="30" rows="1" id="location">Please enter a study location</textarea>
-        <span id="location_text">Displays inputted location on Google Maps</span>
+        <textarea cols="30" rows="1" id="location">Please enter a study location...</textarea>
+        <div>
+          <span id="location_text">Inputted location on Google Maps</span>
+        </div>
         <div id="map"></div>
 
         <!--Choose starting date of study session -->
@@ -99,16 +104,16 @@
       </div>
 
       <div id="main_right">
-        <button type="button" id="home_button">Back To Home</button>
+        <button type="button" id="home_button">Cancel</button>
         <div id="location_info">
           <div>
-            <span>Location Stats</span>
+            <span id="stats_header">Location Stats</span>
           </div>
           <div>
-            <span>Quiet Level: N/A</span>
+            <span id="quiet">Quiet Level: N/A</span>
           </div>
           <div>
-            <span>Crowded Level: N/A</span>
+            <span id="crowded">Crowded Level: N/A</span>
           </div>
         </div>
         <button type="button" id="submit_button">Create Meeting!</button>
