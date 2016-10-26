@@ -5,9 +5,9 @@ body {
     background-color: #FFCA6E;
 
     /* Setting margins for all content */
-    margin-top: 2em;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 a {
@@ -22,8 +22,8 @@ a:hover{
 
 /* */
 #Top {
-	margin-bottom: 0em;
-	padding-bottom: 0em;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
 }
 
 /* Aligns Title/Logo to left */
@@ -44,7 +44,7 @@ a:hover{
 	/* Sets title font */
     text-transform: uppercase;
     font-family: Impact, Courier, monospace;
-    font-size: 4em;
+    font-size: 60px;
     font-style: normal;
 
     vertical-align: bottom;
@@ -70,14 +70,12 @@ a:hover{
 /* Sets font size */
 #User, #BarSeparator {
 	vertical-align: bottom;
-
-	font-size: 2em;
+	font-size: 30px;
 }
 
 /* Sets font color */
 #UserName {
 	vertical-align: bottom;
-
 	color: black;
 }
 
@@ -91,10 +89,9 @@ a:hover{
 
 /* Sets font color and size */
 #SignOut {
-	vertical-align: -17px;
-
+	vertical-align: -15px;
 	color: black;
-	font-size: 1em;
+	font-size: 16px;
 }
 
 /* Sets hover color to orange */
@@ -112,7 +109,7 @@ a:hover{
 	border-radius: 16px;
 	border-width: 5px;
 
-	font-size: 2em;
+	font-size: 30px;
 }
 
 #LeftMenuBar {
@@ -135,4 +132,25 @@ a:hover{
 
 #Friends {
 	color: #FFFFFF;
+}
+
+#FriendsList {
+	float:left;
+	margin: 0px;
+	padding: 0px;
+	background-color: black;
+
+	width: 38%;
+}
+#AddFriendButton {
+	border: 3px, solid, white;
+
+	vertical-align: bottom;
+	text-align: center;
+}
+
+#MainBox {
+	float: right;
+	height: 80%;
+	width: 62%;
 }
