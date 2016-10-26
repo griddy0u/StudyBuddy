@@ -16,43 +16,41 @@
   <body>
     <div id="top">
       <!-- Links to Homepage, Title and Logo -->
-      <span id="title">
-        <a href="">
-          StudyBuddy
-          <img src="http://i.imgur.com/8nF4920.png"></a>
-      </span>
 
-      <!-- Shows signed-in user and their profile picture -->
-      <span id="user">
-        Welcome!
-        <a href="">
-          <img src="" id="user_photo">
-          Corgi
+      <span id="top_left">
+        <a href="" id="title">StudyBuddy</a>
+        <a href="" id="logo">
+          <img src="http://i.imgur.com/8nF4920.png">
         </a>
       </span>
 
-      <span id="sign_out">
-        |
-        <a href=""> Sign Out </a>
+      <!-- Shows signed-in user and their profile picture -->
+      <span id="top_right">
+        <span id="user">
+          Create A Meetup!
+          <a href="">
+            <img src="http://i.imgur.com/8nF4920.png" id="user_photo">
+          </a>
+          <a href="" id="user_name">Corgi</a>
+        </span>
+        <span id="bar">|</span>
+        <a href="" id="sign_out">Sign Out</a>
       </span>
     </div>
 
     <!-- TOP MENU BAR -->
   	<div id="menu_bar">
   		<span id="left_menu_bar">
-  			<a href="">Friends</a>
+  			<span id="friends">Friends</span>
   		</span>
 
   		<span id="right_menu_bar">
   			<a href="">Settings</a>
-  			<a href="">Contact Us</a>
+  			<a href="" id="contact">Contact Us</a>
   			<a href="">Help</a>
   		</span>
   	</div>
-
-  	<!-- FRIENDS LIST -->
-  	<div id="add_friend_button">
-  		+ Add Friend
-  	</div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
