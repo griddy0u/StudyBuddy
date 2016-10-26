@@ -5,36 +5,50 @@ body{
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
+  margin: auto;
+  padding: auto;
 }
 
-a{
+/* Applies universal font to all text */
+* {
+  font-family: "Agency FB", "Times New Roman", Serif;
+}
+
+/* Applies universal color to all hyperlinks */
+a {
   color: #FFFFFF;
 }
+
+/* When hovering over hyperlinks, links turn black and are not underlined */
 a:hover{
   text-decoration: none;
   color: #000000;
 }
+
 #top{
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
+
 #top_left{
   float: left;
   text-align: center;
 }
+
 #title{
+  /* Creates filled border */
   background-color: #FFCA6E;
+  vertical-align: bottom;
+
   border-style: solid;
   border-color: #FFCA6E;
   border-radius: 40px 25px;
   border-width: 9px;
 
+  /* Sets title font */
   text-transform: uppercase;
-  font-family: Impact, Courier, monospace;
+  letter-spacing: 10px;
   font-size: 60px;
-  font-style: normal;
-
-  vertical-align: bottom;
 }
 
 #logo{
@@ -42,6 +56,7 @@ a:hover{
   width: 150px;
   height: 120px;
 }
+
 #top_right{
   float: right;
 
@@ -64,15 +79,15 @@ a:hover{
 }
 
 #user_photo{
-  background-color: #000000;
-  border: 0px solid #000000;
+  background-color: black;
+  border: 0px solid black;
   width: 75px;
   height: 75px;
 }
 
 #sign_out{
   vertical-align: -15px;
-  color: #000000;
+  color: black;
   font-size: 16px;
 }
 
