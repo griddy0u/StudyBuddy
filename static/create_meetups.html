@@ -19,19 +19,20 @@
 
       <span id="top_left">
         <a href="" id="title">StudyBuddy</a>
-        <a href="" id="logo">
-          <img src="http://i.imgur.com/8nF4920.png">
-        </a>
+
+        <a href="">
+          <img src="http://i.imgur.com/8nF4920.png" id="logo"></a>
       </span>
 
       <!-- Shows signed-in user and their profile picture -->
       <span id="top_right">
         <span id="user">
           Create A Meetup!
+
           <a href="">
-            <img src="http://i.imgur.com/8nF4920.png" id="user_photo">
+            <img src="http://i.imgur.com/mGhsq0V.png" id="user_photo">
           </a>
-          <a href="" id="user_name">Corgi</a>
+          <a href="" id="user_name">User Name</a>
         </span>
         <span id="bar">|</span>
         <a href="" id="sign_out">Sign Out</a>
@@ -50,7 +51,86 @@
   			<a href="">Help</a>
   		</span>
   	</div>
+
+    <!-- MAIN BODY -->
+    <div id="main_body">
+      <div id="main_left">
+
+      </div>
+
+      <div id="main_center">
+        <textarea cols="30" rows="1" id="location">Please enter a study location</textarea>
+        <span id="location_text">Displays inputted location on Google Maps</span>
+        <div id="map"></div>
+
+        <!--Choose starting date of study session -->
+        <div id="date">
+          <span>Enter Start Date:</span>
+          <textarea cols="5" rows="1" id="date_month">Month</textarea>
+          <span> </span>
+          <textarea cols="2" rows="1" id="date_day">Day</textarea>
+          <span> </span>
+          <textarea cols="2" rows="1" id="date_year">Year</textarea>
+        </div>
+
+        <!--Choose start and end time for study session-->
+        <div id="time">
+          <div id="start_time">
+            <span>Start Time</span>
+            <textarea cols="1" rows="1" id="start_hour"></textarea>
+            <span>:</span>
+            <textarea cols="1" rows="1" id="start_min"></textarea>
+            <label>AM <input type="checkbox" name="checkbox" value="value"></label>
+            <span> / </span>
+            <label>PM <input type="checkbox" name="checkbox" value="value"></label>
+          </div>
+
+          <div id="end_time">
+            <label><input type="checkbox" name="checkbox" value="value"> End Time</label>
+            <textarea cols="1" rows="1" id="end_hour"></textarea>
+            <span>:</span>
+            <textarea cols="1" rows="1" id="end_min"></textarea>
+            <label>AM <input type="checkbox" name="checkbox" value="value"></label>
+            <span> / </span>
+            <label>PM <input type="checkbox" name="checkbox" value="value"></label>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="main_right">
+        <button type="button" id="home_button">Back To Home</button>
+        <div id="location_info">
+          <div>
+            <span>Location Stats</span>
+          </div>
+          <div>
+            <span>Quiet Level: N/A</span>
+          </div>
+          <div>
+            <span>Crowded Level: N/A</span>
+          </div>
+        </div>
+        <button type="button" id="submit_button">Create Meeting!</button>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      function initMap() {
+        var uluru = {lat: 32.8801, lng: -117.2340};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtN1_XktTqXV4vg_Jcnuon9KXrFykAnlc&callback=initMap">
+    </script>
   </body>
 </html>
