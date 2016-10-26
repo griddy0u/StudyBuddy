@@ -6,6 +6,8 @@ body {
 
     /* Setting margins for all content */
     margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
     padding: auto;
 }
 
@@ -33,7 +35,8 @@ a:hover{
 
 /* Aligns Title/Logo to left */
 #TopLeft {
-	float: left;
+	position: absolute;
+	left: 10px;
 	text-align: center;
 }
 
@@ -50,7 +53,7 @@ a:hover{
 
 	/* Sets title font */
 	text-transform: uppercase;
-	letter-spacing: 10px;
+	letter-spacing: 8px;
 	font-size: 60px;
 }
 
@@ -63,8 +66,8 @@ a:hover{
 
 /* Aligns User/SignOut to right */
 #TopRight {
-	float: right;
-
+	position: absolute;
+	right: 10px;
 	padding-top: 25px;
 	padding-right: 20px;
 
@@ -85,7 +88,6 @@ a:hover{
 
 /* Adjusts size */
 #UserPhoto {
-	background-color: black;
 	border: 0px solid black;
 	width: 75px;
 	height: 75px;
@@ -93,9 +95,9 @@ a:hover{
 
 /* Sets font color and size */
 #SignOut {
-	vertical-align: -15px;
+	vertical-align: -18px;
 	color: black;
-	font-size: 16px;
+	font-size: 18px;
 }
 
 /* Sets hover color to orange */
@@ -106,24 +108,31 @@ a:hover{
 /* Sets border */
 #MenuBar {
 	clear: both;
-
+	position: absolute;
+	height: 60px;
+	width: auto;
+	top: 107px;
+	left: 5px;
+	right: 5px;
 	background-color: #FFCA6E;
 	border-style: solid;
 	border-color: black;
 	border-radius: 16px;
 	border-width: 5px;
 
-	font-size: 30px;
+	font-size: 35px;
+	z-index: -1;
 }
 
 #LeftMenuBar {
-	padding-left: 200px;
-
+	position: absolute;
+	left: 118px;
+	color: #FFFFFF;
 	text-align: center;
 }
 
 #RightMenuBar {
-	float: right;
+	position: absolute;
 	right: 20px;
 
 	padding-right: 20px;
@@ -134,27 +143,120 @@ a:hover{
 	margin-right: 20px;
 }
 
-#Friends {
-	color: #FFFFFF;
-}
-
 #FriendsList {
-	float:left;
-	margin: 0px;
-	padding: 0px;
-	background-color: black;
+	position: absolute;
+	width: 22%;
+	top: 170px;
+	bottom: 1%;
 
-	width: 38%;
+	background-color: white;
+	border: 5px solid black;
+	border-radius: 16px;
 }
-#AddFriendButton {
-	border: 3px, solid, white;
 
-	vertical-align: bottom;
+#FriendsMessage {
+	position: absolute;
+	height: auto;
+	width: 100%;
 	text-align: center;
+
+	font-size: 30px;
+}
+
+#FriendsMessage p {
+	font-size: 20px;
+}
+
+#AddFriendButton {
+	position: absolute;
+	height: auto;
+	width: 100%;
+	bottom: 0px;
+	background-color: #A0D8EB;
+
+	border-top: 5px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 0px; 
+	border-style: solid;
+	border-color: black;
+	border-radius: 0px 0px 10px 10px;
+
+	text-align: center;
+	font-size: 50px;
 }
 
 #MainBox {
-	float: right;
-	height: 80%;
-	width: 62%;
+	position: absolute;
+	height: auto;
+	width: 76.5%;
+	top: 170px;
+	right: 0%;
+	bottom: 1%;
+	margin-right: 10px;
+
+	border: 5px solid black;
+	border-radius: 16px;
+	text-align: right;
+}
+
+#BigPaw {
+	position: absolute;
+	vertical-align: middle;
+	height: 90%;
+	width: 55%;
+	top: 6%;
+	bottom: 6%;
+	left: 2%;
+}
+
+#PawMessage {
+	position: absolute;
+	height: auto;
+	width: 25%;
+	top: 62%;
+	left: 16%;
+	text-align: center;
+	font-size: 40px;
+}
+
+.Bones {
+	color: black;
+	font-size: 40px;
+	text-align: center;
+}
+
+.Bones:hover {
+	color: #FFCA6E;
+}
+
+#MyMeetups, #CreateMeetup {
+	position: absolute;
+	height: 26%;
+	width: 35%;
+	right: 8%;
+}
+
+#MyMeetups {
+	top: 15%;
+}
+
+#CreateMeetup {
+	bottom: 15%;
+}
+
+#MyMeetupsMessage, #CreateMeetupMessage {
+	position: absolute;
+	height: 50%;
+	width: 50%;
+}
+
+#MyMeetupsMessage {
+	top: 24%;
+	right: 1%;
+}
+
+#CreateMeetupMessage {
+	top: 68%;
+	right: 1%;
 }
