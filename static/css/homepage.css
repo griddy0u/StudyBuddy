@@ -36,6 +36,7 @@ a:hover{
 /* Aligns Title/Logo to left */
 #TopLeft {
 	position: absolute;
+	width: 675px;
 	left: 10px;
 	text-align: center;
 }
@@ -49,12 +50,11 @@ a:hover{
 	border-radius: 40px 25px;
 	border-width: 9px;
 
-	/* Sets title font */
-	text-transform: uppercase;
+	/* Font Styling */
 	vertical-align: bottom;
-	letter-spacing: 6px;
+	text-transform: uppercase;
+	letter-spacing: 8px;
 	font-size: 60px;
-	font-style: italic;
 }
 
 /* Adjusts Size*/
@@ -68,9 +68,9 @@ a:hover{
 /* Aligns User/SignOut to right */
 #TopRight {
 	position: absolute;
-	right: 10px;
-	padding-top: 25px;
-	padding-right: 20px;
+	width: 500px;
+	left: 760px;
+	margin-top: 25px;
 	text-align: center;
 }
 
@@ -83,7 +83,7 @@ a:hover{
 /* Sets font color */
 #UserName {
 	vertical-align: bottom;
-	color: black;
+	color: #000000;
 }
 
 /* Adjusts size */
@@ -96,7 +96,7 @@ a:hover{
 /* Sets font color and size */
 #SignOut {
 	vertical-align: -18px;
-	color: black;
+	color: #000000;
 	font-size: 18px;
 }
 
@@ -110,10 +110,10 @@ a:hover{
 	clear: both;
 	position: absolute;
 	height: 60px;
-	width: 99%;
-	min-width: 90%;
+	width: 1280px;
 	top: 107px;
-	left: 7.5px;
+	left: 5px;
+
 	background-color: #FFCA6E;
 	border-style: solid;
 	border-color: black;
@@ -145,20 +145,20 @@ a:hover{
 
 #FriendsList {
 	position: absolute;
+	height: 550px;
 	width: 346px;
 	top: 170px;
-	bottom: 10px;
 
-	background-color: white;
-	border: 5px solid black;
+	background-color: #FFFFFF;
+	border: 5px solid #000000;
 	border-radius: 16px;
 }
 
 #FriendsMessage {
 	position: absolute;
-	height: auto;
-	top: 10px;
+	height: 200px;
 	width: 330px;
+	top: 10px;
 	text-align: center;
 
 	font-size: 30px;
@@ -170,7 +170,7 @@ a:hover{
 
 #AddFriendButton {
 	position: absolute;
-	height: auto;
+	height: 100px;
 	width: 100%;
 	bottom: 0px;
 	background-color: #A0D8EB;
@@ -189,13 +189,14 @@ a:hover{
 
 #MainBox {
 	position: absolute;
-	height: auto;
+	height: 550px;
+	width: 924px;
 	top: 170px;
 	left: 360px;
 	right: 10px;
-	bottom: 10px;
 
-	border: 5px solid black;
+	background-color: #FFFFFF;
+	border: 5px solid #000000;
 	border-radius: 16px;
 	text-align: right;
 }
@@ -214,7 +215,7 @@ a:hover{
 	position: absolute;
 	height: auto;
 	width: 25%;
-	top: 62%;
+	top: 58%;
 	left: 16%;
 	text-align: center;
 	font-size: 40px;
@@ -222,7 +223,7 @@ a:hover{
 
 .Bones {
 	color: black;
-	font-size: 40px;
+	font-size: 30px;
 	text-align: center;
 }
 
