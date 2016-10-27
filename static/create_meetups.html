@@ -17,11 +17,11 @@
     <div id="top">
       <!-- Links to Homepage, Title and Logo -->
 
-      <span id="top_left">
-        <a href="" id="title">StudyBuddy</a>
-
-        <a href="">
-          <img src="http://i.imgur.com/8nF4920.png" id="logo"></a>
+      <span>
+        <a href="homepage.html" id="top_left">
+          <span id="title">StudyBuddy</span>
+          <img src="http://i.imgur.com/8nF4920.png" id="logo">
+        </a>
       </span>
 
       <!-- Shows signed-in user and their profile picture -->
@@ -32,7 +32,7 @@
           <a href="">
             <img src="http://i.imgur.com/mGhsq0V.png" id="user_photo">
           </a>
-          <a href="" id="user_name">Corgi</a>
+          <a href="profile.html" id="user_name">Corgi</a>
         </span>
         <span id="bar">|</span>
         <a href="" id="sign_out">Sign Out</a>
@@ -46,9 +46,9 @@
   		</span>
 
   		<span id="right_menu_bar">
-  			<a href="">Settings</a>
-  			<a href="" id="contact">Contact Us</a>
-  			<a href="">Help</a>
+  			<a href="settings.html">Settings</a>
+  			<a href="contact_us.html" id="contact">Contact Us</a>
+  			<a href="help.html">Help</a>
   		</span>
   	</div>
 
@@ -104,7 +104,9 @@
       </div>
 
       <div id="main_right">
-        <button type="button" id="home_button">Cancel</button>
+        <a href="homepage.html">
+          <button type="button" id="home_button">Cancel</button>
+        </a>
         <div id="location_info">
           <div>
             <span id="stats_header">Location Stats</span>
@@ -116,7 +118,9 @@
             <span id="crowded">Crowded Level: N/A</span>
           </div>
         </div>
-        <button type="button" id="submit_button">Create Meeting!</button>
+        <a href="">
+          <button type="button" id="submit_button">Create Meeting!</button>
+        </a>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery.js"></script>
