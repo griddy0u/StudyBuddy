@@ -8,6 +8,6 @@ app.get('/', function (req, res) {
   res.sendfile('static/homepage.html');
 });
 
-http.listen(process.env.PORT || 3000, function () {
-  console.log('Listening on port', http.address().port);
+app.listen(process.env.PORT || 3000, function () {
+  console.log('Listening on port', process.env.PORT);
 });
