@@ -7,6 +7,6 @@ app.get('/', function (req, res) {
   res.sendfile('static/homepage.html');
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+http.listen(process.env.PORT || 3000, function () {
+  console.log('Listening on port', http.address().port);
 });
