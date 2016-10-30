@@ -1,0 +1,145 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Create Meetups</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <link href="css/create_meetups.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <div id="top">
+      <!-- Links to Homepage, Title and Logo -->
+
+      <span>
+        <a href="homepage.html" id="top_left">
+          <span id="title">StudyBuddy</span>
+          <img src="http://i.imgur.com/8nF4920.png" id="logo">
+        </a>
+      </span>
+
+      <!-- Shows signed-in user and their profile picture -->
+      <span id="top_right">
+        <span id="user">
+          Create A Meetup!
+
+          <a href="">
+            <img src="http://i.imgur.com/mGhsq0V.png" id="user_photo">
+          </a>
+          <a href="profile.html" id="user_name">Corgi</a>
+        </span>
+        <span id="bar">|</span>
+        <a href="login.html" id="sign_out">Sign Out</a>
+      </span>
+    </div>
+
+    <!-- TOP MENU BAR -->
+  	<div id="menu_bar">
+  		<span id="left_menu_bar">
+  			<span id="friends">Friends</span>
+  		</span>
+
+  		<span id="right_menu_bar">
+  			<a href="settings.html">Settings</a>
+  			<a href="contact_us.html" id="contact">Contact Us</a>
+  			<a href="help.html">Help</a>
+  		</span>
+  	</div>
+
+    <!-- MAIN BODY -->
+    <div id="main_body">
+      <div id="friends_list">
+        <span id="friends_message">
+          You have no friends, why not try getting some?
+          <p>(When the feature becomes available!)</p>
+        </span>
+        <div id="friends_instruction">Select Friends Above</div>
+      </div>
+      <div id="main_center">
+        <textarea cols="30" rows="1" id="location">Please enter a study location...</textarea>
+        <div>
+          <span id="location_text">Inputted location on Google Maps</span>
+        </div>
+        <div id="map"></div>
+
+        <!--Choose starting date of study session -->
+        <div id="date">
+          <span>Enter Start Date:</span>
+          <textarea cols="5" rows="1" id="date_month">Month</textarea>
+          <span> </span>
+          <textarea cols="2" rows="1" id="date_day">Day</textarea>
+          <span> </span>
+          <textarea cols="2" rows="1" id="date_year">Year</textarea>
+        </div>
+
+        <!--Choose start and end time for study session-->
+        <div id="time">
+          <div id="start_time">
+            <span>Start Time</span>
+            <textarea cols="1" rows="1" id="start_hour"></textarea>
+            <span>:</span>
+            <textarea cols="1" rows="1" id="start_min"></textarea>
+            <label>AM <input type="checkbox" name="checkbox" value="value"></label>
+            <span> / </span>
+            <label>PM <input type="checkbox" name="checkbox" value="value"></label>
+          </div>
+
+          <div id="end_time">
+            <label><input type="checkbox" name="checkbox" value="value"> End Time</label>
+            <textarea cols="1" rows="1" id="end_hour"></textarea>
+            <span>:</span>
+            <textarea cols="1" rows="1" id="end_min"></textarea>
+            <label>AM <input type="checkbox" name="checkbox" value="value"></label>
+            <span> / </span>
+            <label>PM <input type="checkbox" name="checkbox" value="value"></label>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="main_right">
+        <a href="homepage.html">
+          <button type="button" id="home_button">Cancel</button>
+        </a>
+        <div id="location_info">
+          <div>
+            <span id="stats_header">Location Stats</span>
+          </div>
+          <div>
+            <span id="quiet">Quiet Level: N/A</span>
+          </div>
+          <div>
+            <span id="crowded">Crowded Level: N/A</span>
+          </div>
+        </div>
+        <a href="homepage.html">
+          <button type="button" id="submit_button">Create Meeting!</button>
+        </a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      function initMap() {
+        var uluru = {lat: 32.8801, lng: -117.2340};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtN1_XktTqXV4vg_Jcnuon9KXrFykAnlc&callback=initMap">
+    </script>
+  </body>
+</html>

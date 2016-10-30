@@ -1,0 +1,265 @@
+body{
+  background-image:url("http://31.media.tumblr.com/60258e73e78ddd833e85bd49fac2a5a8/tumblr_mt67noIbPl1ru3nbdo4_r1_100.png");
+  background-color: #FFCA6E;
+
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: auto;
+}
+
+/* Applies universal font to all text */
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Applies universal color to all hyperlinks */
+a {
+  color: #FFFFFF;
+}
+
+/* When hovering over hyperlinks, links turn black and are not underlined */
+a:hover{
+  text-decoration: none;
+  color: #000000;
+}
+
+#top{
+}
+
+#top_left{
+  position: absolute;
+  left: 10px;
+  width: 675px;
+  text-align: center;
+}
+
+#title{
+  /* Creates filled border */
+  background-color: #FFCA6E;
+  vertical-align: bottom;
+
+  border-style: solid;
+  border-color: #FFCA6E;
+  border-radius: 40px 25px;
+  border-width: 9px;
+
+  /* Sets title font */
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-size: 60px;
+}
+
+#logo{
+  margin-bottom: -13px;
+  width: 150px;
+  height: 120px;
+}
+
+#top_right{
+  position: absolute;
+  left: 760px;
+  width: 500px;
+  margin-top: 25px;
+
+}
+
+#user, #bar{
+  vertical-align: bottom;
+  font-size: 30px;
+}
+
+#user_name{
+  vertical-align: bottom;
+  color: #000000;
+}
+
+#user_photo{
+  width: 75px;
+  height: 75px;
+}
+
+#sign_out{
+  vertical-align: -18px;
+  color: #000000;
+  font-size: 18px;
+}
+
+#user_name:hover, #sign_out:hover {
+  color: #FFCA6E;
+}
+
+#menu_bar{
+  clear: both;
+  position: absolute;
+  height: 60px;
+  width: 1280px;
+  top: 107px;
+  left: 5px;
+  background-color: #FFCA6E;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 16px;
+  border-width: 5px;
+
+  font-size: 35px;
+  z-index: -1;
+}
+
+#left_menu_bar{
+  position: absolute;
+  left: 118px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+#right_menu_bar{
+  position: absolute;
+  left: 800px;
+  padding-right: 20px;
+}
+
+#contact{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#friends{
+  color: #FFFFFF;
+}
+
+#friends_list{
+  position: absolute;
+  width: 346px;
+  top: 170px;
+  height: 550px;
+
+  background-color: white;
+  border: 5px solid #000000;
+  border-radius: 16px;
+}
+#friends_message{
+  position: absolute;
+  height: 200px;
+  width: 330px;
+  top: 10px;
+  text-align: center;
+
+  font-size: 30px;
+}
+
+#friends_message p{
+  font-size: 20px;
+}
+
+#friends_instruction{
+  position: absolute;
+  top: 440px;
+  height: 100px;
+  width: 100%;
+  background-color: #A0D8EB;
+
+  border-top: 5px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 0px 0px 10px 10px;
+
+  text-align: center;
+  font-size: 36px;
+}
+#main_center{
+  position: absolute;
+  top: 180px;
+  left: 410px;
+  width: 400px;
+  height: 600px;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+}
+#location{
+  width: 250px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#location_text{
+  margin-top: 40px;
+}
+#map{
+  margin: auto;
+  padding: auto;
+  height: 300px;
+  width: 300px;
+}
+
+#date{
+  margin-top: 20px;
+}
+#time{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#main_right{
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: 167px;
+  left: 800px;
+  width: 500px;
+  height: 600px;
+  text-align: center;
+}
+
+#home_button{
+  width: 150px;
+  margin-top: 20px;
+  background-color: red;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 5px;
+  color: #FFFFFF;
+  font-size: 25px;
+}
+#submit_button{
+  width: 300px;
+  margin-top: 20px;
+  background-color: #FFCA6E;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 5px;
+  color: #FFFFFF;
+  font-size: 35px;
+}
+#home_button:hover{
+  color: #000000;
+}
+#submit_button:hover{
+  color: #000000;
+}
+#location_info{
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: auto;
+  padding-right: auto;
+  height: 350px;
+  width: 350px;
+
+  background-color: #FFFFFF;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 5px;
+  text-align: center;
+}
+
+#location_info div span{
+  margin: 10px;
+  font-size: 36px;
+}
+
+#stats_header{
+  text-decoration: underline;
+}
