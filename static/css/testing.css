@@ -1,0 +1,180 @@
+/*Applies background image and color of website */
+body {
+    /* Background Image taken from Cocorini, cocorini.tumblr.com/patterns */
+    background-image: url("http://31.media.tumblr.com/60258e73e78ddd833e85bd49fac2a5a8/tumblr_mt67noIbPl1ru3nbdo4_r1_100.png");
+    background-color: #FFFFFF;
+
+    /* Setting margins for all content */
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: auto;
+}
+
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.navbar-brand {
+    font-size: 3rem;
+    margin-top: 0.67rem;
+    margin-bottom: 0.67rem;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.rightMenu {
+    font-size: 1.5rem;
+    margin-top: 0.67rem;
+    margin-bottom: 0.67rem;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
+ul hr {
+	margin: 1%;
+	padding: 0;
+	text-align: center;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .sidenav a {font-size: 18px;}
+
+  .row.content {
+  	height:auto;
+  }
+}
+
+.sidenav {
+	position: fixed;
+    height: 100%;
+    width: 0;
+    top: 12%;
+    left: 0;
+    padding-top: 60px;
+
+    background-color: #111;
+    border-radius: 0px, 15px, 15px, 0px;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#addFriend {
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
+
+	vertical-align: 100%;
+}
+
+#myMeetups #createMeetup {
+	padding: 2rem;
+	width: 100%;
+	border: none;
+	border-radius: 1rem;
+
+	cursor: pointer;
+
+	text-align: center;
+	font-size: 2rem;
+}
+
+#myMeetups span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#myMeetups span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#myMeetups:hover span {
+  padding-right: 25px;
+}
+
+#myMeetups:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#createMeetup span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#createMeetup span:after {
+  content: '+';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+#createMeetup:hover span {
+  padding-left: 25px;
+}
+
+#createMeetup:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
