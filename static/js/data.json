@@ -1,0 +1,143 @@
+{
+  "login": [
+    {
+      "email": "rioh@ucsd.edu",
+      "password": "password"
+    }
+  ],
+  "friends": [
+    {
+      "name": "Gary Gillespie"
+    },
+    {
+      "name": "Philip Guo"
+    },
+    {
+      "name": "Rick Ord"
+    },
+    {
+      "name": null
+    },
+    {
+      "name": null
+    },
+    {
+      "name": null
+    },
+    {
+      "name": null
+    },
+    {
+      "name": null
+    },
+    {
+      "name": null
+    },
+    {
+      "name": null
+    },
+    {
+      "name": null
+    },
+    {
+      "name": null
+    },
+    {
+      "name": null
+    },
+    {
+      "name": null
+    },
+    {
+      "name": null
+    }
+  ],
+  "locations": [
+    {
+      "name": "Geisel",
+      "location": {"lat": 32.8811, "lng": "-117.2374"},
+      "quiet": "Moderately noisy",
+      "crowded": "Extremely crowded"
+    },
+    {
+      "name": "JK Wood Lounge",
+      "location": {"lat": 32.8840, "lng": -117.2333},
+      "quiet": "Extremely quiet",
+      "crowded": "Moderately crowded"
+    },
+    {
+      "name": "Sun God Lounge",
+      "location": {"lat": 32.8801, "lng": -117.2371},
+      "quiet": "Moderately quiet",
+      "crowded": "Moderately crowded"
+    },
+    {
+      "name": "Price Center",
+      "location": {"lat": 32.8797,"lng": -117.2362},
+      "quiet": "Extremely noisy",
+      "crowded": "Extremely crowded"
+    },
+    {
+      "name": "The Village",
+      "location": {"lat": 32.8879, "lng": -117.2423},
+      "quiet": "Very quiet",
+      "crowded": "Moderately empty"
+    }
+  ],
+  "meetups": [
+    {
+      "friends": [null, null, null, null, null],
+      "month": null,
+      "day": null,
+      "year": null,
+      "hour": null,
+      "min": null,
+      "location": null
+    },
+    {
+      "friends": [null, null, null, null, null],
+      "month": null,
+      "day": null,
+      "year": null,
+      "hour": null,
+      "min": null,
+      "location": null
+    },
+    {
+      "friends": [null, null, null, null, null],
+      "month": null,
+      "day": null,
+      "year": null,
+      "hour": null,
+      "min": null,
+      "location": null
+    },
+    {
+      "friends": [null, null, null, null, null],
+      "month": null,
+      "day": null,
+      "year": null,
+      "hour": null,
+      "min": null,
+      "location": null
+    },
+    {
+      "friends": [null, null, null, null, null],
+      "month": null,
+      "day": null,
+      "year": null,
+      "hour": null,
+      "min": null,
+      "location": null
+    },
+    {
+      "friends": [null, null, null, null, null],
+      "month": null,
+      "day": null,
+      "year": null,
+      "hour": null,
+      "min": null,
+      "location": null
+    }
+  ]
+}

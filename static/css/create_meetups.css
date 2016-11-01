@@ -1,265 +1,208 @@
-body{
-  background-image:url("http://31.media.tumblr.com/60258e73e78ddd833e85bd49fac2a5a8/tumblr_mt67noIbPl1ru3nbdo4_r1_100.png");
-  background-color: #FFCA6E;
+/*Applies background image and color of website */
+body {
+  /* Background Image taken from Cocorini, cocorini.tumblr.com/patterns */
+  /* background-image: url("http://31.media.tumblr.com/60258e73e78ddd833e85bd49fac2a5a8/tumblr_mt67noIbPl1ru3nbdo4_r1_100.png");*/
+  background-color: #BAC9CF;
 
+  /* Setting margins for all content */
   margin: auto;
   margin-left: 10px;
   margin-right: 10px;
   padding: auto;
+
+  font-family: 'Coiny', cursive;
+  /*font-family: "Lato", sans-serif; */
 }
 
-/* Applies universal font to all text */
-* {
-  font-family: Helvetica, Arial, sans-serif;
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Coiny', cursive;
+}
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+	margin-top: 1%;
+	margin-bottom: 1%;
 }
 
-/* Applies universal color to all hyperlinks */
-a {
-  color: #FFFFFF;
+.navbar-brand {
+    font-size: 3rem;
+    margin-top: 0.67rem;
+    margin-bottom: 0.67rem;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
 }
 
-/* When hovering over hyperlinks, links turn black and are not underlined */
-a:hover{
-  text-decoration: none;
-  color: #000000;
+.rightMenu {
+    font-size: 1.5rem;
+    margin-top: 0.67rem;
+    margin-bottom: 0.67rem;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
 }
 
-#top{
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
 }
 
-#top_left{
-  position: absolute;
-  left: 10px;
-  width: 675px;
+ul hr {
+	margin: 1%;
+	padding: 0;
+	text-align: center;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+
+  .row.content {
+  	height:auto;
+  }
+}
+
+#friendsList {
+  background-color: #111;
+  border: 1rem solid #111;
+  border-radius: 1rem;
+  color: #818181;
+}
+
+#friendsList:hover {
+  color: white;
+}
+
+#friend_dropdown{
+  left: 50%;
+  right: auto;
   text-align: center;
+  transform: translate(-50%, 0);
 }
-
-#title{
-  /* Creates filled border */
-  background-color: #FFCA6E;
-  vertical-align: bottom;
-
-  border-style: solid;
-  border-color: #FFCA6E;
-  border-radius: 40px 25px;
-  border-width: 9px;
-
-  /* Sets title font */
-  text-transform: uppercase;
-  letter-spacing: 8px;
-  font-size: 60px;
-}
-
-#logo{
-  margin-bottom: -13px;
-  width: 150px;
-  height: 120px;
-}
-
-#top_right{
-  position: absolute;
-  left: 760px;
-  width: 500px;
-  margin-top: 25px;
-
-}
-
-#user, #bar{
-  vertical-align: bottom;
-  font-size: 30px;
-}
-
-#user_name{
-  vertical-align: bottom;
-  color: #000000;
-}
-
-#user_photo{
-  width: 75px;
-  height: 75px;
-}
-
-#sign_out{
-  vertical-align: -18px;
-  color: #000000;
-  font-size: 18px;
-}
-
-#user_name:hover, #sign_out:hover {
-  color: #FFCA6E;
-}
-
-#menu_bar{
-  clear: both;
-  position: absolute;
-  height: 60px;
-  width: 1280px;
-  top: 107px;
-  left: 5px;
-  background-color: #FFCA6E;
-  border-style: solid;
-  border-color: #000000;
-  border-radius: 16px;
-  border-width: 5px;
-
-  font-size: 35px;
-  z-index: -1;
-}
-
-#left_menu_bar{
-  position: absolute;
-  left: 118px;
-  color: #FFFFFF;
+#friend_scroll{
+  left: 50%;
+  right: auto;
   text-align: center;
+  transform: translate(-50%, 0);
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 12%;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-#right_menu_bar{
-  position: absolute;
-  left: 800px;
-  padding-right: 20px;
+.sidenav span{
+    padding: 8px 8px 8px 32px;
+    text-decoration: underline;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav .checkbox {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
-#contact{
-  margin-left: 20px;
-  margin-right: 20px;
+.sidenav .checkbox:hover, .offcanvas .checkbox:focus{
+    color: #f1f1f1;
 }
 
-#friends{
-  color: #FFFFFF;
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
-
-#friends_list{
-  position: absolute;
-  width: 346px;
-  top: 170px;
-  height: 550px;
-
-  background-color: white;
-  border: 5px solid #000000;
-  border-radius: 16px;
+ul.scroll-menu {
+    position:relative;
+    display:inherit;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    -moz-overflow-scrolling:touch;
+    -ms-overflow-scrolling:touch;
+    -o-overflow-scrolling:touch;
+    overflow-scrolling:touch;
+    top:0;
+    left:0;
+    width:100%;
+    height:auto;
+    max-height:500px;
+    margin:0;
+    border-left:none;
+    border-right:none;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    -ms-border-radius:0;
+    -o-border-radius:0;
+    border-radius:0;
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    -ms-box-shadow:none;
+    -o-box-shadow:none;
+    box-shadow:none
 }
-#friends_message{
-  position: absolute;
-  height: 200px;
-  width: 330px;
-  top: 10px;
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+#location_drop {
+  left: 50%;
+  right: auto;
   text-align: center;
-
-  font-size: 30px;
+  transform: translate(-50%, 0);
 }
-
-#friends_message p{
-  font-size: 20px;
+.radio{
+  text-align: left;
 }
-
-#friends_instruction{
-  position: absolute;
-  top: 440px;
-  height: 100px;
-  width: 100%;
-  background-color: #A0D8EB;
-
-  border-top: 5px;
-  border-left: 0px;
-  border-right: 0px;
-  border-bottom: 0px;
-  border-style: solid;
-  border-color: #000000;
-  border-radius: 0px 0px 10px 10px;
-
-  text-align: center;
-  font-size: 36px;
-}
-#main_center{
-  position: absolute;
-  top: 180px;
-  left: 410px;
-  width: 400px;
-  height: 600px;
-  margin: auto;
-  padding: auto;
-  text-align: center;
-}
-#location{
-  width: 250px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-#location_text{
-  margin-top: 40px;
+.checkbox{
+  text-align: left;
 }
 #map{
   margin: auto;
   padding: auto;
-  height: 300px;
-  width: 300px;
-}
-
-#date{
-  margin-top: 20px;
-}
-#time{
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-#main_right{
-  margin: 0px;
-  padding: 0px;
-  position: absolute;
-  top: 167px;
-  left: 800px;
-  width: 500px;
-  height: 600px;
-  text-align: center;
-}
-
-#home_button{
-  width: 150px;
-  margin-top: 20px;
-  background-color: red;
+  height: 25rem;
+  width: 25rem;
   border-style: solid;
   border-color: #000000;
-  border-width: 5px;
-  color: #FFFFFF;
-  font-size: 25px;
-}
-#submit_button{
-  width: 300px;
-  margin-top: 20px;
-  background-color: #FFCA6E;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 5px;
-  color: #FFFFFF;
-  font-size: 35px;
-}
-#home_button:hover{
-  color: #000000;
-}
-#submit_button:hover{
-  color: #000000;
-}
-#location_info{
-  margin-top: 20px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: auto;
-  padding-right: auto;
-  height: 350px;
-  width: 350px;
-
-  background-color: #FFFFFF;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 5px;
-  text-align: center;
+  border-width: 1px;
 }
 
-#location_info div span{
-  margin: 10px;
-  font-size: 36px;
+#friend_title, #loc_dropdown, #loc_text, #date_text, #cancel{
+  margin-top: 5rem;
 }
-
-#stats_header{
-  text-decoration: underline;
+#stats{
+  margin-top: 5rem;
+}
+#create{
+  margin-top: 2.5rem;
 }
