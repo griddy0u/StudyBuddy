@@ -6,9 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/homepage.css" rel="stylesheet"/>
+	<link href="../public/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../public/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="../public/css/homepage.css" rel="stylesheet"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
 	<!-- JavaScript -->
@@ -47,7 +47,7 @@
 				</button>
 
 				<!-- Title/Logo -->
-	    		<a class="navbar-brand" href="homepage.html">
+	    		<a class="navbar-brand" href="homepage.handlebars">
 	    			<span id="title" class="orange">StudyBuddy</span>
 	    		</a>
 	    	</div>
@@ -58,7 +58,7 @@
 
 					<!-- Home -->
 					<li class="active menu">
-						<a class="rightMenu" href="homepage.html">
+						<a class="rightMenu" href="homepage.handlebars">
 							Home
 						</a>
 					</li>
@@ -70,11 +70,11 @@
 							<span class="caret orange"></span>
 						</a>
 						<ul class="dropdown-menu text-center">
-							<li><a href="settings.html">Settings</a></li>
-							<li><a href="contact_us.html">Contact Us</a></li>
-							<li><a href="help.html">Help</a></li>
+							<li><a href="settings.handlebars">Settings</a></li>
+							<li><a href="contact_us.handlebars">Contact Us</a></li>
+							<li><a href="help.handlebars">Help</a></li>
 							<hr>
-							<li><a href="login.html">Sign Out</a></li>
+							<li><a href="login.handlebars">Sign Out</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -176,13 +176,13 @@
 	<!-- Bottom Buttons -->
 	<footer class="container-fluid text-center">
 	    <div class="col-sm-offset-3 col-sm-4">
-			<a type="button" id="myMeetups" class="btn btn-info btn-lg" href="my_meetups.html">
+			<a type="button" id="myMeetups" class="btn btn-info btn-lg" href="my_meetups.handlebars">
 	    		<span>My Meetups</span>
 	    	</a>
 	    </div>
 
 	    <div class="col-sm-4">
-	    	<a type="button" id="createMeetup" class="btn btn-success btn-lg" href="create_meetups.html">
+	    	<a type="button" id="createMeetup" class="btn btn-success btn-lg" href="create_meetups.handlebars">
 	    		<span>Create Meetup</span>
 	    	</a>
 		</div>
