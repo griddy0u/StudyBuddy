@@ -6,9 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Bootstrap -->
-	<link href="../public/css/bootstrap.min.css" rel="stylesheet">
-	<link href="../public/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="../public/css/settings.css" rel="stylesheet"/>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/help.css" rel="stylesheet"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
 	<!-- JavaScript -->
@@ -40,7 +40,7 @@
 				</button>
 
 				<!-- Title/Logo -->
-	    		<a class="navbar-brand" href="homepage.handlebars">
+	    		<a class="navbar-brand" href="homepage.html">
 	    			<span id="title" class="orange">StudyBuddy</span>
 	    		</a>
 	    	</div>
@@ -51,7 +51,7 @@
 
 					<!-- Home -->
 					<li class="menu">
-						<a class="rightMenu orange" href="homepage.handlebars">
+						<a class="rightMenu orange" href="homepage.html">
 							Home
 						</a>
 					</li>
@@ -64,11 +64,11 @@
 						</a>
 
 						<ul class="dropdown-menu text-center">
-							<li><a href="settings.handlebars">Settings</a></li>
-							<li><a href="contact_us.handlebars">Contact Us</a></li>
-							<li><a href="help.handlebars">Help</a></li>
+							<li><a href="settings.html">Settings</a></li>
+							<li><a href="contact_us.html">Contact Us</a></li>
+							<li><a href="help.html">Help</a></li>
 							<hr>
-							<li><a href="login.handlebars">Sign Out</a></li>
+							<li><a href="login.html">Sign Out</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -78,9 +78,18 @@
 
 	<!-- Main Screen -->
 	<div class="container-fluid text-left">
-		<h1>Settings</h1>
+		<h1>Help</h1>
 		<br>
-		<h4>Coming Soon!</h4>
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#faq">FAQ</button>
+		<div id="faq" class="collapse">
+			<h3>How To Create a Meetup</h3>
+				<p>Go to Home and click the Create Meetup button located on the bottom right of the page</p>
+			<hr>
+			<h3>How To View My Meetups</h3>
+				<p>Go to Home and click the My Meetups button located on the bottom left of the page</p>
+		</div>
+		<hr>
+		<a type="button" class="btn btn-danger" href="contact_us.html">Still Stuck? Contact Us</a>
 	</div>
 </body>
 </html>
