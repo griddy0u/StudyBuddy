@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Help</title>
+	<title>Contact Us</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Bootstrap -->
-	<link href="../public/css/bootstrap.min.css" rel="stylesheet">
-	<link href="../public/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="../public/css/settings.css" rel="stylesheet"/>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/contact_us.css" rel="stylesheet"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
 	<!-- JavaScript -->
@@ -51,8 +51,8 @@
 
 					<!-- Home -->
 					<li class="menu">
-						<a class="rightMenu orange" href="homepage.html">
-							Home
+						<a class="rightMenu" href="homepage.html">
+							<span class="orange">Home</span>
 						</a>
 					</li>
 
@@ -77,10 +77,29 @@
 	</nav>
 
 	<!-- Main Screen -->
-	<div class="container-fluid text-left">
-		<h1>Settings</h1>
+	<div class="container-fluid text-center">
+		<h1>Contact Us</h1>
 		<br>
-		<h4>Coming Soon!</h4>
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#richard">Richard Oh</button>
+		<div id="richard" class="collapse">
+			<p>rioh@ucsd.edu</p>
+			<p>- OR -</p>
+			<p> (###)-###-#### </p>
+		</div>
+		<hr>
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#ingrid">Ingrid Ou</button>
+		<div id="ingrid" class="collapse">
+			<p>iou@ucsd.edu</p>
+			<p>- OR -</p>
+			<p> (###)-###-#### </p>
+		</div>
+		<hr>
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#jovan">Jovan Limosnero</button>
+		<div id="jovan" class="collapse">
+			<p>jlimosne@ucsd.edu</p>
+			<p>- OR -</p>
+			<p> (###)-###-#### </p>
+		</div>
 	</div>
 </body>
 </html>
