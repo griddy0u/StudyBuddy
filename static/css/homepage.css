@@ -9,8 +9,6 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   padding: auto;
-
-  font-family: "Lato", sans-serif;
 }
 
 /* Top Nav Bar */
@@ -30,6 +28,10 @@ body {
 
 .orange {
   color: #FFD996;
+}
+
+.orange:hover {
+  color: #FFFFFF;
 }
 
 #title:hover {
@@ -138,8 +140,9 @@ ul hr {
 	vertical-align: 100%;
 }
 
-ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
+ul {
+  list-style-type: none;
+}
 
 /* Month header */
 .month {

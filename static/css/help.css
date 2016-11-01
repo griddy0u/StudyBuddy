@@ -1,0 +1,93 @@
+/*Applies background image and color of website */
+body {
+  /* Background Image taken from Cocorini, cocorini.tumblr.com/patterns */
+  /* background-image: url("http://31.media.tumblr.com/60258e73e78ddd833e85bd49fac2a5a8/tumblr_mt67noIbPl1ru3nbdo4_r1_100.png"); */
+  background-color: #FFFFFF;
+
+  /* Setting margins for all content */
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: auto;
+}
+
+/* Top Nav Bar */
+.navbar {
+	margin: 0% 0% 1% 0%;
+}
+
+/* Title */
+.navbar-brand {
+  font-size: 3rem;
+  margin-top: 0.67rem;
+  margin-bottom: 0.67rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.orange {
+  color: #FFD996;
+}
+
+.orange:hover {
+  color: #FFFFFF;
+}
+
+#title:hover {
+  color: #FFFFFF;
+}
+
+/* Top Right */
+.rightMenu {
+  font-size: 1.5rem;
+  margin-top: 0.67rem;
+  margin-bottom: 0.67rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+
+  color: #FFD996;
+}
+
+/* Bar Separation on DropDown */
+ul hr {
+  margin: 1%;
+  padding: 0;
+  text-align: center;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  height: 450px
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+
+  .row.content {
+  	height:auto;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1, h3 {
+  font-family: 'Coiny', cursive;
+}
+
+.btn {
+  margin-bottom: 10px;
+}
+
+.collapse p {
+  text-indent: 2rem;
+}
