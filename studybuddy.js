@@ -5,7 +5,7 @@ var app = express();
 app.use(express.static('static'));
 
 app.get('/', function (req, res) {
-  res.sendfile('static/homepage.html');
+  res.sendfile('views/homepage.handlebars');
 });
 
 app.listen(process.env.PORT || 3000, function () {
