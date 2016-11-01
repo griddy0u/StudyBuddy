@@ -2,7 +2,7 @@
 body {
   /* Background Image taken from Cocorini, cocorini.tumblr.com/patterns */
   /* background-image: url("http://31.media.tumblr.com/60258e73e78ddd833e85bd49fac2a5a8/tumblr_mt67noIbPl1ru3nbdo4_r1_100.png");*/
-  background-color: #BAC9CF;
+  background-color: #FFFFFF;
 
   /* Setting margins for all content */
   margin: auto;
@@ -32,6 +32,9 @@ h1, h2, h3, h4, h5, h6{
     font-weight: bold;
 }
 
+#title{
+  color: #FFD996;
+}
 .rightMenu {
     font-size: 1.5rem;
     margin-top: 0.67rem;
@@ -43,13 +46,6 @@ h1, h2, h3, h4, h5, h6{
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {height: 450px}
-
-/* Set gray background color and 100% height */
-.sidenav {
-  padding-top: 20px;
-  background-color: #f1f1f1;
-  height: 100%;
-}
 
 ul hr {
 	margin: 1%;
@@ -181,11 +177,14 @@ ul.scroll-menu {
   text-align: center;
   transform: translate(-50%, 0);
 }
+  
 .radio{
   text-align: left;
+  margin-left: 1rem;
 }
 .checkbox{
   text-align: left;
+  margin-left: 1rem;
 }
 #map{
   margin: auto;

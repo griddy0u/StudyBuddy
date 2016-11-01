@@ -30,7 +30,7 @@
 				    </button>
 
 				    <!-- Title/Logo -->
-	    		  <a class="navbar-brand" href="">
+	    		  <a class="navbar-brand" href="homepage.html">
 	    			  <span id="title">StudyBuddy</span>
 	    		  </a>
 	    	  </div>
@@ -40,7 +40,7 @@
 
 					  <!-- Home -->
 					  <li class="active menu">
-						  <a class="rightMenu" href="">
+						  <a class="rightMenu" href="homepage.html">
 							  Home
 						  </a>
 					  </li>
@@ -48,11 +48,11 @@
 					  <li>
 						  <a class="dropdown-toggle rightMenu" data-toggle="dropdown" href="">Directory<span class="caret"></span></a>
 						  <ul class="dropdown-menu text-center">
-							  <li><a href="">Settings</a></li>
-						    <li><a href="">Contact Us</a></li>
-							  <li><a href="">Help</a></li>
+							  <li><a href="settings.html">Settings</a></li>
+						    <li><a href="contact_us.html">Contact Us</a></li>
+							  <li><a href="help.html">Help</a></li>
                 <hr>
-						    <li><a href="">Sign Out</a></li>
+						    <li><a href="login.html">Sign Out</a></li>
 						  </ul>
 					  </li>
 				  </ul>
@@ -66,7 +66,7 @@
         <h1 id="page_name">Create a Meetup!</h1>
       </div>
 		  <div class="row content">
-			  <!-- Friends List SideNav -->
+			  <!-- Friends List Select -->
 			  <div class="col-sm-4 text-center">
           <div class="btn-group" id="friend_select">
             <h3 id="friend_title">Select Study Buddies!</h3>
@@ -155,31 +155,46 @@
           <div class="dropdown" id="loc_dropdown">
 
             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select a study location...<span class="caret"></span></button>
-            <ul class="dropdown-menu" id="location_drop">
+            <ul class="dropdown-menu scrollable-menu" role="menu" id="location_drop">
               <!-- Study locations on campus -->
               <li>
                 <div class="radio">
-                  <label><input type="radio" name="study_loc">Geisel</label>
+                  <label><input type="radio" onclick="modifyLocInfo('Geisel')" name="study_loc">Geisel</label>
                 </div>
               </li>
               <li>
                 <div class="radio">
-                  <label><input type="radio" name="study_loc">Courtroom</label>
+                  <label><input type="radio" onclick="modifyLocInfo('JK Wood Lounge')" name="study_loc">JK Wood Lounge</label>
                 </div>
               </li>
               <li>
                 <div class="radio">
-                  <label><input type="radio" name="study_loc">Sun God Lounge</label>
+                  <label><input type="radio" onclick="modifyLocInfo('Sun God Lounge')" name="study_loc">Sun God Lounge</label>
                 </div>
               </li>
               <li>
                 <div class="radio">
-                  <label><input type="radio" name="study_loc">Price Center</label>
+                  <label><input type="radio" onclick="modifyLocInfo('Price Center')" name="study_loc">Price Center</label>
                 </div>
               </li>
               <li>
                 <div class="radio">
-                  <label><input type="radio" name="study_loc">The Village</label>
+                  <label><input type="radio" onclick="modifyLocInfo('The Village')"name="study_loc">The Village</label>
+                </div>
+              </li>
+              <li>
+                <div class="radio">
+                  <label><input type="radio" onclick="modifyLocInfo('The Courtroom')"name="study_loc">The Courtroom</label>
+                </div>
+              </li>
+              <li>
+                <div class="radio">
+                  <label><input type="radio" onclick="modifyLocInfo('CSE Lab')"name="study_loc">CSE Lab</label>
+                </div>
+              </li>
+              <li>
+                <div class="radio">
+                  <label><input type="radio" onclick="modifyLocInfo('Muir Student Center')"name="study_loc">Muir Student Center</label>
                 </div>
               </li>
             </ul>
@@ -196,15 +211,15 @@
         <div class="col-sm-4">
           <h3 id="stats">Location stats</h4>
 
-          <h4>Quiet?:</h5>
-          <h4>Crowded?:</h5>
+          <h4>Quiet?: <h4 id="quiet">N/A</h4></h4>
+          <h4>Crowded?: <h4 id="crowded">N/A</h4></h4>
           <div>
-            <a type="button" id="cancel" class="btn btn-danger btn-lg" href="">
+            <a type="button" id="cancel" class="btn btn-danger btn-lg" href="homepage.html">
               <span>Cancel Meetup</span>
             </a>
           </div>
           <div>
-            <a type="button" id="create" class="btn btn-success btn-lg" href="">
+            <a type="button" id="create" class="btn btn-success btn-lg" href="homepage.html">
               <span>Schedule this Meetup!</span>
             </a>
           </div>
@@ -228,6 +243,7 @@
     <script src="datetime/build/jquery.datetimepicker.full.min.js">
     </script>
 
+    <script src="js/data.json"></script>
     <script src="js/create_meetups.js"></script>
   </body>
 </html>
