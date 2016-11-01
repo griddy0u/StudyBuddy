@@ -9,6 +9,7 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/testing.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
 	<!-- JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
@@ -64,27 +65,16 @@
 		</div>
 	</nav>
 	
-	<!-- Right -->
+	<!-- Main Screen -->
 	<div class="container-fluid text-center">
 		<div class="row content">
+
+			<!-- Friends List SideNav -->
 			<div class="col-sm-9 text-left">
 
-				<!-- Friends List Sidebar -->
-		    	<div id="mySidenav" class="sidenav">
-					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-					<a href="#">Shiba</a>
-					<a href="#">Shiba</a>
-					<a href="#">Shiba</a>
-					<a href="#">Shiba</a>
-
-					<!-- Add Friends Button -->
-					<button type="button" id="addFriend" class="btn btn-primary btn-lg disabled">
-						+ Add Friends
-					</button>
-				</div>
-
-				<span style="font-size:2rem;cursor:pointer" onclick="openNav()">
-					&#9776; Friends
+				<!-- SideNav Button -->
+				<span id="friendsList" style="font-size:2rem;cursor:pointer" onclick="openNav()">
+					Friends <i style="font-size:2rem" class="fa">&#xf138;</i>
 				</span>
 
 				<script>
@@ -97,17 +87,33 @@
 					}
 				</script>
 
+				<!-- Sidenav Content -->
+		    	<div id="mySidenav" class="sidenav">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					<a href="#">Shiba</a>
+					<a href="#">Shiba</a>
+					<a href="#">Shiba</a>
+					<a href="#">Shiba</a>
+
+					<!-- Add Friends Button -->
+					<button type="button" id="addFriend" class="btn btn-primary btn-lg disabled">
+						+ Add Friends
+					</button>
+				</div>
 	    	</div>
 
+	    	<!-- Right -->
 		    <div class="col-sm-3">
+		    	<p>
 				<a type="button" id="myMeetups" class="btn btn-info btn-lg" href="">
 		    		<span>My Meetups</span>
 		    	</a>
-
+		    	</p>
+		    	<p>
 		    	<a type="button" id="createMeetup" class="btn btn-success btn-lg" href="">
 		    		<span>Create Meetup</span>
 		    	</a>
-
+		    	</p>
 	    	</div>
 
 			
