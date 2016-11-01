@@ -1,7 +1,7 @@
 {
   "name": "studybuddy",
   "version": "1.0.0",
-  "description": "",
+  "author": "Richard Oh, Ingrid Ou, Jovan Limosnero",
 
   "main": "studybuddy.js",
   "scripts": {
@@ -14,7 +14,6 @@
     "url": "git+https://github.com/griddy0u/StudyBuddy.git"
   },
 
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/griddy0u/StudyBuddy/issues"
@@ -22,7 +21,10 @@
 
   "homepage": "https://github.com/griddy0u/StudyBuddy#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "express3-handlebars": "*",
+    "mongodb": "*",
+    "mongoose": "*"
   },
 
   "engines": {
