@@ -30,12 +30,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.logger());
 app.use(express.compress());
 
-/*app.get('/', function (req, res) {
+app.get('/', function (req, res) {
   res.sendfile('views/homepage.handlebars');
-});*/
+});
 
 // Call route file
-app.get('/', homepage.view);
+//app.get('/', homepage.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
