@@ -1,263 +1,278 @@
 /*Applies background image and color of website */
 body {
-    /* Background Image taken from Cocorini, cocorini.tumblr.com/patterns */
-    background-image: url("http://31.media.tumblr.com/60258e73e78ddd833e85bd49fac2a5a8/tumblr_mt67noIbPl1ru3nbdo4_r1_100.png");
-    background-color: #FFCA6E;
+  /* Background Image taken from Cocorini, cocorini.tumblr.com/patterns */
+  /* background-image: url("http://31.media.tumblr.com/60258e73e78ddd833e85bd49fac2a5a8/tumblr_mt67noIbPl1ru3nbdo4_r1_100.png"); */
+  background-color: #FFFFFF;
 
-    /* Setting margins for all content */
-    margin: auto;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: auto;
+  /* Setting margins for all content */
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: auto;
 }
 
-/* Applies universal font to all text */
-* {
-	font-family: Helvetica, Arial, sans-serif;
+/* Top Nav Bar */
+.navbar {
+	margin: 0% 0% 1% 0%;
 }
 
-/* Applies universal color to all hyperlinks */
-a {
-	color: #FFFFFF;
+/* Title */
+.navbar-brand {
+  font-size: 3rem;
+  margin-top: 0.67rem;
+  margin-bottom: 0.67rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
-/* When hovering over hyperlinks, links turn black and are not underlined */
-a:hover{
-	text-decoration: none;
-	color: #000000;
+.orange {
+  color: #FFD996;
 }
 
-/* */
-#Top {
-	margin-bottom: 0px;
-	padding-bottom: 0px;
+.orange:hover {
+  color: #FFFFFF;
 }
 
-/* Aligns Title/Logo to left */
-#TopLeft {
-	position: absolute;
-	width: 675px;
-	left: 10px;
-	text-align: center;
+#title:hover {
+  color: #FFFFFF;
 }
 
-/* Styles the StudyBuddy title */
-#Title {
-	/* Creates filled border */
-	background-color: #FFCA6E;
-	border-style: solid;
-	border-color: #FFCA6E;
-	border-radius: 40px 25px;
-	border-width: 9px;
+/* Top Right */
+.rightMenu {
+  font-size: 1.5rem;
+  margin-top: 0.67rem;
+  margin-bottom: 0.67rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 
-	/* Font Styling */
-	vertical-align: bottom;
-	text-transform: uppercase;
-	letter-spacing: 8px;
-	font-size: 60px;
+  color: #FFD996;
 }
 
-/* Adjusts Size*/
-#TitleLogo {
-	margin-bottom: -13px;
-	width: 150px;
-	height: 120px;
+/* Bar Separation on DropDown */
+ul hr {
+  margin: 1%;
+  padding: 0;
+  text-align: center;
 }
 
-
-/* Aligns User/SignOut to right */
-#TopRight {
-	position: absolute;
-	width: 500px;
-	left: 760px;
-	margin-top: 25px;
-	text-align: center;
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  height: 450px
 }
 
-/* Sets font size */
-#User, #BarSeparator {
-	vertical-align: bottom;
-	font-size: 30px;
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+
+  .row.content {
+  	height:auto;
+  }
 }
 
-/* Sets font color */
-#UserName {
-	vertical-align: bottom;
-	color: #000000;
+/* Friends List Button */
+#friendsList {
+  position: fixed;
+  background-color: #111;
+  border: 0.75rem solid #111;
+  border-radius: 1rem;
+
+  color: #FFD996;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
-/* Adjusts size */
-#UserPhoto {
-	border: 0px solid black;
-	width: 75px;
-	height: 75px;
+#friendsList:hover {
+  color: white;
 }
 
-/* Sets font color and size */
-#SignOut {
-	vertical-align: -18px;
-	color: #000000;
-	font-size: 18px;
+/* Side Nav Popout */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-/* Sets hover color to orange */
-#UserName:hover, #SignOut:hover {
-	color: #FFCA6E;
+.sidenav a, .sidenav p {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFD996;
+    display: block;
+    transition: 0.3s
 }
 
-/* Sets border */
-#MenuBar {
-	clear: both;
-	position: absolute;
-	height: 60px;
-	width: 1280px;
-	top: 107px;
-	left: 5px;
-
-	background-color: #FFCA6E;
-	border-style: solid;
-	border-color: black;
-	border-radius: 16px;
-	border-width: 5px;
-
-	font-size: 35px;
-	z-index: -1;
+.sidenav a:hover, .offcanvas a:focus, .sidenav p:hover, .offcanvas p:focus{
+    color: #FFFFFF;
 }
 
-#LeftMenuBar {
-	position: absolute;
-	left: 118px;
-	color: #FFFFFF;
-	text-align: center;
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
-#RightMenuBar {
-	position: absolute;
-	right: 20px;
-
-	padding-right: 20px;
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
 }
 
-#ContactUs {
-	margin-left: 20px;
-	margin-right: 20px;
+#addFriend {
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
+
+	vertical-align: 100%;
 }
 
-#FriendsList {
-	position: absolute;
-	height: 550px;
-	width: 346px;
-	top: 170px;
-
-	background-color: #FFFFFF;
-	border: 5px solid #000000;
-	border-radius: 16px;
+ul {
+  list-style-type: none;
 }
 
-#FriendsMessage {
-	position: absolute;
-	height: 200px;
-	width: 330px;
-	top: 10px;
-	text-align: center;
-
-	font-size: 30px;
+/* Month header */
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #FFD996;
 }
 
-#FriendsMessage p {
-	font-size: 20px;
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
 }
 
-#AddFriendButton {
-	position: absolute;
-	height: 100px;
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color:#777;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+    padding: 5px;
+    background: #FFD996;
+    color: white !important
+}
+
+#myMeetups #createMeetup {
+	padding: 2rem;
 	width: 100%;
-	bottom: 0px;
-	background-color: #A0D8EB;
+	border: none;
+	border-radius: 1rem;
 
-	border-top: 5px;
-	border-left: 0px;
-	border-right: 0px;
-	border-bottom: 0px; 
-	border-style: solid;
-	border-color: black;
-	border-radius: 0px 0px 10px 10px;
+	cursor: pointer;
 
 	text-align: center;
-	font-size: 50px;
+	font-size: 2rem;
 }
 
-#MainBox {
-	position: absolute;
-	height: 550px;
-	width: 924px;
-	top: 170px;
-	left: 360px;
-	right: 10px;
-
-	background-color: #FFFFFF;
-	border: 5px solid #000000;
-	border-radius: 16px;
-	text-align: right;
+#myMeetups span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-#BigPaw {
-	position: absolute;
-	vertical-align: middle;
-	height: 90%;
-	width: 55%;
-	top: 6%;
-	bottom: 6%;
-	left: 2%;
+#myMeetups span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
 }
 
-#PawMessage {
-	position: absolute;
-	height: auto;
-	width: 25%;
-	top: 58%;
-	left: 16%;
-	text-align: center;
-	font-size: 40px;
+#myMeetups:hover span {
+  padding-right: 25px;
 }
 
-.Bones {
-	color: black;
-	font-size: 30px;
-	text-align: center;
+#myMeetups:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
-.Bones:hover {
-	color: #FFCA6E;
+#createMeetup span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-#MyMeetups, #CreateMeetup {
-	position: absolute;
-	height: 26%;
-	width: 35%;
-	right: 8%;
+#createMeetup span:after {
+  content: '+';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
 }
 
-#MyMeetups {
-	top: 15%;
+#createMeetup:hover span {
+  padding-left: 25px;
 }
 
-#CreateMeetup {
-	bottom: 15%;
+#createMeetup:hover span:after {
+  opacity: 1;
+  left: 0;
 }
 
-#MyMeetupsMessage, #CreateMeetupMessage {
-	position: absolute;
-	height: 50%;
-	width: 50%;
-}
-
-#MyMeetupsMessage {
-	top: 24%;
-	right: 1%;
-}
-
-#CreateMeetupMessage {
-	top: 68%;
-	right: 1%;
-}

@@ -1,105 +1,192 @@
-<!doctype html>
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<title>Home</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/homepage.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+	<!-- JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+
+	<!-- Toggle Popovers -->
+	<script>
+		$(document).ready(function(){
+		$('[data-toggle="popover"]').popover();
+		});
+	</script>
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+	<style>
+      body {
+        font-family: 'Coiny', cursive;
+      }
+    </style>
 </head>
 
 <body>
-	<!-- TOP -->
-	<div id="Top">
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
 
-		<!-- Links to Homepage, Title and Corgi Logo -->
-		<span>
-			<a href="homepage.html" id="TopLeft">
-				<span id="Title">StudyBuddy</span>
-				<img src="http://i.imgur.com/8nF4920.png" id="TitleLogo">
-			</a>
-		</span>
+		    	<!-- Collapse Button -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" 
+				data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
 
-		<!-- Shows signed in user and their profile picture -->
-		<span id="TopRight">
-			<span id="User">
-				Welcome Home!
+				<!-- Title/Logo -->
+	    		<a class="navbar-brand" href="homepage.html">
+	    			<span id="title" class="orange">StudyBuddy</span>
+	    		</a>
+	    	</div>
 
-				<!-- User Name and Profile Picture, LINK to Profile Page -->
-				<img src="http://i.imgur.com/mGhsq0V.png" id="UserPhoto">
-				<a href="profile.html" id="UserName">Corgi</a>
-			</span>
+		    <!-- Home/User/Options -->
+		    <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+				<ul class="nav navbar-nav">
 
-			<!-- Shows sign out option -->
-			<!-- Bar Separator -->
-			<span id="BarSeparator">|</span>
+					<!-- Home -->
+					<li class="active menu">
+						<a class="rightMenu" href="homepage.html">
+							Home
+						</a>
+					</li>
 
-			<!-- Sign Out Button LINK to Login page -->
-			<a href="login.html" id="SignOut">Sign Out</a>
-		</span>
+					<!-- User/Options -->
+					<li>
+						<a class="dropdown-toggle rightMenu" data-toggle="dropdown" href="">
+							<span class="orange">Corgi </span>
+							<span class="caret orange"></span>
+						</a>
+						<ul class="dropdown-menu text-center">
+							<li><a href="settings.html">Settings</a></li>
+							<li><a href="contact_us.html">Contact Us</a></li>
+							<li><a href="help.html">Help</a></li>
+							<hr>
+							<li><a href="login.html">Sign Out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<!-- Main Screen -->
+	<div class="container-fluid text-center">
+		<div class="row content">
+
+			<!-- Left Friends List SideNav -->
+			<div class="col-sm-3 text-left">
+
+				<!-- SideNav Button -->
+				<span id="friendsList" style="font-size:2rem;cursor:pointer" onclick="openNav()">
+					Friends Online <i style="font-size:2rem" class="fa">&#xf138;</i>
+				</span>
+
+				<script>
+					function openNav() {
+					    document.getElementById("mySidenav").style.width="250px";
+					}
+
+					function closeNav() {
+					    document.getElementById("mySidenav").style.width="0";
+					}
+				</script>
+
+				<!-- Sidenav Content -->
+		    	<div id="mySidenav" class="sidenav">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					<p>Shiba</p>
+					<p>Shiba</p>
+					<p>Shiba</p>
+					<p>Shiba</p>
+
+					<!-- Add Friends Button -->
+					<button type="button" id="addFriend" class="btn btn-primary btn-lg disabled">
+						+ Add Friends
+					</button>
+				</div>
+	    	</div>
+
+	    	<!-- Center Calendar -->
+	    	<div class="col-sm-8">
+				<div class="month"> 
+					<ul>
+						<li class="prev">&#10094;</li>
+						<li class="next">&#10095;</li>
+						<li>
+							November<br>
+							<span style="font-size:18px">2016</span>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="weekdays">
+					<li>Mo</li>
+					<li>Tu</li>
+					<li>We</li>
+					<li>Th</li>
+					<li>Fr</li>
+					<li>Sa</li>
+					<li>Su</li>
+				</ul>
+
+				<ul class="days"> 
+					<li>
+						<span class="active" data-toggle="popover" data-placement="top" title="Meetup" data-content="Where/When/Who" style="cursor:pointer">1</span>
+					</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+					<li>10</li>
+					<li>11</li>
+					<li>12</li>
+					<li>13</li>
+					<li>14</li>
+					<li>15</li>
+					<li>16</li>
+					<li>17</li>
+					<li>18</li>
+					<li>19</li>
+					<li>20</li>
+					<li>31</li>
+				</ul>
+			</div>
+
+
+		</div>
 	</div>
 
-	<!-- TOP MENU BAR -->
-	<div id="MenuBar">
-		<span id="LeftMenuBar">
-			Friends
-		</span>
+	<!-- Bottom Buttons -->
+	<footer class="container-fluid text-center">
+	    <div class="col-sm-offset-3 col-sm-4">
+			<a type="button" id="myMeetups" class="btn btn-info btn-lg" href="my_meetups.html">
+	    		<span>My Meetups</span>
+	    	</a>
+	    </div>
 
-		<span id="RightMenuBar">
-			<a href="settings.html">Settings</a>
-			<a href="contact_us.html" id="ContactUs">Contact Us</a>
-			<a href="help.html">Help</a>
-		</span>
-	</div>
+	    <div class="col-sm-4">
+	    	<a type="button" id="createMeetup" class="btn btn-success btn-lg" href="create_meetups.html">
+	    		<span>Create Meetup</span>
+	    	</a>
+		</div>
+	</footer>
 
-	<!-- FRIENDS LIST -->
-	<div id="FriendsList">
-		<span id="FriendsMessage">
-			You have no friends, why not try getting some?
-			<p>(When the feature becomes available!)</p>
-		</span>
-		<button  type="button" onclick="alert('Sorry, No Adding Friends At This Time')" id="AddFriendButton">
-			+ Add Friend
-		</button>
-	</div>
-
-	<!-- MAIN BOX -->
-	<div id="MainBox">
-
-		<!-- Paw Pad doesn't need to be linked to My Meetups,
-			 instead information should be shown as a popup when
-			 clicked -->
-		<span>
-			<img src="http://i.imgur.com/tK0R51e.png" id="BigPaw">
-		</span>
-
-		<span id="PawMessage">
-			No Meetups to Show
-		</span>
-		<!-- My/Create Meetup Buttons -->
-		<span>
-
-			<!-- My Meetups Button (Top)-->
-			<a href="my_meetups.html" class="Bones">
-				<img src="http://i.imgur.com/iDGB34j.png" id="MyMeetups">
-				<span id="MyMeetupsMessage">My Meetups</span>
-			</a>
-
-			<!-- Create Meetup Button (Bottom) -->
-			<a href="create_meetups.html" class="Bones">
-				<img src="http://i.imgur.com/iDGB34j.png" id="CreateMeetup">
-				<span id="CreateMeetupMessage">+ Create Meetup</span>
-			</a>
-		</span>
-	</div>
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
