@@ -2,10 +2,10 @@ var express = require('express');
 var http = require('http');
 var app = express();
 
-app.use(express.static('static'));
+app.use(express.static('views'));
 
 app.get('/', function (req, res) {
-  res.sendfile('static/homepage.html');
+  res.sendfile('views/homepage.html');
 });
 
 app.listen(process.env.PORT || 3000, function () {
