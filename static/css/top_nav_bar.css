@@ -18,17 +18,17 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* Top Nav Bar */
-.navbar {
-	margin: 0% 0% 1% 0%;
+.navbar-inverse {
+
 }
 
 /* Top Nav Bar Hrefs */
 #title, #options {
-  color: #FFE5B8;
+  color: #FFFFFF;
 }
 
 #title:hover, #options:hover {
-  color: #FFFFFF;
+  color: #FFE5B8;
 }
 
 /* Top Left */
@@ -54,6 +54,10 @@ h1, h2, h3, h4, h5, h6{
   margin-right: 0;
   font-weight: bold;
 
+  color: #FFE5B8;
+}
+
+nav .active {
   color: #FFE5B8;
 }
 
