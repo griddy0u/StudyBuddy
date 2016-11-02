@@ -10,8 +10,6 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   padding: auto;
-
-  font-family: 'Coiny', cursive;
 }
 
 /* Set All Header Fonts */
@@ -24,16 +22,7 @@ h1, h2, h3, h4, h5, h6{
 	margin: 0% 0% 1% 0%;
 }
 
-/* Title */
-.navbar-brand {
-  font-size: 3rem;
-  margin-top: 0.67rem;
-  margin-bottom: 0.67rem;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: bold;
-}
-
+/* Top Nav Bar Hrefs */
 #title, #options {
   color: #FFE5B8;
 }
@@ -42,9 +31,23 @@ h1, h2, h3, h4, h5, h6{
   color: #FFFFFF;
 }
 
+/* Top Left */
+.navbar-brand {
+  margin-top: 0.67rem;
+  margin-bottom: 0.67rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Title */
+#title {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
 /* Top Right */
 .rightMenu {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-top: 0.67rem;
   margin-bottom: 0.67rem;
   margin-left: 0;
@@ -52,6 +55,11 @@ h1, h2, h3, h4, h5, h6{
   font-weight: bold;
 
   color: #FFE5B8;
+}
+
+/* No Bullet Styles for ULs */
+ul {
+  list-style-type: none;
 }
 
 /* Bar Separation on DropDown */

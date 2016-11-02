@@ -1,6 +1,7 @@
 /* Friends List Button */
 #friendsList {
   position: fixed;
+  float: left;
   background-color: #111;
   border: 0.75rem solid #111;
   border-radius: 1rem;
@@ -8,6 +9,8 @@
   color: #FFE5B8;
   font-size: 1rem;
   font-weight: bold;
+
+  z-index: 1;
 }
 
 #friendsList:hover {
@@ -19,7 +22,7 @@
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     background-color: #111;
@@ -49,11 +52,6 @@
     margin-left: 50px;
 }
 
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
 #addFriend {
 	margin-left: 5%;
 	margin-right: 5%;
@@ -62,8 +60,10 @@
 	vertical-align: 100%;
 }
 
-ul {
-  list-style-type: none;
+.calendar {
+  position: fixed;
+  float: right;
+  margin-bottom: 1rem;
 }
 
 /* Month header */
@@ -136,7 +136,12 @@ ul {
     color: white !important
 }
 
+.myMeetupsButton, .createMeetupButton {
+  margin-top: 2rem;
+}
+
 #myMeetups #createMeetup {
+  margin-bottom: 2rem;
 	padding: 2rem;
 	width: 100%;
 	border: none;
@@ -197,4 +202,3 @@ ul {
   opacity: 1;
   left: 0;
 }
-
