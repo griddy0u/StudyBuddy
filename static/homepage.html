@@ -5,17 +5,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<!-- Corresponding CSS File -->
 	<link href="css/homepage.css" rel="stylesheet"/>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
-	<!-- JavaScript -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-	</script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-	</script>
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<!-- Toggle Popovers -->
 	<script>
@@ -48,7 +49,7 @@
 
 				<!-- Title/Logo -->
 	    		<a class="navbar-brand" href="homepage.html">
-	    			<span id="title" class="orange">StudyBuddy</span>
+	    			<span id="title">StudyBuddy</span>
 	    		</a>
 	    	</div>
 
@@ -65,9 +66,9 @@
 
 					<!-- User/Options -->
 					<li>
-						<a class="dropdown-toggle rightMenu" data-toggle="dropdown" href="">
-							<span class="orange">Corgi </span>
-							<span class="caret orange"></span>
+						<a id="options" class="dropdown-toggle rightMenu" data-toggle="dropdown" href="">
+							<span>Corgi </span>
+							<span class="caret "></span>
 						</a>
 						<ul class="dropdown-menu text-center">
 							<li><a href="settings.html">Settings</a></li>
@@ -107,10 +108,12 @@
 				<!-- Sidenav Content -->
 		    	<div id="mySidenav" class="sidenav">
 					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-					<p>Shiba</p>
-					<p>Shiba</p>
-					<p>Shiba</p>
-					<p>Shiba</p>
+					<span style="cursor:default">
+						<p>Shiba</p>
+						<p>Shiba</p>
+						<p>Shiba</p>
+						<p>Shiba</p>
+					</span>
 
 					<!-- Add Friends Button -->
 					<button type="button" id="addFriend" class="btn btn-primary btn-lg disabled">
@@ -182,7 +185,7 @@
 	    </div>
 
 	    <div class="col-sm-4">
-	    	<a type="button" id="createMeetup" class="btn btn-success btn-lg" href="create_meetups.html">
+	    	<a type="button" id="createMeetup" class="btn btn-success btn-lg" href="create_meetup.html">
 	    		<span>Create Meetup</span>
 	    	</a>
 		</div>

@@ -11,6 +11,11 @@ body {
   padding: auto;
 }
 
+/* Set All Header Fonts */
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Coiny', cursive;
+}
+
 /* Top Nav Bar */
 .navbar {
 	margin: 0% 0% 1% 0%;
@@ -26,15 +31,11 @@ body {
   font-weight: bold;
 }
 
-.orange {
-  color: #FFD996;
+#title, #options {
+  color: #FFE5B8;
 }
 
-.orange:hover {
-  color: #FFFFFF;
-}
-
-#title:hover {
+#title:hover, #options:hover {
   color: #FFFFFF;
 }
 
@@ -80,14 +81,6 @@ ul {
   list-style-type: none;
 }
 
-h1, h3 {
-  font-family: 'Coiny', cursive;
-}
-
 .btn {
   margin-bottom: 10px;
-}
-
-.collapse p {
-  text-indent: 2rem;
 }

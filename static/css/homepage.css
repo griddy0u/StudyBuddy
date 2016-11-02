@@ -2,6 +2,7 @@
 body {
   /* Background Image taken from Cocorini, cocorini.tumblr.com/patterns */
   /* background-image: url("http://31.media.tumblr.com/60258e73e78ddd833e85bd49fac2a5a8/tumblr_mt67noIbPl1ru3nbdo4_r1_100.png"); */
+  background-image: url("http://36.media.tumblr.com/ebe54054565476bcb1b95fac4375428c/tumblr_novhnrwKja1ru3nbdo9_r2_250.png");
   background-color: #FFFFFF;
 
   /* Setting margins for all content */
@@ -9,6 +10,11 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   padding: auto;
+}
+
+/* Set All Header Fonts */
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Coiny', cursive;
 }
 
 /* Top Nav Bar */
@@ -26,15 +32,11 @@ body {
   font-weight: bold;
 }
 
-.orange {
-  color: #FFD996;
+#title, #options {
+  color: #FFE5B8;
 }
 
-.orange:hover {
-  color: #FFFFFF;
-}
-
-#title:hover {
+#title:hover, #options:hover {
   color: #FFFFFF;
 }
 
@@ -47,7 +49,7 @@ body {
   margin-right: 0;
   font-weight: bold;
 
-  color: #FFD996;
+  color: #FFE5B8;
 }
 
 /* Bar Separation on DropDown */
@@ -83,7 +85,7 @@ ul hr {
   border: 0.75rem solid #111;
   border-radius: 1rem;
 
-  color: #FFD996;
+  color: #FFE5B8;
   font-size: 1rem;
   font-weight: bold;
 }
@@ -110,7 +112,7 @@ ul hr {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #FFD996;
+    color: #FFE5B8;
     display: block;
     transition: 0.3s
 }
