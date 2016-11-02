@@ -1,6 +1,3 @@
-/*$.getJSON("data.json", function(data){
-  console.log(data);
-});*/
 $.ajax({
     url: 'data.json',
     dataType: 'json',
@@ -177,7 +174,7 @@ function initMap() {
   });
 }
 
-$('#datetimepicker').datetimepicker();
+jQuery('#datetimepicker').datetimepicker();
 
 function updateMap(x, y){
   var uluru = {lat: x, lng: y};

@@ -5,17 +5,6 @@ footer {
   padding: 15px;
 }
 
-#friendsList {
-  background-color: #111;
-  border: 1rem solid #111;
-  border-radius: 1rem;
-  color: #818181;
-}
-
-#friendsList:hover {
-  color: white;
-}
-
 #friend_dropdown{
   left: 50%;
   right: auto;
@@ -28,47 +17,7 @@ footer {
   text-align: center;
   transform: translate(-50%, 0);
 }
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 12%;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
 
-.sidenav span{
-    padding: 8px 8px 8px 32px;
-    text-decoration: underline;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-.sidenav .checkbox {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav .checkbox:hover, .offcanvas .checkbox:focus{
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
 ul.scroll-menu {
     position:relative;
     display:inherit;
@@ -108,7 +57,7 @@ ul.scroll-menu {
   text-align: center;
   transform: translate(-50%, 0);
 }
-  
+
 .radio{
   text-align: left;
   margin-left: 1rem;

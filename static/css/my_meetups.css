@@ -1,0 +1,42 @@
+.meeting{
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0.5rem;
+}
+ul{
+  padding-left: 0;
+  list-style-type: none;
+}
+ul.scroll-menu {
+  position:relative;
+  display:inherit;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  -moz-overflow-scrolling:touch;
+  -ms-overflow-scrolling:touch;
+  -o-overflow-scrolling:touch;
+  overflow-scrolling:touch;
+  top:0;
+  left:0;
+  width:100%;
+  height:auto;
+  max-height:500px;
+  margin:0;
+  border-left:none;
+  border-right:none;
+  -webkit-border-radius:0;
+  -moz-border-radius:0;
+  -ms-border-radius:0;
+  -o-border-radius:0;
+  border-radius:0;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  -ms-box-shadow:none;
+  -o-box-shadow:none;
+  box-shadow:none
+}
+.scrollable-menu {
+  height: auto;
+  max-height: 50rem;
+  overflow-x: hidden;
+}

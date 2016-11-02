@@ -30,11 +30,11 @@
 
 <body>
 	<nav class="navbar navbar-inverse">
-		<div class="container-fluid">
+		<div class="container-fluid col-sm-12">
 			<div class="navbar-header">
 
 		    	<!-- Collapse Button -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" 
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
 				data-target="#myNavbar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -53,7 +53,7 @@
 
 					<!-- Home -->
 					<li class="active menu">
-						<a class="rightMenu" href="homepage.html">
+						<a id="homeButton" class="rightMenu" href="homepage.html">
 							Home
 						</a>
 					</li>
@@ -62,7 +62,7 @@
 					<li>
 						<a id="options" class="dropdown-toggle rightMenu" data-toggle="dropdown" href="">
 							<span>Corgi </span>
-							<span class="caret "></span>
+							<span class="caret"></span>
 						</a>
 
 						<ul class="dropdown-menu text-center">
@@ -80,28 +80,97 @@
 
 	<!-- Main Screen -->
 	<div class="container-fluid text-center">
-		<h1>My Meetups</h1>
-		<br>
-		<button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#richard">Richard Oh</button>
-		<div id="richard" class="collapse">
-			<p>rioh@ucsd.edu</p>
-			<p>- OR -</p>
-			<p> (###)-###-#### </p>
-		</div>
-		<hr>
-		<button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#ingrid">Ingrid Ou</button>
-		<div id="ingrid" class="collapse">
-			<p>iou@ucsd.edu</p>
-			<p>- OR -</p>
-			<p> (###)-###-#### </p>
-		</div>
-		<hr>
-		<button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#jovan">Jovan Limosnero</button>
-		<div id="jovan" class="collapse">
-			<p>jlimosne@ucsd.edu</p>
-			<p>- OR -</p>
-			<p> (###)-###-#### </p>
-		</div>
+		<div class="row content">
+			<h1>My Meetups</h1>
+			<br>
+			<ul class="scrollable-menu" role="menu" id="meetings_scroll">
+				<li>
+					<div class="container-fluid text-center meeting" id="meet1">
+						<h2>Meeting 1:</h2>
+						<div class="col-sm-4">
+							<h4>Attendees:</h4>
+							<h5 id="a1">N/A</h5>
+						</div>
+						<div class="col-sm-4">
+							<h4>Location:</h4>
+							<h5 id="l1">N/A</h5>
+						</div>
+						<div class="col-sm-4">
+							<h4>Date/Time:</h4>
+							<h5 id="d1">N/A</h5>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="container-fluid text-center meeting" id="meet2">
+						<h2>Meeting 2:</h2>
+						<div class="col-sm-4">
+							<h4>Attendees:</h4>
+							<h5>N/A</h5>
+						</div>
+						<div class="col-sm-4">
+							<h4>Location:</h4>
+							<h5>N/A</h5>
+						</div>
+						<div class="col-sm-4">
+							<h4>Date/Time:</h4>
+							<h5>N/A</h5>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="container-fluid text-center meeting" id="meet3">
+						<h2>Meeting 3:</h2>
+						<div class="col-sm-4">
+							<h4>Attendees:</h4>
+							<h5>N/A</h5>
+						</div>
+						<div class="col-sm-4">
+							<h4>Location:</h4>
+							<h5>N/A</h5>
+						</div>
+						<div class="col-sm-4">
+							<h4>Date/Time:</h4>
+							<h5>N/A</h5>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="container-fluid text-center meeting" id="meet4">
+						<h2>Meeting 4:</h2>
+						<div class="col-sm-4">
+							<h4>Attendees:</h4>
+							<h5>N/A</h5>
+						</div>
+						<div class="col-sm-4">
+							<h4>Location:</h4>
+							<h5>N/A</h5>
+						</div>
+						<div class="col-sm-4">
+							<h4>Date/Time:</h4>
+							<h5>N/A</h5>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="container-fluid text-center meeting" id="meet5">
+						<h2>Meeting 5:</h2>
+						<div class="col-sm-4">
+							<h4>Attendees:</h4>
+							<h5>N/A</h5>
+						</div>
+						<div class="col-sm-4">
+							<h4>Location:</h4>
+							<h5>N/A</h5>
+						</div>
+						<div class="col-sm-4">
+							<h4>Date/Time:</h4>
+							<h5>N/A</h5>
+						</div>
+					</div>
+				</li>
+			</div>
 	</div>
+	<script src="js/my_meetups.js"></script>
 </body>
 </html>

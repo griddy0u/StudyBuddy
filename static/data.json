@@ -105,8 +105,8 @@
   "meetups": [
     {
       "friends": ["Gary Gillespie", "Rick Ord", "Russell Impagliazzo", null, null],
-      "meeting_time": null,
-      "location": null
+      "meeting_time": "2016/11/05 14:00",
+      "location": "Sun God Lounge"
     },
     {
       "friends": [null, null, null, null, null],
