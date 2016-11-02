@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Test Login</title>
+  <title>Login</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-  <link href="css/login.css" rel="stylesheet"/>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
-  <!-- JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-    </script>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Corresponding CSS File -->
+  <link href="css/login.css" rel="stylesheet"/>
 
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
@@ -33,14 +34,14 @@
   <div class="container">
     <form class="form-horizontal">
       <div class="form-group">
-        <label class="control-label col-sm-offset-2 col-sm-2" for="email">Email:</label>
+        <label class="control-label col-sm-offset-2 col-sm-2 leftText" for="email">Email:</label>
         <div class="col-sm-5">
           <input type="email" class="form-control" id="email" placeholder="Enter email">
         </div>
       </div>
 
       <div class="form-group">
-        <label class="control-label col-sm-offset-2 col-sm-2" for="pwd">Password:</label>
+        <label class="control-label col-sm-offset-2 col-sm-2 leftText" for="pwd">Password:</label>
         <div class="col-sm-5"> 
           <input type="password" class="form-control" id="pwd" placeholder="Enter password">
         </div>
@@ -49,14 +50,14 @@
       <div class="form-group"> 
         <div class="col-sm-offset-4 col-sm-5">
           <div class="checkbox">
-            <label><input type="checkbox">Remember Me</label>
+            <label><input id="rememberMe" type="checkbox">Remember Me</label>
           </div>
         </div>
       </div>
 
       <div class="form-group"> 
         <div class="col-sm-offset-4 col-sm-5">
-          <a href="homepage.html" type="submit" class="btn btn-primary btn-block">Login</a>
+          <a href="homepage.html" type="submit" id="login" class="btn btn-primary btn-block">Login</a>
         </div>
       </div>
     </form>

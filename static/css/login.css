@@ -12,13 +12,16 @@ body {
 	/* background-image: url("http://31.media.tumblr.com/60258e73e78ddd833e85bd49fac2a5a8/tumblr_mt67noIbPl1ru3nbdo4_r1_100.png"); */
 	background-color: #FFFFFF;
 
-   color: #FFFFFF;
    text-shadow:
        2px 2px 0 #FFB533,
      -1px -1px 0 #FFB533,  
       1px -1px 0 #FFB533,
       -1px 1px 0 #FFB533,
        1px 1px 0 #FFB533;
+}
+
+* {
+	color: #FFFFFF;
 }
 
 #title {
@@ -43,4 +46,17 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
+}
+
+.leftText, #login {
+	font-size: 2rem;
+}
+
+#login {
+	text-shadow:
+		0px 0px 0 #000000,
+		0px 0px 0 #000000,  
+		0px 0px 0 #000000,
+		0px 0px 0 #000000,
+		0px 0px 0 #000000;
 }

@@ -5,17 +5,19 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/contact_us.css" rel="stylesheet"/>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
-	<!-- JavaScript -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-	</script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-	</script>
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Corresponding CSS File -->
+	<link href="css/top_nav_bar.css" rel="stylesheet"/>
+	<link href="css/contact_us.css" rel="stylesheet"/>
 
 	<!-- Font -->
 	<link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
@@ -41,7 +43,7 @@
 
 				<!-- Title/Logo -->
 	    		<a class="navbar-brand" href="homepage.html">
-	    			<span id="title" class="orange">StudyBuddy</span>
+	    			<span id="title">StudyBuddy</span>
 	    		</a>
 	    	</div>
 
@@ -50,17 +52,17 @@
 				<ul class="nav navbar-nav">
 
 					<!-- Home -->
-					<li class="menu">
+					<li class="active menu">
 						<a class="rightMenu" href="homepage.html">
-							<span class="orange">Home</span>
+							Home
 						</a>
 					</li>
 
 					<!-- User/Options -->
 					<li>
-						<a class="dropdown-toggle rightMenu" data-toggle="dropdown" href="">
-							<span class="orange">Corgi </span>
-							<span class="caret orange"></span>
+						<a id="options" class="dropdown-toggle rightMenu" data-toggle="dropdown" href="">
+							<span>Corgi </span>
+							<span class="caret "></span>
 						</a>
 
 						<ul class="dropdown-menu text-center">

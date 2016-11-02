@@ -5,17 +5,19 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/homepage.css" rel="stylesheet"/>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
-	<!-- JavaScript -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-	</script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-	</script>
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Corresponding CSS File -->
+	<link href="css/top_nav_bar.css" rel="stylesheet"/>
+	<link href="css/homepage.css" rel="stylesheet"/>
 
 	<!-- Toggle Popovers -->
 	<script>
@@ -48,7 +50,7 @@
 
 				<!-- Title/Logo -->
 	    		<a class="navbar-brand" href="homepage.html">
-	    			<span id="title" class="orange">StudyBuddy</span>
+	    			<span id="title">StudyBuddy</span>
 	    		</a>
 	    	</div>
 
@@ -65,9 +67,9 @@
 
 					<!-- User/Options -->
 					<li>
-						<a class="dropdown-toggle rightMenu" data-toggle="dropdown" href="">
-							<span class="orange">Corgi </span>
-							<span class="caret orange"></span>
+						<a id="options" class="dropdown-toggle rightMenu" data-toggle="dropdown" href="">
+							<span>Corgi </span>
+							<span class="caret "></span>
 						</a>
 						<ul class="dropdown-menu text-center">
 							<li><a href="settings.html">Settings</a></li>
@@ -81,9 +83,10 @@
 			</div>
 		</div>
 	</nav>
-	
+	<br>
+
 	<!-- Main Screen -->
-	<div class="container-fluid text-center">
+	<div class="container text-center">
 		<div class="row content">
 
 			<!-- Left Friends List SideNav -->
@@ -91,7 +94,7 @@
 
 				<!-- SideNav Button -->
 				<span id="friendsList" style="font-size:2rem;cursor:pointer" onclick="openNav()">
-					Friends Online <i style="font-size:2rem" class="fa">&#xf138;</i>
+					Friends List <i style="font-size:2rem" class="fa">&#xf138;</i>
 				</span>
 
 				<script>
@@ -107,10 +110,12 @@
 				<!-- Sidenav Content -->
 		    	<div id="mySidenav" class="sidenav">
 					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-					<p>Shiba</p>
-					<p>Shiba</p>
-					<p>Shiba</p>
-					<p>Shiba</p>
+					<span style="cursor:default">
+						<p>Shiba</p>
+						<p>Shiba</p>
+						<p>Shiba</p>
+						<p>Shiba</p>
+					</span>
 
 					<!-- Add Friends Button -->
 					<button type="button" id="addFriend" class="btn btn-primary btn-lg disabled">
@@ -120,14 +125,14 @@
 	    	</div>
 
 	    	<!-- Center Calendar -->
-	    	<div class="col-sm-8">
+	    	<div class="col-sm-8 calendar">
 				<div class="month"> 
 					<ul>
 						<li class="prev">&#10094;</li>
 						<li class="next">&#10095;</li>
 						<li>
-							November<br>
-							<span style="font-size:18px">2016</span>
+							<span style="font-size:4rem">November</span><br>
+							<span style="font-size:2rem">2016</span>
 						</li>
 					</ul>
 				</div>
@@ -165,6 +170,16 @@
 					<li>18</li>
 					<li>19</li>
 					<li>20</li>
+					<li>21</li>
+					<li>22</li>
+					<li>23</li>
+					<li>24</li>
+					<li>25</li>
+					<li>26</li>
+					<li>27</li>
+					<li>28</li>
+					<li>29</li>
+					<li>30</li>
 					<li>31</li>
 				</ul>
 			</div>
@@ -175,14 +190,14 @@
 
 	<!-- Bottom Buttons -->
 	<footer class="container-fluid text-center">
-	    <div class="col-sm-offset-3 col-sm-4">
+	    <div class="col-sm-offset-3 col-sm-4 myMeetupsButton">
 			<a type="button" id="myMeetups" class="btn btn-info btn-lg" href="my_meetups.html">
 	    		<span>My Meetups</span>
 	    	</a>
 	    </div>
 
-	    <div class="col-sm-4">
-	    	<a type="button" id="createMeetup" class="btn btn-success btn-lg" href="create_meetups.html">
+	    <div class="col-sm-4 createMeetupButton">
+	    	<a type="button" id="createMeetup" class="btn btn-success btn-lg" href="create_meetup.html">
 	    		<span>Create Meetup</span>
 	    	</a>
 		</div>
