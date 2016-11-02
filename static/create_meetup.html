@@ -24,49 +24,54 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-inverse">
-		  <div class="container-fluid">
-	        <div class="navbar-header">
+    <nav class="navbar navbar-inverse row">
+      <div class="container-fluid col-sm-12">
+        <div class="navbar-header">
 
-		    	  <!-- Collapse Button -->
-				    <button type="button" class="navbar-toggle" data-toggle="collapse"
-				    data-target="#myNavbar">
-					    <span class="icon-bar"></span>
-					    <span class="icon-bar"></span>
-					    <span class="icon-bar"></span>
-				    </button>
+            <!-- Collapse Button -->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" 
+          data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
 
-				    <!-- Title/Logo -->
-	    		  <a class="navbar-brand" href="homepage.html">
-	    			  <span id="title">StudyBuddy</span>
-	    		  </a>
-	    	  </div>
+          <!-- Title/Logo -->
+            <a class="navbar-brand" href="homepage.html">
+              <span id="title">StudyBuddy</span>
+            </a>
+          </div>
+
           <!-- Home/User/Options -->
-		      <div class="collapse navbar-collapse navbar-right" id="myNavbar">
-				  <ul class="nav navbar-nav">
+          <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+          <ul class="nav navbar-nav">
 
-					  <!-- Home -->
-					  <li class="active menu">
-						  <a class="rightMenu" href="homepage.html">
-							  Home
-						  </a>
-					  </li>
-					  <!-- Other Options -->
-					  <li>
-						  <a class="dropdown-toggle rightMenu" data-toggle="dropdown" href="">Directory<span class="caret"></span></a>
-						  <ul class="dropdown-menu text-center">
-							  <li><a href="settings.html">Settings</a></li>
-						    <li><a href="contact_us.html">Contact Us</a></li>
-							  <li><a href="help.html">Help</a></li>
+            <!-- Home -->
+            <li class="active menu">
+              <a id="homeButton" class="rightMenu" href="homepage.html">
+                Home
+              </a>
+            </li>
+
+            <!-- User/Options -->
+            <li>
+              <a id="options" class="dropdown-toggle rightMenu" data-toggle="dropdown" href="">
+                <span>Corgi </span>
+                <span class="caret "></span>
+              </a>
+              <ul class="dropdown-menu text-center">
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="help.html">Help</a></li>
                 <hr>
-						    <li><a href="login.html">Sign Out</a></li>
-						  </ul>
-					  </li>
-				  </ul>
-			  </div>
-		  </div>
-	  </nav>
-
+                <li><a href="login.html">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
     <!-- Main Screen -->
     <div class="container-fluid text-center" id="main">
       <div>
