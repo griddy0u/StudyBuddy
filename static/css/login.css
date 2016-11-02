@@ -1,9 +1,6 @@
 html { 
-  background: url(http://i.imgur.com/QoDwTz3.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url(http://i.imgur.com/QoDwTz3.jpg) center center fixed;
+  background-size: 100%;
 }
 
 /*Applies background image and color of website */
