@@ -69,8 +69,8 @@
 
 .calendar {
   margin-bottom: 1rem;
+  height: 100%;
   width: 100%;
-  min-width: 580px;
   z-index: -1;
 }
 
@@ -79,7 +79,6 @@
     padding: 70px 25px;
     max-height: 200px;
     width: 100%;
-    min-width: 60%;
     background: #FFD996;
 }
 
