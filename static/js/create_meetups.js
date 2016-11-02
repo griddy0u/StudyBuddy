@@ -12,8 +12,7 @@ $.ajax({
         switch(index){
           case 0:
             if(value.name == null){
-              var ele = document.getElementById("friend1");
-              ele.parentNode.removeChild(ele);
+              document.getElementById("friend1").style.display='none';
             }
             else{
               $("#friend1").append(value.name);
@@ -21,8 +20,7 @@ $.ajax({
             break;
           case 1:
             if(value.name == null){
-              var ele = document.getElementById("friend2");
-              ele.parentNode.removeChild(ele);
+              document.getElementById("friend2").style.display='none';
             }
             else{
               $("#friend2").append(value.name);
@@ -30,8 +28,7 @@ $.ajax({
             break;
           case 2:
             if(value.name == null){
-              var ele = document.getElementById("friend3");
-              ele.parentNode.removeChild(ele);
+              document.getElementById("friend3").style.display='none';
             }
             else{
               $("#friend3").append(value.name);
@@ -39,8 +36,7 @@ $.ajax({
             break;
           case 3:
             if(value.name == null){
-              var ele = document.getElementById("friend4");
-              ele.parentNode.removeChild(ele);
+              document.getElementById("friend4").style.display='none';
             }
             else{
               $("#friend4").append(value.name);
@@ -48,8 +44,7 @@ $.ajax({
             break;
           case 4:
             if(value.name == null){
-              var ele = document.getElementById("friend5");
-              ele.parentNode.removeChild(ele);
+              document.getElementById("friend5").style.display='none';
             }
             else{
               $("#friend5").append(value.name);
@@ -57,8 +52,7 @@ $.ajax({
             break;
           case 5:
             if(value.name == null){
-              var ele = document.getElementById("friend6");
-              ele.parentNode.removeChild(ele);
+              document.getElementById("friend6").style.display='none';
             }
             else{
               $("#friend6").append(value.name);
@@ -66,8 +60,7 @@ $.ajax({
             break;
           case 6:
             if(value.name == null){
-              var ele = document.getElementById("friend7");
-              ele.parentNode.removeChild(ele);
+              document.getElementById("friend7").style.display='none';
             }
             else{
               $("#friend7").append(value.name);
@@ -75,8 +68,7 @@ $.ajax({
             break;
           case 7:
             if(value.name == null){
-              var ele = document.getElementById("friend8");
-              ele.parentNode.removeChild(ele);
+              document.getElementById("friend8").style.display='none';
             }
             else{
               $("#friend8").append(value.name);
@@ -84,8 +76,7 @@ $.ajax({
             break;
           case 8:
             if(value.name == null){
-              var ele = document.getElementById("friend9");
-              ele.parentNode.removeChild(ele);
+              document.getElementById("friend9").style.display='none';
             }
             else{
               $("#friend9").append(value.name);
@@ -93,8 +84,7 @@ $.ajax({
             break;
           case 9:
             if(value.name == null){
-              var ele = document.getElementById("friend10");
-              ele.parentNode.removeChild(ele);
+              document.getElementById("friend10").style.display='none';
             }
             else{
               $("#friend10").append(value.name);
@@ -102,8 +92,7 @@ $.ajax({
             break;
           case 10:
             if(value.name == null){
-              var ele = document.getElementById("friend11");
-              ele.parentNode.removeChild(ele);
+              document.getElementById("friend11").style.display='none';
             }
             else{
               $("#friend11").append(value.name);
@@ -111,8 +100,7 @@ $.ajax({
             break;
           case 11:
             if(value.name == null){
-              var ele = document.getElementById("friend12");
-              ele.parentNode.removeChild(ele);
+              document.getElementById("friend12").style.display='none';
             }
             else{
               $("#friend12").append(value.name);
@@ -120,8 +108,7 @@ $.ajax({
             break;
           case 12:
             if(value.name == null){
-              var ele = document.getElementById("friend13");
-              ele.parentNode.removeChild(ele);
+              document.getElementById("friend13").style.display='none';
             }
             else{
               $("#friend13").append(value.name);
@@ -129,8 +116,7 @@ $.ajax({
             break;
           case 13:
             if(value.name == null){
-              var ele = document.getElementById("friend14");
-              ele.parentNode.removeChild(ele);
+              document.getElementById("friend14").style.display='none';
             }
             else{
               $("#friend14").append(value.name);
@@ -138,8 +124,7 @@ $.ajax({
             break;
           case 14:
             if(value.name == null){
-              var ele = document.getElementById("friend15");
-              ele.parentNode.removeChild(ele);
+              document.getElementById("friend15").style.display='none';
             }
             else{
               $("#friend15").append(value.name);
@@ -147,8 +132,36 @@ $.ajax({
             break;
         }
       });
-      /* Loads locations in */
 
+      /* Loads locations in */
+      $(data.locations).each(function(index, value){
+        switch(index){
+          case 0:
+            $("#loc1").append(value.name);
+            break;
+          case 1:
+            $("#loc2").append(value.name);
+            break;
+          case 2:
+            $("#loc3").append(value.name);
+            break;
+          case 3:
+            $("#loc4").append(value.name);
+            break;
+          case 4:
+            $("#loc5").append(value.name);
+            break;
+          case 5:
+            $("#loc6").append(value.name);
+            break;
+          case 6:
+            $("#loc7").append(value.name);
+            break;
+          case 7:
+            $("#loc8").append(value.name);
+            break;
+        }
+      });
     }
 });
 
@@ -163,6 +176,7 @@ function initMap() {
     map: map
   });
 }
+
 $('#datetimepicker').datetimepicker();
 
 function updateMap(x, y){
@@ -177,34 +191,54 @@ function updateMap(x, y){
   });
 }
 function modifyLocInfo(str){
-  /* var jsonFile = $.getjson("data.json", function(json){
-
-  });*/
   document.getElementById('loc_text').innerHTML = str;
-  switch(str){
-    case "Geisel":
-      updateMap(32.8811, -117.2376);
-      document.getElementById('quiet').innerHTML = "Moderately noisy";
-      document.getElementById('crowded').innerHTML = "Extremely crowded";
-      break;
-      case "JK Wood Lounge":
-      updateMap(32.8840, -117.2333);
-      document.getElementById('quiet').innerHTML = "Extremely quiet";
-      document.getElementById('crowded').innerHTML = "Moderately crowded";
-      break;
-    case "Sun God Lounge":
-      updateMap(32.8801, -117.2371);
-      document.getElementById('quiet').innerHTML = "Moderately quiet";
-      document.getElementById('crowded').innerHTML = "Moderately crowded";
-      break;
-    case "Price Center":
-      updateMap(32.8797, -117.2362);
-      document.getElementById('quiet').innerHTML = "Extremely noisy";
-      document.getElementById('crowded').innerHTML = "Extremely crowded";
-      break;
-    case "The Village":
-      updateMap(32.8879, -117.2423);
-      document.getElementById('quiet').innerHTML = "Very quiet";
-      document.getElementById('crowded').innerHTML = "Moderately empty";
-  }
+  $.ajax({
+    url: 'data.json',
+    dataType: 'json',
+    type: 'get',
+    cache: true,
+    success: function(data){
+      switch(str){
+        case data.locations[0].name:
+          updateMap(data.locations[0].coord.lat, data.locations[0].coord.lng);
+          document.getElementById('quiet').innerHTML = data.locations[0].quiet;
+          document.getElementById('crowded').innerHTML = data.locations[0].crowded;
+          break;
+        case data.locations[1].name:
+          updateMap(data.locations[1].coord.lat, data.locations[1].coord.lng);
+          document.getElementById('quiet').innerHTML = data.locations[1].quiet;
+          document.getElementById('crowded').innerHTML = data.locations[1].crowded;
+          break;
+        case data.locations[2].name:
+          updateMap(data.locations[2].coord.lat, data.locations[2].coord.lng);
+          document.getElementById('quiet').innerHTML = data.locations[2].quiet;
+          document.getElementById('crowded').innerHTML = data.locations[2].crowded;
+          break;
+        case data.locations[3].name:
+          updateMap(data.locations[3].coord.lat, data.locations[3].coord.lng);
+          document.getElementById('quiet').innerHTML = data.locations[3].quiet;
+          document.getElementById('crowded').innerHTML = data.locations[3].crowded;
+          break;
+        case data.locations[4].name:
+          updateMap(data.locations[4].coord.lat, data.locations[4].coord.lng);
+          document.getElementById('quiet').innerHTML = data.locations[4].quiet;
+          document.getElementById('crowded').innerHTML = data.locations[4].crowded;
+          break;
+        case data.locations[5].name:
+          updateMap(data.locations[5].coord.lat, data.locations[5].coord.lng);
+          document.getElementById('quiet').innerHTML = data.locations[5].quiet;
+          document.getElementById('crowded').innerHTML = data.locations[5].crowded;
+          break;
+        case data.locations[6].name:
+          updateMap(data.locations[6].coord.lat, data.locations[6].coord.lng);
+          document.getElementById('quiet').innerHTML = data.locations[6].quiet;
+          document.getElementById('crowded').innerHTML = data.locations[6].crowded;
+          break;
+        case data.locations[7].name:
+          updateMap(data.locations[7].coord.lat, data.locations[7].coord.lng);
+          document.getElementById('quiet').innerHTML = data.locations[7].quiet;
+          document.getElementById('crowded').innerHTML = data.locations[7].crowded;
+      }
+    }
+  });
 }
