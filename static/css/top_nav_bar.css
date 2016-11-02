@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6{
   color: #FFFFFF;
   font-size: 4rem;
   font-weight: bold;
+  transition: 0.3s;
 }
 
 /* Color of Title while Hovering */
@@ -52,12 +53,17 @@ h1, h2, h3, h4, h5, h6{
   margin-left: 0;
   margin-right: 0;
   font-weight: bold;
+  transition: 0.3s;
+}
+
+#homeButton {
+  background-color: #96BCFF;
+  border-radius: 1rem;
 }
 
 /* Sets Home Button Styling */
-#homeButton, #homeButton:hover, #homeButton:focus {
+#homeButton:hover, #homeButton:focus {
   background-color: #70A4FF;
-  border-radius: 1rem;
 }
 
 /* Sets Username Color and Rounded Background Border */
@@ -80,6 +86,7 @@ h1, h2, h3, h4, h5, h6{
 /* Sets Color of Text for the Drop Down Menu */
 .dropdown-menu > li > a {
   color: #96BCFF;
+  transition: 0.3s;
 }
 
 /* Sets Color of Text while Hovering for the Drop Down Menu */
@@ -116,5 +123,9 @@ ul hr {
 
   .row.content {
   	height:auto;
+  }
+
+  .calendar {
+    min-width: 580px;
   }
 }

@@ -5,6 +5,7 @@
       "password":"password"
     }
   ],
+
   "friends":[
     {
       "name":"Gary Gillespie"
@@ -52,6 +53,7 @@
       "name":null
     }
   ],
+
   "locations":[
     {
       "name": "Geisel Library",
@@ -102,6 +104,7 @@
       "crowded": "Moderately empty"
     }
   ],
+  
   "meetups": [
     {
       "friends": ["Gary Gillespie", "Rick Ord", "Russell Impagliazzo", null, null],
