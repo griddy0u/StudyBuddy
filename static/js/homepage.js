@@ -161,7 +161,7 @@ $.ajax({
         }
 
         if (numOfFriends != 0) {
-          ocument.getElementById("noFriends").style.display='none';
+          document.getElementById("noFriends").style.display='none';
         }
       });
     }
