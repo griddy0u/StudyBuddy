@@ -1,3 +1,12 @@
+.btn {
+	margin-bottom: 1rem;
+}
+
 #richard, #ingrid, #jovan {
-  margin-top: 10px;
+	margin: auto;
+	padding: auto;
+	width: 25%;
+	border: 1px solid #FFFFFF;
+	border-radius: 1rem;
+	background-color: #FFFFFF;
 }
