@@ -2,7 +2,8 @@
 body {
   /* Background Image taken from Cocorini, cocorini.tumblr.com/patterns */
   /* background-image: url("http://31.media.tumblr.com/60258e73e78ddd833e85bd49fac2a5a8/tumblr_mt67noIbPl1ru3nbdo4_r1_100.png"); */
-  background-image: url("http://36.media.tumblr.com/ebe54054565476bcb1b95fac4375428c/tumblr_novhnrwKja1ru3nbdo9_r2_250.png");
+  /* background-image: url("http://36.media.tumblr.com/ebe54054565476bcb1b95fac4375428c/tumblr_novhnrwKja1ru3nbdo9_r2_250.png"); */
+  background-image: url("http://i.imgur.com/WbvTTm9.png");
   background-color: #FFFFFF;
 
   /* Setting margins for all content */
@@ -19,16 +20,9 @@ h1, h2, h3, h4, h5, h6{
 
 /* Top Nav Bar */
 .navbar-inverse {
-
-}
-
-/* Top Nav Bar Hrefs */
-#title, #options {
-  color: #FFFFFF;
-}
-
-#title:hover, #options:hover {
-  color: #FFE5B8;
+  background-color: #96BCFF;
+  border-color: #96BCFF;
+  border-radius: 1rem;
 }
 
 /* Top Left */
@@ -39,10 +33,16 @@ h1, h2, h3, h4, h5, h6{
   margin-right: 0;
 }
 
-/* Title */
+/* Title Styling */
 #title {
+  color: #FFFFFF;
   font-size: 4rem;
   font-weight: bold;
+}
+
+/* Color of Title while Hovering */
+#title:hover {
+  color: #FFE5B8;
 }
 
 /* Top Right */
@@ -53,12 +53,40 @@ h1, h2, h3, h4, h5, h6{
   margin-left: 0;
   margin-right: 0;
   font-weight: bold;
-
-  color: #FFE5B8;
 }
 
-nav .active {
+/* Sets Home Button Styling */
+#homeButton, #homeButton:hover, #homeButton:focus {
+  background-color: #70A4FF;
+  border-radius: 1rem;
+}
+
+/* Sets Username Color and Rounded Background Border */
+#options {
+  color: #FFFFFF;
+  border-radius: 1rem;
+}
+
+/* Colors Background */
+#options:visited {
+  background-color: #70A4FF;
+}
+
+/* Colors Background/Text */
+#options:hover, #options:active {
+  background-color: #70A4FF;
   color: #FFE5B8;
+} 
+
+/* Sets Color of Text for the Drop Down Menu */
+.dropdown-menu > li > a {
+  color: #96BCFF;
+}
+
+/* Sets Color of Text while Hovering for the Drop Down Menu */
+.dropdown-menu > li > a:hover {
+  color: #FFD996;
+  background-color: #96BCFF;
 }
 
 /* No Bullet Styles for ULs */
