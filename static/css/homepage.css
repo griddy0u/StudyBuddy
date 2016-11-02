@@ -65,6 +65,7 @@
 .calendar {
   margin-bottom: 1rem;
   width: 100%;
+  min-width: 60%;
   z-index: -1;
 }
 
