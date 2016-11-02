@@ -3,10 +3,12 @@
   border-color: #000000;
   border-width: 0.5rem;
 }
+
 ul{
   padding-left: 0;
   list-style-type: none;
 }
+
 ul.scroll-menu {
   position:relative;
   display:inherit;
@@ -35,6 +37,7 @@ ul.scroll-menu {
   -o-box-shadow:none;
   box-shadow:none
 }
+
 .scrollable-menu {
   height: auto;
   max-height: 50rem;
