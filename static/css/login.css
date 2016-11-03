@@ -1,20 +1,17 @@
-html { 
-  background: url(http://i.imgur.com/QoDwTz3.jpg) center center fixed;
-  background-size: 100%;
-}
-
-/*Applies background image and color of website */
+/*Applies text shadow to all elements */
 body {
-	/* Background Image taken from Cocorini, cocorini.tumblr.com/patterns */
-	/* background-image: url("http://31.media.tumblr.com/60258e73e78ddd833e85bd49fac2a5a8/tumblr_mt67noIbPl1ru3nbdo4_r1_100.png"); */
-	background-color: #FFFFFF;
+	background: url(http://i.imgur.com/QoDwTz3.jpg) center center fixed;
+	width: 100%;
 
-   text-shadow:
-       2px 2px 0 #FFB533,
-     -1px -1px 0 #FFB533,  
-      1px -1px 0 #FFB533,
-      -1px 1px 0 #FFB533,
-       1px 1px 0 #FFB533;
+	text-shadow:
+		2px 2px 0 #FFB533,
+		-1px -1px 0 #FFB533,  
+		1px -1px 0 #FFB533,
+		-1px 1px 0 #FFB533,
+		1px 1px 0 #FFB533;
+
+	margin: auto;
+	padding: auto;
 }
 
 * {
@@ -22,27 +19,8 @@ body {
 }
 
 #title {
-	margin: auto;
-	position: absolute;
-	height: 70%;
-	width: 50%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
 	text-align: center;
 	font-size: 5rem;
-}
-
-.container {
-	margin: auto;
-	position: absolute;
-	height: 50%;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
 }
 
 .leftText, #login {
@@ -56,4 +34,29 @@ body {
 		0px 0px 0 #000000,
 		0px 0px 0 #000000,
 		0px 0px 0 #000000;
+}
+
+label {
+	float: left;
+}
+
+input {
+	float: right;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+	body {
+		background: url(http://i.imgur.com/qnQNLyt.png) center center fixed;
+		background-size: 100%;
+	}
+
+	#title, label {
+		padding-left: 15px;
+		width: 100%;
+	}
+
+	.container {
+		width: 100%;
+	}
 }

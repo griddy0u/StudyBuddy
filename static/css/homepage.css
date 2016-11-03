@@ -87,20 +87,50 @@
 
 .calendar {
   float: left; 
-  margin-top: 2rem;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 1rem;
   width: 100%;
-
   background-color: #FFD996;
 }
 
 .controls {
-    padding: 50px 25px;
-    max-height: 50px;
-    width: 100%;
-    background: #FFD996;
+  margin: 10px 0px;
+  margin-bottom: 30px;
+  max-height: 50px;
+  width: 100%;
+  color: #FFFFFF;
+}
+
+#prev, #next {
+  padding-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#prevButton, #nextButton {
+  background-color: #FFD996;
+  border-color: #FFD996;
+  transition: 0.3s;
+}
+
+#prevButton:hover, #nextButton:hover {
+  background-color: #96BCFF;
+  border-color: #96BCFF;
 }
 
 #monthAndYear {
+  word-spacing: 5px;
+}
+
+.responsive-calendar .day-headers {
+  padding: 10px 0px;
+  background-color: #96BCFF;
+  color: #FFFFFF;
+}
+
+.days {
+  background-color: #FFFFFF;
 
 }
 
@@ -124,5 +154,9 @@
 
   .calendar {
     height: auto;
+  }
+
+  #monthAndYear {
+    font-size: 1rem;
   }
 }

@@ -89,7 +89,7 @@
 		<div class="row content">
 
 			<!-- Left Friends List SideNav -->
-			<div class="col-sm-3 text-left">
+			<div class="text-left">
 
 				<!-- SideNav Button -->
 				<span id="friendsList" onclick="openNav()">
@@ -140,14 +140,14 @@
 	    	</div>
 
 			<!-- Right Create Meetup Button -->
-			<div class="col-sm-offset-6 col-sm-3 text-left">
+			<div class="text-left">
 		    	<a type="button" id="createMeetup" class="btn btn-success" href="create_meetup.html">
 		    		<span>+ Create Meetup</span>
 		    	</a>
 			</div>
 
 			<!-- Center Calendar -->
-			<div class="container col-sm-6 calendar">
+			<div class="container calendar">
 
 				<!-- Responsive calendar - START -->
 				<div class="responsive-calendar">
@@ -155,21 +155,20 @@
 					<div class="controls">
 						<!-- Prev Button -->
 						<a id="prev" class="pull-left" data-go="prev">
-							<div class="btn btn-primary">Prev</div>
+							<div id="prevButton" class="btn btn-primary">&#10094;</div>
 						</a>
 
 						<!-- Month -->
-						<h4 id="monthAndYear">
-							<span data-head-year></span><span data-head-month></span>
-						</h4>
+						<span id="monthAndYear">
+							<span style="font-size:4rem" data-head-month></span>
+							<span style="font-size:2rem" data-head-year></span>
+						</span>
 
 						<!-- Next Button -->
 						<a id="next" class="pull-right" data-go="next">
-							<div class="btn btn-primary">Next</div>
+							<div id="nextButton" class="btn btn-primary">&#10095;</div>
 						</a>
 					</div>
-
-					<hr/>
 
 					<!-- Weekdays -->
 					<div class="day-headers">
@@ -205,7 +204,7 @@
 		    $(".responsive-calendar").responsiveCalendar({
 				time: '2016-11',
 				events: {
-					"2016-11-12": {"number": 1, "url": ""},
+					"2016-10-31": {"number": 1, "url": ""},
 					"2016-11-17": {"number": 1, "url": ""}
 				}
 		    });

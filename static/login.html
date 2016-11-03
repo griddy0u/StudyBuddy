@@ -9,12 +9,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   <!-- Corresponding CSS File -->
   <link href="css/login.css" rel="stylesheet"/>
 
@@ -28,7 +22,7 @@
 </head>
 
 <body>
-  <div id="title">
+  <div id="title" class="container-fluid">
     <p>StudyBuddy</sp>
   </div>
   <div class="container">
@@ -57,10 +51,19 @@
 
       <div class="form-group"> 
         <div class="col-sm-offset-4 col-sm-5">
-          <a href="homepage.html" type="submit" id="login" class="btn btn-primary btn-block">Login</a>
+          <input id="login" class="btn btn-primary btn-block" value="Login" type="submit" onclick="loginToHome()" disabled>
         </div>
       </div>
     </form>
   </div>
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Corresponding JS File -->
+  <script src="js/login.js"></script>
 </body>
 </html>
