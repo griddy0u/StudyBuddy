@@ -19,38 +19,47 @@
   text-align: center;
 }
 .responsive-calendar .day a {
-  color: #000000;
   display: block;
   cursor: pointer;
-  padding: 20% 0 20% 0;
+  padding: 19% 0 19% 0;
+  transition: 0.3s;
+
+  border-radius: 1rem;
+  color: #70A4FF;
 }
 .responsive-calendar .day a:hover {
-  background-color: #eee;
+  background-color: #FFE5B8;
   text-decoration: none;
 }
-.responsive-calendar .day.header {
-  border-bottom: 1px gray solid;
-}
+
 .responsive-calendar .day.active a {
-  background-color: #1d86c8;
+  background-color: #96BCFF;
   color: #ffffff;
 }
+
 .responsive-calendar .day.active a:hover {
-  background-color: #36a0e2;
+  background-color: #70A4FF;
 }
+
 .responsive-calendar .day.active .not-current {
   background-color: #8fcaef;
   color: #ffffff;
 }
+
 .responsive-calendar .day.active .not-current:hover {
   background-color: #bcdff5;
 }
+
 .responsive-calendar .day.not-current a {
-  color: #ddd;
+  color: #bcdff5;
 }
+
 .responsive-calendar .day .badge {
   position: absolute;
   top: 2px;
   right: 2px;
   z-index: 1;
+
+  background-color: #FFD996;
+  cursor: pointer;
 }
