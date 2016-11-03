@@ -159,4 +159,9 @@
   #monthAndYear {
     font-size: 1rem;
   }
+
+  #prev, #next {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
