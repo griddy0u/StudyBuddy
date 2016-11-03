@@ -10,9 +10,10 @@
   border-radius: 1rem;
 
   color: #FFFFFF;
-  font-size: 1rem;
+  font-size:2rem;
   font-weight: bold;
 
+  cursor: pointer;
   transition: 0.3s;
   z-index: 1;
 }
@@ -63,12 +64,29 @@
 	margin-left: 5%;
 	margin-right: 5%;
 	width: 90%;
-
 	vertical-align: 100%;
 }
 
+#createMeetup {
+  float: right;
+  background-color: #86D472;
+  border-color: #86D472;
+  border-radius: 1rem;
+
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#createMeetup:hover {
+  color: #FFD996;
+}
+
 .calendar {
-  float: left;
+  float: left; 
   margin-bottom: 1rem;
   width: 100%;
   z-index: -1;
@@ -147,69 +165,25 @@
     color: white !important
 }
 
-.myMeetupsButton, .createMeetupButton {
-  margin-top: 2rem;
-}
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 770px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 
-#myMeetups #createMeetup {
-  margin-bottom: 2rem;
-	padding: 2rem;
-	width: 100%;
-	border: none;
-	border-radius: 1rem;
+  #friendsList {
+    text-align: center;
+  }
 
-	cursor: pointer;
+  #friendsList, #createMeetup {
+    height: auto;
+    width: 100%;
+  }
 
-	text-align: center;
-	font-size: 2rem;
-}
-
-#myMeetups span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-#myMeetups span:after {
-  content: '»';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-#myMeetups:hover span {
-  padding-right: 25px;
-}
-
-#myMeetups:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-#createMeetup span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-#createMeetup span:after {
-  content: '+';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: -20px;
-  transition: 0.5s;
-}
-
-#createMeetup:hover span {
-  padding-left: 25px;
-}
-
-#createMeetup:hover span:after {
-  opacity: 1;
-  left: 0;
+  .calendar {
+    height: auto;
+  }
 }
