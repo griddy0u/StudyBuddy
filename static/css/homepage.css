@@ -10,9 +10,10 @@
   border-radius: 1rem;
 
   color: #FFFFFF;
-  font-size: 1rem;
+  font-size:2rem;
   font-weight: bold;
 
+  cursor: pointer;
   transition: 0.3s;
   z-index: 1;
 }
@@ -63,153 +64,65 @@
 	margin-left: 5%;
 	margin-right: 5%;
 	width: 90%;
-
 	vertical-align: 100%;
 }
 
-.calendar {
-  float: left;
-  margin-bottom: 1rem;
-  width: 100%;
-  z-index: -1;
+#createMeetup {
+  float: right;
+  background-color: #86D472;
+  border-color: #86D472;
+  border-radius: 1rem;
+
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* Month header */
-.month {
-    padding: 70px 25px;
-    max-height: 200px;
+#createMeetup:hover {
+  color: #FFD996;
+}
+
+.calendar {
+  float: left; 
+  margin-top: 2rem;
+  width: 100%;
+
+  background-color: #FFD996;
+}
+
+.controls {
+    padding: 50px 25px;
+    max-height: 50px;
     width: 100%;
     background: #FFD996;
 }
 
-/* Month list */
-.month ul {
-    margin: 0;
-    padding: 0;
+#monthAndYear {
+
 }
 
-.month ul li {
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 770px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 
-/* Previous button inside month header */
-.month .prev {
-    float: left;
-    padding-top: 10px;
-}
-
-/* Next button */
-.month .next {
-    float: right;
-    padding-top: 10px;
-}
-
-/* Weekdays (Mon-Sun) */
-.weekdays {
-    margin: 0;
-    padding: 10px 0;
-    background-color:#96BCFF;
-}
-
-.weekdays li {
-    display: inline-block;
-    width: 13.6%;
-    color: #FFFFFF;
+  #friendsList {
     text-align: center;
-}
+  }
 
-/* Days (1-31) */
-.days {
-    padding: 20px 0;
-    background: #FFFFFF;
-    margin: 0;
-}
+  #friendsList, #createMeetup {
+    height: auto;
+    width: 100%;
+  }
 
-.days li {
-    padding: 10px 0px 10px 0px;
-    list-style-type: none;
-    display: inline-block;
-    width: 13.6%;
-    min-width: 13.6%;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size:12px;
-    color:#96BCFF;
-}
-
-/* Highlight the "current" day */
-.days li .active {
-    padding: 0px 5px 0px 5px;
-    background: #FFD996;
-    color: white !important
-}
-
-.myMeetupsButton, .createMeetupButton {
-  margin-top: 2rem;
-}
-
-#myMeetups #createMeetup {
-  margin-bottom: 2rem;
-	padding: 2rem;
-	width: 100%;
-	border: none;
-	border-radius: 1rem;
-
-	cursor: pointer;
-
-	text-align: center;
-	font-size: 2rem;
-}
-
-#myMeetups span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-#myMeetups span:after {
-  content: '»';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-#myMeetups:hover span {
-  padding-right: 25px;
-}
-
-#myMeetups:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-#createMeetup span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-#createMeetup span:after {
-  content: '+';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: -20px;
-  transition: 0.5s;
-}
-
-#createMeetup:hover span {
-  padding-left: 25px;
-}
-
-#createMeetup:hover span:after {
-  opacity: 1;
-  left: 0;
+  .calendar {
+    height: auto;
+  }
 }

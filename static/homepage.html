@@ -11,6 +11,7 @@
 
 	<!-- Corresponding CSS File -->
 	<link href="css/top_nav_bar.css" rel="stylesheet"/>
+	<link href="css/responsive-calendar.css" rel="stylesheet"/>
 	<link href="css/homepage.css" rel="stylesheet"/>
 
 	<!-- Toggle Popovers -->
@@ -35,7 +36,7 @@
 			<div class="navbar-header">
 
 		    	<!-- Collapse Button -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" 
+				<button type="button" id="navbarCollapseToggle" class="navbar-toggle" data-toggle="collapse" 
 				data-target="#myNavbar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -58,6 +59,11 @@
 							Home
 						</a>
 					</li>
+				    <li>
+						<a id="options" class="rightMenu" href="my_meetups.html">
+				    		<span>My Meetups</span>
+				    	</a>
+				    </li>
 
 					<!-- User/Options -->
 					<li>
@@ -86,7 +92,7 @@
 			<div class="col-sm-3 text-left">
 
 				<!-- SideNav Button -->
-				<span id="friendsList" style="font-size:2rem;cursor:pointer" onclick="openNav()">
+				<span id="friendsList" onclick="openNav()">
 					Friends List <i style="font-size:2rem" class="fa">&#xf138;</i>
 				</span>
 
@@ -133,82 +139,56 @@
 				</div>
 	    	</div>
 
-	    	<!-- Center Calendar -->
-	    	<div class="col-sm-9 calendar">
-				<div class="month"> 
-					<ul>
-						<li class="prev">&#10094;</li>
-						<li class="next">&#10095;</li>
-						<li>
-							<span style="font-size:4rem">November</span><br>
-							<span style="font-size:2rem">2016</span>
-						</li>
-					</ul>
-				</div>
-
-				<ul class="weekdays">
-					<li>Mo</li>
-					<li>Tu</li>
-					<li>We</li>
-					<li>Th</li>
-					<li>Fr</li>
-					<li>Sa</li>
-					<li>Su</li>
-				</ul>
-
-				<ul class="days text-left"> 
-					<li>
-						<span class="active" data-toggle="popover" data-placement="top" title="Meetup" data-content="Where/When/Who" style="cursor:pointer">1</span>
-					</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-					<li>5</li>
-					<li>6</li>
-					<li>7</li>
-					<li>8</li>
-					<li>9</li>
-					<li>10</li>
-					<li>11</li>
-					<li>12</li>
-					<li>13</li>
-					<li>14</li>
-					<li>15</li>
-					<li>16</li>
-					<li>17</li>
-					<li>18</li>
-					<li>19</li>
-					<li>20</li>
-					<li>21</li>
-					<li>22</li>
-					<li>23</li>
-					<li>24</li>
-					<li>25</li>
-					<li>26</li>
-					<li>27</li>
-					<li>28</li>
-					<li>29</li>
-					<li>30</li>
-					<li>31</li>
-				</ul>
+			<!-- Right Create Meetup Button -->
+			<div class="col-sm-offset-6 col-sm-3 text-left">
+		    	<a type="button" id="createMeetup" class="btn btn-success" href="create_meetup.html">
+		    		<span>+ Create Meetup</span>
+		    	</a>
 			</div>
+
+			<!-- Center Calendar -->
+			<div class="container col-sm-6 calendar">
+
+				<!-- Responsive calendar - START -->
+				<div class="responsive-calendar">
+
+					<div class="controls">
+						<!-- Prev Button -->
+						<a id="prev" class="pull-left" data-go="prev">
+							<div class="btn btn-primary">Prev</div>
+						</a>
+
+						<!-- Month -->
+						<h4 id="monthAndYear">
+							<span data-head-year></span><span data-head-month></span>
+						</h4>
+
+						<!-- Next Button -->
+						<a id="next" class="pull-right" data-go="next">
+							<div class="btn btn-primary">Next</div>
+						</a>
+					</div>
+
+					<hr/>
+
+					<!-- Weekdays -->
+					<div class="day-headers">
+						<div class="day header">Mon</div>
+						<div class="day header">Tue</div>
+						<div class="day header">Wed</div>
+						<div class="day header">Thu</div>
+						<div class="day header">Fri</div>
+						<div class="day header">Sat</div>
+						<div class="day header">Sun</div>
+					</div>
+
+					<!-- Days, Populated by JS -->
+					<div class="days" data-group="days">
+					</div>
+				</div>
+			<!-- Responsive calendar - END -->
 		</div>
 	</div>
-
-	<!-- Bottom Buttons -->
-	<footer class="container-fluid text-center">
-	    <div class="col-sm-offset-2 col-sm-4 myMeetupsButton">
-			<a type="button" id="myMeetups" class="btn btn-info btn-lg" href="my_meetups.html">
-	    		<span>My Meetups</span>
-	    	</a>
-	    </div>
-
-	    <div class="col-sm-offset-1 col-sm-4 createMeetupButton">
-	    	<a type="button" id="createMeetup" class="btn btn-success btn-lg" href="create_meetup.html">
-	    		<span>Create Meetup</span>
-	    	</a>
-		</div>
-	</footer>
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -218,5 +198,18 @@
 
 	<!-- Corresponding JS File -->
 	<script src="js/homepage.js"></script>
+	<script src="js/responsive-calendar.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+		    $(".responsive-calendar").responsiveCalendar({
+				time: '2016-11',
+				events: {
+					"2016-11-12": {"number": 1, "url": ""},
+					"2016-11-17": {"number": 1, "url": ""}
+				}
+		    });
+		});
+	</script>
 </body>
 </html>
