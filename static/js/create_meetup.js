@@ -239,3 +239,336 @@ function modifyLocInfo(str){
     }
   });
 }
+
+function createMeetup(){
+  localStorage.setItem("f1", null);
+  localStorage.setItem("f2", null);
+  localStorage.setItem("f3", null);
+  localStorage.setItem("f4", null);
+  localStorage.setItem("f5", null);
+  var numFriends = 0;
+  for(var i = 0; i < 15; i++){
+    switch(i){
+      case 0:
+        if(numFriends < 5 && document.getElementById('check1').checked == true){
+          switch(numFriends){
+            case 0:
+              localStorage.f1 = document.getElementById('friend1').textContent;
+              break;
+            case 1:
+              localStorage.f2 = document.getElementById('friend1').textContent;
+              break;
+            case 2:
+              localStorage.f3 = document.getElementById('friend1').textContent;
+              break;
+            case 3:
+              localStorage.f4 = document.getElementById('friend1').textContent;
+              break;
+            case 4:
+              localStorage.f5 = document.getElementById('friend1').textContent;
+          }
+          numFriends++;
+        }
+        break;
+      case 1:
+        if(numFriends < 5 && document.getElementById('check2').checked){
+          switch(numFriends){
+            case 0:
+              localStorage.f1 = document.getElementById('friend2').textContent;
+              break;
+            case 1:
+              localStorage.f2 = document.getElementById('friend2').textContent;
+              break;
+            case 2:
+              localStorage.f3 = document.getElementById('friend2').textContent;
+              break;
+            case 3:
+              localStorage.f4 = document.getElementById('friend2').textContent;
+              break;
+            case 4:
+              localStorage.f5 = document.getElementById('friend2').textContent;
+          }
+          numFriends++;
+        }
+        break;
+      case 2:
+        if(numFriends < 5 && document.getElementById('check3').checked){
+          switch(numFriends){
+            case 0:
+              localStorage.f1 = document.getElementById('friend3').textContent;
+              break;
+            case 1:
+              localStorage.f2 = document.getElementById('friend3').textContent;
+              break;
+            case 2:
+              localStorage.f3 = document.getElementById('friend3').textContent;
+              break;
+            case 3:
+              localStorage.f4 = document.getElementById('friend3').textContent;
+              break;
+            case 4:
+              localStorage.f5 = document.getElementById('friend3').textContent;
+          }
+          numFriends++;
+        }
+        break;
+      case 3:
+        if(numFriends < 5 && document.getElementById('check4').checked){
+          switch(numFriends){
+            case 0:
+              localStorage.f1 = document.getElementById('friend4').textContent;
+              break;
+            case 1:
+              localStorage.f2 = document.getElementById('friend4').textContent;
+              break;
+            case 2:
+              localStorage.f3 = document.getElementById('friend4').textContent;
+              break;
+            case 3:
+              localStorage.f4 = document.getElementById('friend4').textContent;
+              break;
+            case 4:
+              localStorage.f5 = document.getElementById('friend4').textContent;
+          }
+          numFriends++;
+        }
+        break;
+      case 4:
+        if(numFriends < 5 && document.getElementById('check5').checked){
+          switch(numFriends){
+            case 0:
+              localStorage.f1 = document.getElementById('friend5').textContent;
+              break;
+            case 1:
+              localStorage.f2 = document.getElementById('friend5').textContent;
+              break;
+            case 2:
+              localStorage.f3 = document.getElementById('friend5').textContent;
+              break;
+            case 3:
+              localStorage.f4 = document.getElementById('friend5').textContent;
+              break;
+            case 4:
+              localStorage.f5 = document.getElementById('friend5').textContent;
+          }
+          numFriends++;
+        }
+        break;
+      case 5:
+        if(numFriends < 5 && document.getElementById('check6').checked){
+          switch(numFriends){
+            case 0:
+              localStorage.f1 = document.getElementById('friend6').textContent;
+              break;
+            case 1:
+              localStorage.f2 = document.getElementById('friend6').textContent;
+              break;
+            case 2:
+              localStorage.f3 = document.getElementById('friend6').textContent;
+              break;
+            case 3:
+              localStorage.f4 = document.getElementById('friend6').textContent;
+              break;
+            case 4:
+              localStorage.f5 = document.getElementById('friend6').textContent;
+          }
+          numFriends++;
+        }
+        break;
+      case 6:
+        if(numFriends < 5 && document.getElementById('check7').checked){
+          switch(numFriends){
+            case 0:
+              localStorage.f1 = document.getElementById('friend7').textContent;
+              break;
+            case 1:
+              localStorage.f2 = document.getElementById('friend7').textContent;
+              break;
+            case 2:
+              localStorage.f3 = document.getElementById('friend7').textContent;
+              break;
+            case 3:
+              localStorage.f4 = document.getElementById('friend7').textContent;
+              break;
+            case 4:
+              localStorage.f5 = document.getElementById('friend7').textContent;
+          }
+          numFriends++;
+        }
+        break;
+      case 7:
+        if(numFriends < 5 && document.getElementById('check8').checked){
+          switch(numFriends){
+            case 0:
+              localStorage.f1 = document.getElementById('friend8').textContent;
+              break;
+            case 1:
+              localStorage.f2 = document.getElementById('friend8').textContent;
+              break;
+            case 2:
+              localStorage.f3 = document.getElementById('friend8').textContent;
+              break;
+            case 3:
+              localStorage.f4 = document.getElementById('friend8').textContent;
+              break;
+            case 4:
+              localStorage.f5 = document.getElementById('friend8').textContent;
+          }
+          numFriends++;
+        }
+        break;
+      case 8:
+        if(numFriends < 5 && document.getElementById('check9').checked){
+          switch(numFriends){
+            case 0:
+              localStorage.f1 = document.getElementById('friend9').textContent;
+              break;
+            case 1:
+              localStorage.f2 = document.getElementById('friend9').textContent;
+              break;
+            case 2:
+              localStorage.f3 = document.getElementById('friend9').textContent;
+              break;
+            case 3:
+              localStorage.f4 = document.getElementById('friend9').textContent;
+              break;
+            case 4:
+              localStorage.f5 = document.getElementById('friend9').textContent;
+          }
+          numFriends++;
+        }
+        break;
+      case 9:
+        if(numFriends < 5 && document.getElementById('check10').checked){
+          switch(numFriends){
+            case 0:
+              localStorage.f1 = document.getElementById('friend10').textContent;
+              break;
+            case 1:
+              localStorage.f2 = document.getElementById('friend10').textContent;
+              break;
+            case 2:
+              localStorage.f3 = document.getElementById('friend10').textContent;
+              break;
+            case 3:
+              localStorage.f4 = document.getElementById('friend10').textContent;
+              break;
+            case 4:
+              localStorage.f5 = document.getElementById('friend10').textContent;
+          }
+          numFriends++;
+        }
+        break;
+      case 10:
+        if(numFriends < 5 && document.getElementById('check11').checked){
+          switch(numFriends){
+            case 0:
+              localStorage.f1 = document.getElementById('friend11').textContent;
+              break;
+            case 1:
+              localStorage.f2 = document.getElementById('friend11').textContent;
+              break;
+            case 2:
+              localStorage.f3 = document.getElementById('friend11').textContent;
+              break;
+            case 3:
+              localStorage.f4 = document.getElementById('friend11').textContent;
+              break;
+            case 4:
+              localStorage.f5 = document.getElementById('friend11').textContent;
+          }
+          numFriends++;
+        }
+        break;
+      case 11:
+        if(numFriends < 5 && document.getElementById('check12').checked){
+          switch(numFriends){
+            case 0:
+              localStorage.f1 = document.getElementById('friend12').textContent;
+              break;
+            case 1:
+              localStorage.f2 = document.getElementById('friend12').textContent;
+              break;
+            case 2:
+              localStorage.f3 = document.getElementById('friend12').textContent;
+              break;
+            case 3:
+              localStorage.f4 = document.getElementById('friend12').textContent;
+              break;
+            case 4:
+              localStorage.f5 = document.getElementById('friend12').textContent;
+          }
+          numFriends++;
+        }
+        break;
+      case 12:
+        if(numFriends < 5 && document.getElementById('check13').checked){
+          switch(numFriends){
+            case 0:
+              localStorage.f1 = document.getElementById('friend13').textContent;
+              break;
+            case 1:
+              localStorage.f2 = document.getElementById('friend13').textContent;
+              break;
+            case 2:
+              localStorage.f3 = document.getElementById('friend13').textContent;
+              break;
+            case 3:
+              localStorage.f4 = document.getElementById('friend13').textContent;
+              break;
+            case 4:
+              localStorage.f5 = document.getElementById('friend13').textContent;
+          }
+          numFriends++;
+        }
+        break;
+      case 13:
+        if(numFriends < 5 && document.getElementById('check14').checked){
+          switch(numFriends){
+            case 0:
+              localStorage.f1 = document.getElementById('friend14').textContent;
+              break;
+            case 1:
+              localStorage.f2 = document.getElementById('friend14').textContent;
+              break;
+            case 2:
+              localStorage.f3 = document.getElementById('friend14').textContent;
+              break;
+            case 3:
+              localStorage.f4 = document.getElementById('friend14').textContent;
+              break;
+            case 4:
+              localStorage.f5 = document.getElementById('friend14').textContent;
+          }
+          numFriends++;
+        }
+        break;
+      case 14:
+        if(numFriends < 5 && document.getElementById('check15').checked){
+          switch(numFriends){
+            case 0:
+              localStorage.f1 = document.getElementById('friend15').textContent;
+              break;
+            case 1:
+              localStorage.f2 = document.getElementById('friend15').textContent;
+              break;
+            case 2:
+              localStorage.f3 = document.getElementById('friend15').textContent;
+              break;
+            case 3:
+              localStorage.f4 = document.getElementById('friend15').textContent;
+              break;
+            case 4:
+              localStorage.f5 = document.getElementById('friend15').textContent;
+          }
+          numFriends++;
+        }
+    }
+  }
+  if((document.getElementById('datetimepicker').value).localeCompare("") != 0){
+    localStorage.setItem("meeting_time", document.getElementById('datetimepicker').value);
+  }
+  if((document.getElementById('loc_text').innerHTML).localeCompare("Selected location") != 0){
+    localStorage.setItem("location", document.getElementById('loc_text').innerHTML);
+  }
+}

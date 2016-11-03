@@ -1,7 +1,9 @@
 .meeting{
   border-style: solid;
-  border-color: #000000;
-  border-width: 0.5rem;
+  border-color: #96BCFF;
+  border-width: 0.25rem;
+  border-radius: 1rem;
+  background-color: #FFFFFF;
 }
 
 ul{

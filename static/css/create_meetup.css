@@ -4,7 +4,10 @@ footer {
   color: white;
   padding: 15px;
 }
-
+#friend_title, #date_text, #loc_stats, #loc_text {
+  border-radius: 1rem;
+  background-color: #FFFFFF;
+}
 #friend_dropdown{
   left: 50%;
   right: auto;
@@ -75,11 +78,10 @@ ul.scroll-menu {
   border-color: #000000;
   border-width: 1px;
 }
-
-#friend_title, #loc_dropdown, #loc_text, #date_text, #cancel{
+#loc_stats{
   margin-top: 5rem;
 }
-#stats{
+#friend_title, #loc_dropdown, #loc_text, #date_text, #cancel{
   margin-top: 5rem;
 }
 #create{
