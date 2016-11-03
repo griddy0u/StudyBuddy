@@ -42,4 +42,6 @@ ul.scroll-menu {
   height: auto;
   max-height: 50rem;
   overflow-x: hidden;
+
+  background-color: #FFFFFF;
 }
