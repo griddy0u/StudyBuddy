@@ -87,82 +87,21 @@
 
 .calendar {
   float: left; 
-  margin-bottom: 1rem;
+  margin-top: 2rem;
   width: 100%;
-  z-index: -1;
+
+  background-color: #FFD996;
 }
 
-/* Month header */
-.month {
-    padding: 70px 25px;
-    max-height: 200px;
+.controls {
+    padding: 50px 25px;
+    max-height: 50px;
     width: 100%;
     background: #FFD996;
 }
 
-/* Month list */
-.month ul {
-    margin: 0;
-    padding: 0;
-}
+#monthAndYear {
 
-.month ul li {
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-/* Previous button inside month header */
-.month .prev {
-    float: left;
-    padding-top: 10px;
-}
-
-/* Next button */
-.month .next {
-    float: right;
-    padding-top: 10px;
-}
-
-/* Weekdays (Mon-Sun) */
-.weekdays {
-    margin: 0;
-    padding: 10px 0;
-    background-color:#96BCFF;
-}
-
-.weekdays li {
-    display: inline-block;
-    width: 13.6%;
-    color: #FFFFFF;
-    text-align: center;
-}
-
-/* Days (1-31) */
-.days {
-    padding: 20px 0;
-    background: #FFFFFF;
-    margin: 0;
-}
-
-.days li {
-    padding: 10px 0px 10px 0px;
-    list-style-type: none;
-    display: inline-block;
-    width: 13.6%;
-    min-width: 13.6%;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size:12px;
-    color:#96BCFF;
-}
-
-/* Highlight the "current" day */
-.days li .active {
-    padding: 0px 5px 0px 5px;
-    background: #FFD996;
-    color: white !important
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
