@@ -123,6 +123,14 @@
   word-spacing: 5px;
 }
 
+#month {
+  font-size: 4rem;
+}
+
+#year {
+  font-size: 2rem;
+}
+
 .responsive-calendar .day-headers {
   padding: 10px 0px;
   background-color: #96BCFF;
@@ -136,6 +144,7 @@
 
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 770px) {
+
   .sidenav {
     padding-top: 60px;
   }
@@ -156,11 +165,24 @@
     height: auto;
   }
 
+  .controls {
+    margin-bottom: 10px;
+  }
+
   #monthAndYear {
-    font-size: 1rem;
+    padding-top: 20px;
+  }
+
+  #month {
+    font-size: 2rem;
+  }
+
+  #year {
+    font-size: 2rem;
   }
 
   #prev, #next {
+    padding-top: 0px;
     padding-left: 0px;
     padding-right: 0px;
   }
