@@ -14,13 +14,6 @@
 	<link href="css/responsive-calendar.css" rel="stylesheet"/>
 	<link href="css/homepage.css" rel="stylesheet"/>
 
-	<!-- Toggle Popovers -->
-	<script>
-		$(document).ready(function(){
-		$('[data-toggle="popover"]').popover();
-		});
-	</script>
-
 	<!-- Font -->
 	<link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
 	<style>
@@ -68,8 +61,8 @@
 					<!-- User/Options -->
 					<li>
 						<a id="options" class="dropdown-toggle rightMenu" data-toggle="dropdown" href="">
-							<span>Corgi </span>
-							<span class="caret "></span>
+							<span id="username"></span>
+							<span class="caret "> </span>
 						</a>
 						<ul class="dropdown-menu text-center">
 							<li><a href="settings.html">Settings</a></li>
@@ -199,6 +192,14 @@
 	<script src="js/homepage.js"></script>
 	<script src="js/responsive-calendar.js"></script>
 
+	<!-- Toggle Popovers -->
+	<script>
+		$(document).ready(function(){
+		$('[data-toggle="popover"]').popover();
+		});
+	</script>
+
+	<!-- Adds Events -->
 	<script type="text/javascript">
 		$(document).ready(function () {
 		    $(".responsive-calendar").responsiveCalendar({

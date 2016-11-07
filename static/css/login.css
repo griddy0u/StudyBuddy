@@ -1,14 +1,14 @@
 /*Applies text shadow to all elements */
 body {
-	background: url(http://i.imgur.com/QoDwTz3.jpg) center center fixed;
+	background: url(http://i.imgur.com/qnQNLyt.png) center center fixed;
 	width: 100%;
 
 	text-shadow:
-		2px 2px 0 #FFB533,
-		-1px -1px 0 #FFB533,  
-		1px -1px 0 #FFB533,
-		-1px 1px 0 #FFB533,
-		1px 1px 0 #FFB533;
+		2px 2px 0 #70ACBF,
+		-1px -1px 0 #70ACBF,  
+		1px -1px 0 #70ACBF,
+		-1px 1px 0 #70ACBF,
+		1px 1px 0 #70ACBF;
 
 	margin: auto;
 	padding: auto;

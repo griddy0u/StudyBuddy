@@ -5,6 +5,9 @@ $.ajax({
     cache: true,
     success: function(data){
 
+      /* Sets Username to Appear on TopNavBar */
+      document.getElementById("username").innerHTML = sessionStorage.getItem("accountUsername");
+
       /* Loads friends list in */
       $(data.friends).each(function(index, value) {
         var numOfFriends = 0;
