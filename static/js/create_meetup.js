@@ -250,3 +250,41 @@ function createMeetup(){
     success
   });
 }
+
+$(document).ready(function() {
+  var selectFriends = 0;
+  var dateAndTime = 0;
+  var studyLocation = 0;
+  $(document.getElementById('create')).prop('disabled', true);
+
+  $('input[type="checkbox"]').click(function() {
+    ++selectFriends;
+
+
+    if (selectFriends > 0 && dateAndTime > 0 && studyLocation > 0) {
+      $(document.getElementById('create')).prop('disabled', false);
+    }
+  });
+  
+  $(document).click(function() {
+    if ($('input[type="text"]').val() != '') {
+      ++dateAndTime;
+    }
+
+    if (selectFriends > 0 && dateAndTime > 0 && studyLocation > 0) {
+      $(document.getElementById('create')).prop('disabled', false);
+    }
+  });
+
+  $('input[type="radio"]').click(function() {
+      ++studyLocation;
+
+    if (selectFriends > 0 && dateAndTime > 0 && studyLocation > 0) {
+      $(document.getElementById('create')).prop('disabled', false);
+    }
+  });
+ });
+
+function returnToHome() {
+  document.location.href = ("homepage.html");
+}

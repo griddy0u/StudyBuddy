@@ -48,7 +48,6 @@ input {
 @media screen and (max-width: 767px) {
 	body {
 		background: url(http://i.imgur.com/qnQNLyt.png) center center fixed;
-		background-size: 100%;
 	}
 
 	#title, label {
