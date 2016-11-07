@@ -1,59 +1,485 @@
 {
-  "login": [
+  "accounts": [
     {
       "email":"rioh@ucsd.edu",
-      "password":"password"
+      "password":"password",
+      "username": "Richard Oh",
+      "friends":[
+        {
+          "name":"Gary Gillespie"
+        },
+        {
+          "name":"Philip Guo"
+        },
+        {
+          "name":"Rick Ord"
+        },
+        {
+          "name":"Scott Klemmer"
+        },
+        {
+          "name":"Miles Jones"
+        },
+        {
+          "name":"Russell Impagliazzo"
+        },
+        {
+          "name":null
+        },
+        {
+          "name":null
+        },
+        {
+          "name":null
+        },
+        {
+          "name":null
+        },
+        {
+          "name":null
+        },
+        {
+          "name":null
+        },
+        {
+          "name":null
+        },
+        {
+          "name":null
+        },
+        {
+          "name":null
+        }
+      ],
+      "meetups": [
+        {
+          "friends": ["Gary Gillespie", "Rick Ord", "Russell Impagliazzo", null, null],
+          "meeting_time": "2016/11/05 14:00",
+          "location": "Sun God Lounge"
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        }
+      ]
+    },
+    {
+      "email": null,
+      "password": null,
+      "username": null,
+      "friends": [
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        }
+      ],
+      "meetups": [
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        }
+      ]
+    },
+    {
+      "email": null,
+      "password": null,
+      "username": null,
+      "friends": [
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        }
+      ],
+      "meetups": [
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        }
+      ]
+    },
+    {
+      "email": null,
+      "password": null,
+      "username": null,
+      "friends": [
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        }
+      ],
+      "meetups": [
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        }
+      ]
+    },
+    {
+      "email": null,
+      "password": null,
+      "username": null,
+      "friends": [
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        }
+      ],
+      "meetups": [
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        }
+      ]
+    },
+    {
+      "email": null,
+      "password": null,
+      "username": null,
+      "friends": [
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        },
+        {
+          "name": null
+        }
+      ],
+      "meetups": [
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        },
+        {
+          "friends": [null, null, null, null, null],
+          "meeting_time": null,
+          "location": null
+        }
+      ]
     }
   ],
-
-  "friends":[
-    {
-      "name":"Gary Gillespie"
-    },
-    {
-      "name":"Philip Guo"
-    },
-    {
-      "name":"Rick Ord"
-    },
-    {
-      "name":"Scott Klemmer"
-    },
-    {
-      "name":"Miles Jones"
-    },
-    {
-      "name":"Russell Impagliazzo"
-    },
-    {
-      "name":null
-    },
-    {
-      "name":null
-    },
-    {
-      "name":null
-    },
-    {
-      "name":null
-    },
-    {
-      "name":null
-    },
-    {
-      "name":null
-    },
-    {
-      "name":null
-    },
-    {
-      "name":null
-    },
-    {
-      "name":null
-    }
-  ],
-
   "locations":[
     {
       "name": "Geisel Library",
@@ -102,39 +528,6 @@
       "coord": {"lat": 32.8771, "lng": -117.2400},
       "quiet": "Moderately quiet",
       "crowded": "Moderately empty"
-    }
-  ],
-  
-  "meetups": [
-    {
-      "friends": ["Gary Gillespie", "Rick Ord", "Russell Impagliazzo", null, null],
-      "meeting_time": "2016/11/05 14:00",
-      "location": "Sun God Lounge"
-    },
-    {
-      "friends": [null, null, null, null, null],
-      "meeting_time": null,
-      "location": null
-    },
-    {
-      "friends": [null, null, null, null, null],
-      "meeting_time": null,
-      "location": null
-    },
-    {
-      "friends": [null, null, null, null, null],
-      "meeting_time": null,
-      "location": null
-    },
-    {
-      "friends": [null, null, null, null, null],
-      "meeting_time": null,
-      "location": null
-    },
-    {
-      "friends": [null, null, null, null, null],
-      "meeting_time": null,
-      "location": null
     }
   ]
 }
