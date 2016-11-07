@@ -188,6 +188,7 @@ function updateMap(x, y){
     map: map
   });
 }
+
 function modifyLocInfo(str){
   document.getElementById('loc_text').innerHTML = str;
   $.ajax({
@@ -242,13 +243,7 @@ function modifyLocInfo(str){
 }
 
 function createMeetup(){
-  $.ajax({
-    url: 'data.json',
-    dataType: 'json',
-    type: 'POST',
-    cache: true,
-    success
-  });
+
 }
 
 $(document).ready(function() {
@@ -265,7 +260,7 @@ $(document).ready(function() {
       $(document.getElementById('create')).prop('disabled', false);
     }
   });
-  
+
   $(document).click(function() {
     if ($('input[type="text"]').val() != '') {
       ++dateAndTime;

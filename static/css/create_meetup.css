@@ -4,10 +4,10 @@ footer {
   color: white;
   padding: 15px;
 }
-#friend_title, #date_text, #loc_stats, #loc_text {
+/*#friend_title, #date_text, #loc_stats, #loc_text {
   border-radius: 1rem;
   background-color: #FFFFFF;
-}
+}*/
 #friend_dropdown{
   left: 50%;
   right: auto;
