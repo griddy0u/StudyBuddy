@@ -6,7 +6,7 @@ $.ajax({
     success: function(data){
       /* Loads friends list in */
       var account = 0;
-      $(data.accounts[0].friends).each(function(index, value){
+      $(data.accounts[sessionStorage.accountIndex].friends).each(function(index, value){
         switch(index){
           case 0:
             if(value.name == null){
@@ -243,7 +243,10 @@ function modifyLocInfo(str){
 }
 
 function createMeetup(){
-
+  /* fs = require('fs');
+  var m = JSON.parse(fs.readFileSync('data.json').toString());
+  m.accounts[sessionStorage.accountIndex].meetups[1].meeting_time = "test";
+  fs.writeFile('data.json', JSON.stringify(m)); */
 }
 
 $(document).ready(function() {
