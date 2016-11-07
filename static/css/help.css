@@ -2,13 +2,18 @@
   text-decoration: none;
 }
 
-#faq {
+#mainscreen {
+	background-color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	border-radius: 1rem;
+}
+
+.faq {
 	margin: auto;
 	padding: auto;
 	width: 75%;
 	border: 1px solid #FFFFFF;
 	border-radius: 1rem;
-	background-color: #FFFFFF;
 }
 
 .btn {

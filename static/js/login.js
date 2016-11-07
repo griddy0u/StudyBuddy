@@ -34,12 +34,18 @@ function loginToHome() {
       for (index = 0; index < data.accounts.length; index++) {
         if (data.accounts[index].email == $('input[type="email"]').val()) {
           if (data.accounts[index].password == $('input[type="password"]').val()) {
-            sessionStorage.setItem("accountEmail", $('input[type="email"]').val());
+            sessionStorage.setItem("accountEmail", data.accounts[index].email);
             sessionStorage.setItem("accountUsername", data.accounts[index].username);
+            sessionStorage.setItem("accountPwd", data.accounts[index].password);
+            sessionStorage.setItem("accountIndex", index);
             document.location.href = ("homepage.html");
           }
         }
       }
     }
   });
+}
+
+function register() {
+  document.location.href = ("register.html");
 }

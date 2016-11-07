@@ -9,12 +9,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
-	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 	<!-- Corresponding CSS File -->
 	<link href="css/top_nav_bar.css" rel="stylesheet"/>
 	<link href="css/help.css" rel="stylesheet"/>
@@ -66,8 +60,8 @@
 					<!-- User/Options -->
 					<li>
 						<a id="options" class="dropdown-toggle rightMenu" data-toggle="dropdown" href="">
-							<span>Corgi </span>
-							<span class="caret "></span>
+							<span id="username"></span>
+							<span class="caret "> </span>
 						</a>
 						<ul class="dropdown-menu text-center">
 							<li><a href="settings.html">Settings</a></li>
@@ -83,20 +77,29 @@
 	</nav>
 
 	<!-- Main Screen -->
-	<div class="container-fluid text-center">
+	<div id="mainscreen" class="container-fluid text-center">
 		<h1>Help</h1>
 		<br>
-		<button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#faq">FAQ</button>
-		<div id="faq" class="collapse">
-			<h3>How To Create a Meetup</h3>
-				<p>- Go to <a class="home" href="homepage.html">Home</a> and click the Create Meetup button located on the bottom right of the page</p>
-			
-			<hr>
-			<h3>How To View My Meetups</h3>
-				<p>- Go to <a class="home" href="homepage.html">Home</a> and click the My Meetups button located on the bottom left of the page</p>
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#createMeetup">How To Create A Meetup</button>
+		<div id="createMeetup" class="collapse in">
+			<p>- Go to <a class="home" href="homepage.html">Home</a> and click the Create Meetup button located on the top right of the page</p>
 		</div>
-		<br>
-		<a type="button" class="btn btn-danger" href="contact_us.html">Still Stuck? Contact Us</a>
+		<hr>
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#viewMeetups">How To View My Meetups</button>
+		<div id="viewMeetups" class="collapse in">
+			<p>- Click the My Meetups button located on the top right of the navigation bar</p>
+		</div>
+		<hr>
+		<a type="button" class="btn btn-danger" href="contact_us.html"><h4>Still Stuck? Contact Us</h4></a>
 	</div>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<!-- Corresponding JS File -->
+	<script src="js/top_nav_bar.js"></script>	
 </body>
 </html>

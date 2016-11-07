@@ -9,12 +9,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
-	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 	<!-- Corresponding CSS File -->
 	<link href="css/top_nav_bar.css" rel="stylesheet"/>
 	<link href="css/settings.css" rel="stylesheet"/>
@@ -66,8 +60,8 @@
 					<!-- User/Options -->
 					<li>
 						<a id="options" class="dropdown-toggle rightMenu" data-toggle="dropdown" href="">
-							<span>Corgi </span>
-							<span class="caret "></span>
+							<span id="username"></span>
+							<span class="caret "> </span>
 						</a>
 						<ul class="dropdown-menu text-center">
 							<li><a href="settings.html">Settings</a></li>
@@ -83,10 +77,125 @@
 	</nav>
 
 	<!-- Main Screen -->
-	<div class="container-fluid text-center">
+	<div id="mainscreen" class="container-fluid text-center">
 		<h1>Settings</h1>
-		<br>
-		<h4>Coming Soon!</h4>
+
+		<hr>
+
+		<!-- Displays Account Email -->
+		<div id="email" class="row">
+			<div class="col-sm-offset-1 col-sm-2 text-right"><h3 id="leftTextEmail">Email:</h3></div>
+			<div id="accEmail" class="col-sm-offset-1 col-sm-5 text-left">
+			</div>
+			<button type="button" class="btn btn-link col-sm-2" onclick="changeEmail()">Change Email</button>
+		</div>
+
+		<!-- Change Account Email -->
+		<form id="changeEmail" class="form-horizontal" hidden>
+
+			<!-- Displays Current Email -->
+			<div id="currentEmail" class="form-group">
+				<label class="control-label col-sm-4" for="currAccEmail"><h3>Current Email:</h3></label>
+				<div class="col-sm-6">
+					<input type="text" id="currAccEmail" class="form-control" placeholder="" disabled>
+				</div>
+			</div>
+
+			<!-- Text Form to Enter New Email -->
+			<div id="newEmail" class="form-group">
+				<label class="control-label col-sm-4" for="newAccEmail"><h3>New Email:</h3></label>
+				<div class="col-sm-6">
+					<input type="email" id="newAccEmail" class="form-control" placeholder="Enter New Email">
+				</div>
+			</div>
+
+			<!-- Confirm and Cancel Buttons -->
+			<div id="confirmcancel" class="row">
+				<button type="button" id="confirmEmailChange" class="btn btn-success col-sm-offset-3 col-sm-3" onclick="setNewEmail(); changeEmail()">Change Email</button>
+				<button type="button" class="btn btn-danger col-sm-offset-1 col-sm-2" onclick="changeEmail()">Cancel</button>
+			</div>
+		</form>
+
+		<hr>
+
+		<!-- Displays Account Username -->
+		<div id="name" class="row">
+			<div class="col-sm-offset-1 col-sm-2 text-right"><h3 id="leftTextUsername">Username:</h3></div>
+			<div id="accUsername" class="col-sm-offset-1 col-sm-5 text-left">
+			</div>
+			<button type="button" class="btn btn-link col-sm-2" onclick="changeName()">Change Username</button>
+		</div>
+
+		<!-- Change Account Username -->
+		<form id="changeUsername" class="form-horizontal" hidden>
+
+			<!-- Displays Current Username -->
+			<div id="currentUsername" class="form-group">
+				<label class="control-label col-sm-4" for="currAccName"><h3>Current Username:</h3></label>
+				<div class="col-sm-6">
+					<input type="text" id="currAccName" class="form-control" placeholder="" disabled>
+				</div>
+			</div>
+
+			<!-- Text Form to Enter New Username -->
+			<div id="newName" class="form-group">
+				<label class="control-label col-sm-4" for="newAccName"><h3>New Username:</h3></label>
+				<div class="col-sm-6">
+					<input type="text" id="newAccName" class="form-control" placeholder="Enter New Username">
+				</div>
+			</div>
+
+			<!-- Confirm and Cancel Buttons -->
+			<div id="confirmcancel" class="row">
+				<button type="button" id="confirmNameChange" class="btn btn-success col-sm-offset-3 col-sm-3" onclick="setNewName(); changeName()">Change Username</button>
+				<button type="button" class="btn btn-danger col-sm-offset-1 col-sm-2" onclick="changeName()">Cancel</button>
+			</div>
+		</form>
+
+		<hr>
+
+		<!-- Displays Account Password -->
+		<div id="pwd" class="row">
+			<div class="col-sm-offset-1 col-sm-2 text-right"><h3 id="leftTextPwd">Password:</h3></div>
+			<div id="accPwd" class="col-sm-offset-1 col-sm-5 text-left"></div>
+			<button type="button" class="btn btn-link col-sm-2" onclick="changePwd()">Change Password</button>
+		</div>
+
+		<!-- Change Account Password -->
+		<form id="changePassword" class="form-horizontal" hidden>
+
+			<!-- Displays Current Password -->
+			<div id="currentPassword" class="form-group">
+				<label class="control-label col-sm-4" for="currAccPwd"><h3>Current Password:</h3></label>
+				<div class="col-sm-6">
+					<input type="text" id="currAccPwd" class="form-control" placeholder="" disabled>
+				</div>
+			</div>
+
+			<!-- Text Form to Enter New Password -->
+			<div id="newPassword" class="form-group">
+				<label class="control-label col-sm-4" for="newAccPwd"><h3>New Password:</h3></label>
+				<div class="col-sm-6">
+					<input type="text" id="newAccPwd" class="form-control" placeholder="Enter New Username">
+				</div>
+			</div>
+
+			<!-- Confirm and Cancel Buttons -->
+			<div id="confirmcancel" class="row">
+				<button type="button" id="confirmPwdChange" class="btn btn-success col-sm-offset-3 col-sm-3" onclick="setNewPwd(); changePwd()">Change Password</button>
+				<button type="button" class="btn btn-danger col-sm-offset-1 col-sm-2" onclick="changePwd()">Cancel</button>
+			</div>
+		</form>
 	</div>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Corresponding JS File -->
+	<script src="js/top_nav_bar.js"></script>
+	<script src="js/settings.js"></script>
 </body>
 </html>
