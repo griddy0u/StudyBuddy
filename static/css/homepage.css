@@ -142,6 +142,10 @@
 
 }
 
+body > div > div > div.container.calendar > div > div.days > div.day.mon.past.not-current.active > a {
+  color: #FFFFFF;
+}
+
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 770px) {
 

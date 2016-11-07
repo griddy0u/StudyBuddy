@@ -39,6 +39,7 @@
 
 .responsive-calendar .day.active a:hover {
   background-color: #70A4FF;
+  border-radius: 0;
 }
 
 .responsive-calendar .day.active .not-current {
