@@ -77,10 +77,13 @@
     </nav>
 
     <!-- Main Screen -->
-    <div class="container-fluid text-center" id="main">
+    <div class="container-fluid text-center" id="mainscreen">
       <div>
         <h1 id="page_name">Create a Meetup!</h1>
       </div>
+
+      <hr>
+
 		  <div class="row content">
 			  <!-- Friends List Select -->
         <div class="btn-group" id="friend_select">
@@ -164,6 +167,8 @@
           </ul>
         </div>
 
+        <hr>
+
         <h3 id="date_text"> Select study date and time: </h3>
         <input id="datetimepicker" type="text" value="">
 
@@ -215,37 +220,34 @@
           </ul>
         </div>
 
-        <h3 id="loc_text">Selected location</h4>
+        <hr>
+
+        <h3 id="loc_text">Selected location</h3>
         <div id="map"></div>
 
         <div id="loc_stats">
-          <h3 id="stats">Location stats</h4>
+          <h3 id="stats">Location stats</h3>
 
           <h4>Noise Level: <h4 id="quiet">N/A</h4></h4>
           <h4>Crowd Level: <h4 id="crowded">N/A</h4></h4>
         </div>
-        <div>
-          <a type="button" id="cancel" class="btn btn-danger btn-lg" href="homepage.html">
-            <span>Cancel Meetup</span>
-          </a>
-        </div>
-        <div>
-          <input value="Schedule this Meetup!" type="submit" id="create" class="btn btn-success btn-lg" onclick="returnToHome(); createMeetup();" disabled>
+
+        <div class="row">
+          <input value="Create Meetup!" type="submit" id="create" class="btn btn-success btn-lg col-sm-offset-1 col-sm-4" onclick="returnToHome(); createMeetup();" disabled>
+
+          <input value="Cancel Meetup" type="button" id="cancel" class="btn btn-danger btn-lg col-sm-offset-2 col-sm-4" onclick="returnToHome()">
         </div>
       </div>
     </div>
 
-
     <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-  	</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <!-- Bootstrap -->
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-  	</script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Google Maps API -->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtN1_XktTqXV4vg_Jcnuon9KXrFykAnlc&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtN1_XktTqXV4vg_Jcnuon9KXrFykAnlc&callback=initMap"></script>
 
     <!-- DateTimePicker -->
     <script src="datetime/build/jquery.datetimepicker.full.min.js"></script>

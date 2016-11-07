@@ -1,19 +1,17 @@
-/* Set black background color, white text and some padding */
-footer {
-  background-color: #555;
-  color: white;
-  padding: 15px;
-}
-/*#friend_title, #date_text, #loc_stats, #loc_text {
-  border-radius: 1rem;
+#mainscreen {
   background-color: #FFFFFF;
-}*/
+  border: 1px solid #FFFFFF;
+  border-radius: 1rem;
+  width: 80%;
+}
+
 #friend_dropdown{
   left: 50%;
   right: auto;
   text-align: center;
   transform: translate(-50%, 0);
 }
+
 #friend_scroll{
   left: 50%;
   right: auto;
@@ -49,11 +47,13 @@ ul.scroll-menu {
     -o-box-shadow:none;
     box-shadow:none
 }
+
 .scrollable-menu {
     height: auto;
     max-height: 200px;
     overflow-x: hidden;
 }
+
 #location_drop {
   left: 50%;
   right: auto;
@@ -65,10 +65,12 @@ ul.scroll-menu {
   text-align: left;
   margin-left: 1rem;
 }
+
 .checkbox{
   text-align: left;
   margin-left: 1rem;
 }
+
 #map{
   margin: auto;
   padding: auto;
@@ -78,12 +80,24 @@ ul.scroll-menu {
   border-color: #000000;
   border-width: 1px;
 }
-#loc_stats{
-  margin-top: 5rem;
+
+#loc_stats, #stats{
+  margin-top: 5px;
 }
-#friend_title, #loc_dropdown, #loc_text, #date_text, #cancel{
-  margin-top: 5rem;
+
+#friend_title, #loc_dropdown, #loc_text, #date_text {
+  margin-top: 15px;
 }
-#create{
-  margin-top: 2.5rem;
+
+#create, #cancel {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 770px) {
+  #create, #cancel {
+    margin: 20px 10px 5px 10px;
+    width: 90%;
+  }
 }

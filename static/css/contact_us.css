@@ -1,15 +1,23 @@
-.btn {
-	margin-bottom: 1rem;
-}
-
 #mainscreen {
 	background-color: #FFFFFF;
 	border: 1px solid #FFFFFF;
 	border-radius: 1rem;
+	width: 60%;
+}
+
+.btn {
+	margin-bottom: 1rem;
+	text-align: center;
 }
 
 #richard, #ingrid, #jovan {
 	margin: auto;
 	padding: auto;
 	width: 25%;
+}
+
+@media screen and (max-width: 770px) {
+	#mainscreen {
+		width: 100%;
+	}
 }
