@@ -164,7 +164,14 @@ $.ajax({
 });
 
 $(document).ready(function(){
-
+  for(var i = 1; i <= 15; i++){
+    if(localStorage.getItem("friend" + i) != null){
+      $("#friend" + i).append(localStorage.getItem("friend" + i));
+    }
+    else{
+      document.getElementById("friend" + i).style.display = 'none';
+    }
+  }
 });
 
 function initMap() {
