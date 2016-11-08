@@ -22,6 +22,10 @@
   color: #FFE5B8;
 }
 
+#addFr{
+  width: 95%;
+  margin-left: .25rem;
+}
 /* Side Nav Popout */
 .sidenav {
   position: fixed;
@@ -86,7 +90,7 @@
 }
 
 .calendar {
-  float: left; 
+  float: left;
   padding-left: 0px;
   padding-right: 0px;
   border-radius: 1rem;
