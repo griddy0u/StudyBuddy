@@ -204,6 +204,12 @@
 	<script>
 		$( document ).ready( function() {
 			$('.responsive-calendar').responsiveCalendar();
+
+        var date = "'" + "2016-11-12" + "'";
+
+        $('.responsive-calendar').responsiveCalendar ('edit', {
+          date: {"number": 1}
+        });
 		});
 	</script>
 

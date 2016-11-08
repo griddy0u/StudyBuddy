@@ -3,9 +3,9 @@ $(document).ready(function() {
   var usernameFilled = 0;
   var pwdFilled = 0;
   $((document).getElementById("signup")).prop('disabled', true);
-  $('input[type="email"]').keyup(function() {
+  $(document.getElementById("email")).keyup(function() {
     if($(this).val() != '') {
-      ++emailFilled;
+      emailFilled = 1;
     }
 
     if (emailFilled > 0 & usernameFilled > 0 && pwdFilled > 0) {
@@ -13,9 +13,9 @@ $(document).ready(function() {
     }
   });
 
-  $('input[type="text"]').keyup(function() {
+  $(document.getElementById("username")).keyup(function() {
     if($(this).val() != '') {
-      ++usernameFilled;
+      usernameFilled = 1;
     }
 
     if (emailFilled > 0 && usernameFilled > 0 && pwdFilled > 0) {
@@ -23,9 +23,9 @@ $(document).ready(function() {
     }
   });
 
-  $('input[type="password"]').keyup(function() {
+  $(document.getElementById("pwd")).keyup(function() {
     if($(this).val() != '') {
-      ++pwdFilled;
+      pwdFilled = 1;
     }
 
     if (emailFilled > 0 & usernameFilled > 0 && pwdFilled > 0) {
@@ -33,6 +33,12 @@ $(document).ready(function() {
     }
   });
  });
+
+function storeAccount() {
+  localStorage.setItem("accountEmail", $(document.getElementById("email")).val());
+  localStorage.setItem("accountUsername", $(document.getElementById("username")).val());
+  localStorage.setItem("accountPwd", $(document.getElementById("pwd")).val());
+}
 
 function login() {
   document.location.href = ("login.html");
