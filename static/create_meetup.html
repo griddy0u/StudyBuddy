@@ -234,7 +234,7 @@
         </div>
 
         <div class="row">
-          <input value="Create Meetup!" type="submit" id="create" class="btn btn-success btn-lg col-sm-offset-1 col-sm-4" onclick="returnToHome(); createMeetup();" disabled>
+          <input value="Create Meetup!" type="submit" id="create" class="btn btn-success btn-lg col-sm-offset-1 col-sm-4" onclick="addEvent(); returnToHome(); createMeetup();" disabled>
 
           <input value="Cancel Meetup" type="button" id="cancel" class="btn btn-danger btn-lg col-sm-offset-2 col-sm-4" onclick="returnToHome()">
         </div>
@@ -256,5 +256,21 @@
     <!-- Corresponding JS File -->
     <script src="js/top_nav_bar.js"></script>
     <script src="js/create_meetup.js"></script>
+    <script src="js/responsive-calendar.js"></script>
+
+    <script>
+      function addEvent() {
+        var val, date, num;
+        val = $(document.getElementById("datetimepicker")).val();
+        date = val.substr(0, 4) + "-" + val.substr(5, 2) + "-" + val.substr(8, 2);
+        num = 1;
+        date = "\"" + date + "\"";
+        console.log(date);
+
+        $('.responsive-calendar').responsiveCalendar ('edit', {
+          date: {"number": num}
+        });
+      }
+    </script>
   </body>
 </html>
