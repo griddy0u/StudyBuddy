@@ -1,19 +1,22 @@
-$.ajax({
+/* $.ajax({
     url: 'data.json',
     dataType: 'json',
     type: 'get',
     cache: true,
     success: function(data){
-
-      /* Loads in Account Email/Username/Password */
-      document.getElementById("accEmail").innerHTML = sessionStorage.getItem("accountEmail");
-      document.getElementById("accUsername").innerHTML = sessionStorage.getItem("accountUsername");
-      document.getElementById("accPwd").innerHTML = sessionStorage.getItem("accountPwd");
+      document.getElementById("accEmail").innerHTML = localStorage.getItem("accountEmail");
+      document.getElementById("accUsername").innerHTML = localStorage.getItem("accountUsername");
+      document.getElementById("accPwd").innerHTML = localStorage.getItem("accountPwd");
     }
-});
+}); */
 
 /* Enables Email/Username/Password Change Buttons */
 $(document).ready(function() {
+
+  /* Loads in Account Email/Username/Password */
+  document.getElementById("accEmail").innerHTML = localStorage.getItem("accountEmail");
+  document.getElementById("accUsername").innerHTML = localStorage.getItem("accountUsername");
+  document.getElementById("accPwd").innerHTML = localStorage.getItem("accountPwd");
 
   /* Email */
   $((document).getElementById("confirmEmailChange")).prop('disabled', true);
@@ -42,51 +45,51 @@ $(document).ready(function() {
 
 /* EMAIL */
 function changeEmail() {
-  document.getElementById("currAccEmail").placeholder = sessionStorage.getItem("accountEmail");
+  document.getElementById("currAccEmail").placeholder = localStorage.accountEmail;
   $(document.getElementById("newAccEmail")).val("");
   $(document.getElementById("email")).toggle();
   $(document.getElementById("changeEmail")).toggle();
 }
 
 function setNewEmail() {
-  /* Stores New Email to Session Storage */
-  sessionStorage.setItem("accountEmail", $(document.getElementById("newAccEmail")).val());
+  /* Stores New Email to Local Storage */
+  localStorage.setItem("accountEmail", $(document.getElementById("newAccEmail")).val());
 
   /* Setes New Email to Appear on Settings */
-  document.getElementById("accEmail").innerHTML = sessionStorage.getItem("accountEmail");
+  document.getElementById("accEmail").innerHTML = localStorage.accountEmail;
 }
 
 /* USERNAME */
 function changeName() {
-  document.getElementById("currAccName").placeholder = sessionStorage.getItem("accountUsername");
+  document.getElementById("currAccName").placeholder = localStorage.accountUsername;
   $(document.getElementById("newAccName")).val("");
   $(document.getElementById("name")).toggle();
   $(document.getElementById("changeUsername")).toggle();
 }
 
 function setNewName() {
-  /* Stores New Username to Session Storage */
-  sessionStorage.setItem("accountUsername", $(document.getElementById("newAccName")).val());
+  /* Stores New Username to Local Storage */
+  localStorage.setItem("accountUsername", $(document.getElementById("newAccName")).val());
 
   /* Sets New Username to Appear on TopNavBar */
-  document.getElementById("username").innerHTML = sessionStorage.getItem("accountUsername");
+  document.getElementById("username").innerHTML = localStorage.accountUsername;
 
   /* Sets New Username to Appear on Settings */
-  document.getElementById("accUsername").innerHTML = sessionStorage.getItem("accountUsername");
+  document.getElementById("accUsername").innerHTML = localStorage.accountUsername;
 }
 
 /* PASSWORD */
 function changePwd() {
-  document.getElementById("currAccPwd").placeholder = sessionStorage.getItem("accountPwd");
+  document.getElementById("currAccPwd").placeholder = localStorage.accountPwd;
   $(document.getElementById("newAccPwd")).val("");
   $(document.getElementById("pwd")).toggle();
   $(document.getElementById("changePassword")).toggle();
 }
 
 function setNewPwd() {
-  /* Stores New Password to Session Storage */
-  sessionStorage.setItem("accountPwd", $(document.getElementById("newAccPwd")).val());
+  /* Stores New Password to Local Storage */
+  localStorage.setItem("accountPwd", $(document.getElementById("newAccPwd")).val());
 
   /* Sets New Password to Appear on Settings */
-  document.getElementById("accPwd").innerHTML = sessionStorage.getItem("accountPwd");
+  document.getElementById("accPwd").innerHTML = localStorage.accountPwd;
 }

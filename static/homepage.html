@@ -29,7 +29,7 @@
 			<div class="navbar-header">
 
 		    	<!-- Collapse Button -->
-				<button type="button" id="navbarCollapseToggle" class="navbar-toggle" data-toggle="collapse" 
+				<button type="button" id="navbarCollapseToggle" class="navbar-toggle" data-toggle="collapse"
 				data-target="#myNavbar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -76,7 +76,7 @@
 			</div>
 		</div>
 	</nav>
-	
+
 	<!-- Main Screen -->
 	<div class="container text-center">
 		<div class="row content">
@@ -102,6 +102,7 @@
 
 				<!-- Sidenav Content -->
 		    	<div id="mySidenav" class="sidenav text-left">
+		    		<span id="numOfFriends" style="cursor:default"></span>
 					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					<span style="cursor:default">
 						<label id="noFriends">
@@ -126,9 +127,13 @@
 					</span>
 
 					<!-- Add Friends Button -->
-					<button type="button" id="addFriend" class="btn btn-primary btn-lg disabled">
-						+ Add Friends
-					</button>
+					<div class="form-group">
+						<label class="control-label" for="addFr"></label>
+						<div>
+							<input type="text" id="addFr" class="form-control" placeholder="Enter Friend's Username">
+						</div>
+					</div>
+					<input value = "+ Add Friend" type="submit" id="addFriend" class="btn btn-primary btn-lg" onclick="addFriend()" disabled>
 				</div>
 	    	</div>
 
@@ -204,13 +209,14 @@
 	<script>
 		$( document ).ready( function() {
 			$('.responsive-calendar').responsiveCalendar();
-
-        var date = "'" + "2016-11-12" + "'";
-
-        $('.responsive-calendar').responsiveCalendar ('edit', {
-          date: {"number": 1}
-        });
 		});
+
+		$(document).ready(function () {
+			var date = "2016-11-06";
+			$('.responsive-calendar').responsiveCalendar('edit', {
+	      		date: {"number": 1}
+	    	});
+    	});
 	</script>
 
 </body>

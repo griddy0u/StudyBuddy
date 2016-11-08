@@ -6,8 +6,7 @@ $.ajax({
     cache: true,
     success: function(data){
       /* Loads friends list in */
-      var account = 0;
-      $(data.accounts[sessionStorage.accountIndex].friends).each(function(index, value){
+      /*$(data.accounts[sessionStorage.accountIndex].friends).each(function(index, value){
         switch(index){
           case 0:
             if(value.name == null){
@@ -130,7 +129,7 @@ $.ajax({
             }
             break;
         }
-      });
+      }); */
 
       /* Loads locations in */
       $(data.locations).each(function(index, value){
@@ -162,6 +161,17 @@ $.ajax({
         }
       });
     }
+});
+
+$(document).ready(function(){
+  for(var i = 1; i <= 15; i++){
+    if(localStorage.getItem("friend" + i) != null){
+      $("#friend" + i).append(localStorage.getItem("friend" + i));
+    }
+    else{
+      document.getElementById("friend" + i).style.display = 'none';
+    }
+  }
 });
 
 function initMap() {

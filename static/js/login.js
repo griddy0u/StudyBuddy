@@ -25,14 +25,18 @@ $(document).ready(function() {
 
 function loginToHome() {
   var index = 0;
+  $(document.getElementById("login")).attr("type", "button");
 
   if (localStorage.getItem("accountEmail") != null) {
     if (localStorage.accountEmail == $(document.getElementById("email")).val()) { 
       if (localStorage.accountPwd == $(document.getElementById("pwd")).val()) {
         document.location.href = ("homepage.html");
+        return;
       }
     }
   }
+
+  $(document.getElementById("login")).attr("type", "submit");
 
   $.ajax({
     url: 'data.json',
@@ -43,11 +47,11 @@ function loginToHome() {
       for (index = 0; index < data.accounts.length; index++) {
         if (data.accounts[index].email == $(document.getElementById("email")).val()) {
           if (data.accounts[index].password == $(document.getElementById("pwd")).val()) {
-            locaStorage.setItem("accountEmail", data.accounts[index].email);
+            localStorage.setItem("accountEmail", data.accounts[index].email);
             localStorage.setItem("accountUsername", data.accounts[index].username);
             localStorage.setItem("accountPwd", data.accounts[index].password);
-            localStorage.setItem("accountIndex", index);
             document.location.href = ("homepage.html");
+            return;
           }
         }
       }

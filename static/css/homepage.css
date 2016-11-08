@@ -22,6 +22,11 @@
   color: #FFE5B8;
 }
 
+#addFr{
+  width: 95%;
+  margin-left: .25rem;
+}
+
 /* Side Nav Popout */
 .sidenav {
   position: fixed;
@@ -39,6 +44,7 @@
 }
 
 .sidenav a, .sidenav label {
+  margin-bottom: 0;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -49,6 +55,19 @@
 
 .sidenav a:hover, .offcanvas a:focus, .sidenav label:hover, .offcanvas label:focus{
   color: #96BCFF;
+}
+
+.sidenav #numOfFriends {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px 8px 8px 32px;
+
+  text-decoration: none;
+  font-size: 36px;
+  color: #FFD996;
+  display: block;
+  transition: 0.3s;
 }
 
 .sidenav .closebtn {
@@ -86,7 +105,7 @@
 }
 
 .calendar {
-  float: left; 
+  float: left;
   padding-left: 0px;
   padding-right: 0px;
   border-radius: 1rem;

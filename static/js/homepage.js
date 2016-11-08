@@ -1,12 +1,47 @@
-$.ajax({
+$(document).ready(function(){
+  var numOfFriends = 0;
+  for(var i = 1; i <= 15; i++){
+    if(localStorage.getItem("friend" + i) != null){
+      if(i == 1){
+        $("#noFriends").hide();
+      }
+      ++numOfFriends;
+      document.getElementById('friend' + i).innerHTML = localStorage.getItem("friend" + i);
+    }
+  }
+
+  document.getElementById("numOfFriends").innerHTML = "(" + numOfFriends + "/15)";
+});
+
+$(document).keyup(function(){
+  var friendCount = 0;
+  while(friendCount < 15 && localStorage.getItem("friend" + (friendCount + 1)) != null){
+      friendCount++;
+  }
+  if(friendCount < 15 && $('#addFr').val() != ""){
+    $(document.getElementById('addFriend')).prop('disabled', false);
+  }
+});
+
+function addFriend(){
+  var friendCount = 0;
+  while(friendCount < 15 && localStorage.getItem("friend" + (friendCount + 1)) != null){
+      friendCount++;
+  }
+  if(friendCount < 15){
+    localStorage.setItem("friend" + (friendCount + 1), $('#addFr').val());
+  }
+  document.location.href = ("homepage.html");
+}
+/*$.ajax({
     url: 'data.json',
     dataType: 'json',
     type: 'get',
     cache: true,
-    success: function(data){
+    success: function(data){*/
 
       /* Loads friends list in */
-      $(data.accounts[sessionStorage.getItem("accountIndex")].friends).each(function(index, value) {
+      /*$(data.accounts[sessionStorage.getItem("accountIndex")].friends).each(function(index, value) {
         var numOfFriends = 0;
         switch(index) {
           case 0:
@@ -165,4 +200,4 @@ $.ajax({
         }
       });
     }
-});
+});*/

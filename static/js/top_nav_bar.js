@@ -5,6 +5,6 @@ $.ajax({
     cache: true,
     success: function(data){
     	/* Sets Username to Appear on TopNavBar */
-    	document.getElementById("username").innerHTML = sessionStorage.getItem("accountUsername");
+    	document.getElementById("username").innerHTML = localStorage.accountUsername;
 	}
 });
