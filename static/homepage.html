@@ -201,33 +201,25 @@
 	</script>
 
 	<!-- Adds Events -->
-	<script type="text/javascript">
+	<script>
 		$(document).ready(function () {
 		    $(".responsive-calendar").responsiveCalendar({
-				time: '2016-11',
-				events: {
-					"2016-11-05": {
-						"number": 1,
-						"dayEvents": [{
-							"name": "Important",
-							"hour": "4"
-						}]
-					}
-				}
+			    time: '2016-11',
+			    events: {
+			      "2016-11-09": {
+			        "number": 1
+			      }
+			    }
 		    });
 		});
-	</script>
 
-	<!-- Actions to Occur When Active Day Is Clicked -->
-	<script>
-	$(document).ready(function() {
-	  $('.responsive-calendar').responsiveCalendar({
-	    onActiveDayClick: function(events) {
-	    	$(this).popover();
-	    }
-	  });
-	});
-	</script>
 
+		$(document).ready(function () {
+			var date = "2016-11-06";
+			$('.responsive-calendar').responsiveCalendar('edit', {
+	        	date: {"number": 1}
+	        });
+        });
+	</script>
 </body>
 </html>
