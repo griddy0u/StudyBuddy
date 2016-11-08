@@ -1,3 +1,4 @@
+
 $.ajax({
     url: 'data.json',
     dataType: 'json',
@@ -243,10 +244,140 @@ function modifyLocInfo(str){
 }
 
 function createMeetup(){
-  /* fs = require('fs');
-  var m = JSON.parse(fs.readFileSync('data.json').toString());
-  m.accounts[sessionStorage.accountIndex].meetups[1].meeting_time = "test";
-  fs.writeFile('data.json', JSON.stringify(m)); */
+  var numMeets = 0;
+  if(localStorage.getItem("f1") == null){
+    for(var i = 1; i <= 5; i++){
+      localStorage.setItem("f" + i, null);
+    }
+    numMeets = 1;
+  }
+  else if(localStorage.getItem("f6") == null){
+    for(var i = 6; i <= 10; i++){
+      localStorage.setItem("f" + i, null);
+    }
+    numMeets = 2;
+  }
+  else if(localStorage.getItem("f11") == null){
+    for(var i = 11; i <= 15; i++){
+      localStorage.setItem("f" + i, null);
+      numMeets = 5;
+    }
+  }
+  else if(localStorage.getItem("f16") == null){
+    for(var i = 16; i <= 20; i++){
+      localStorage.setItem("f" + i, null);
+    }
+    numMeets = 4;
+  }
+  else if(localStorage.getItem("f21") == null){
+    for(var i = 21; i < 25; i++){
+      localStorage.setItem("f" + i, null);
+    }
+    numMeets = 5;
+  }
+  var numFriends = 0;
+  for(var i = 1; i <= 15; i++){
+    if(numFriends < 5 && document.getElementById('check' + i).checked == true){
+      switch(numFriends){
+        case 0:
+          switch(numMeets){
+            case 1:
+              localStorage.f1 = document.getElementById('friend' + i).textContent;
+              break;
+            case 2:
+              localStorage.f6 = document.getElementById('friend' + i).textContent;
+              break;
+            case 3:
+              localStorage.f11 = document.getElementById('friend' + i).textContent;
+              break;
+            case 4:
+              localStorage.f16 = document.getElementById('friend' + i).textContent;
+              break;
+            case 5:
+              localStorage.f21 = document.getElementById('friend' + i).textContent;
+          }
+          break;
+        case 1:
+          switch(numMeets){
+            case 1:
+              localStorage.f2 = document.getElementById('friend' + i).textContent;
+              break;
+            case 2:
+              localStorage.f7 = document.getElementById('friend' + i).textContent;
+              break;
+            case 3:
+              localStorage.f12 = document.getElementById('friend' + i).textContent;
+              break;
+            case 4:
+              localStorage.f17 = document.getElementById('friend' + i).textContent;
+              break;
+            case 5:
+              localStorage.f22 = document.getElementById('friend' + i).textContent;
+          }
+          break;
+        case 2:
+          switch(numMeets){
+            case 1:
+              localStorage.f3 = document.getElementById('friend' + i).textContent;
+              break;
+            case 2:
+              localStorage.f8 = document.getElementById('friend' + i).textContent;
+              break;
+            case 3:
+              localStorage.f13 = document.getElementById('friend' + i).textContent;
+              break;
+            case 4:
+              localStorage.f18 = document.getElementById('friend' + i).textContent;
+              break;
+            case 5:
+              localStorage.f23 = document.getElementById('friend' + i).textContent;
+          }
+          break;
+        case 3:
+          switch(numMeets){
+            case 1:
+              localStorage.f4 = document.getElementById('friend' + i).textContent;
+              break;
+            case 2:
+              localStorage.f9 = document.getElementById('friend' + i).textContent;
+              break;
+            case 3:
+              localStorage.f14 = document.getElementById('friend' + i).textContent;
+              break;
+            case 4:
+              localStorage.f19 = document.getElementById('friend' + i).textContent;
+              break;
+            case 5:
+              localStorage.f24 = document.getElementById('friend' + i).textContent;
+          }
+          break;
+        case 4:
+          switch(numMeets){
+            case 1:
+              localStorage.f5 = document.getElementById('friend' + i).textContent;
+              break;
+            case 2:
+              localStorage.f10 = document.getElementById('friend' + i).textContent;
+              break;
+            case 3:
+              localStorage.f15 = document.getElementById('friend' + i).textContent;
+              break;
+            case 4:
+              localStorage.f20 = document.getElementById('friend' + i).textContent;
+              break;
+            case 5:
+              localStorage.f25 = document.getElementById('friend' + i).textContent;
+          }
+      }
+      numFriends++;
+    }
+  }
+  if((document.getElementById('datetimepicker').value).localeCompare("") != 0){
+    localStorage.setItem("meeting_time" + numMeets, document.getElementById('datetimepicker').value);
+  }
+  if((document.getElementById('loc_text').innerHTML).localeCompare("Selected location") != 0){
+    localStorage.setItem("location" + numMeets, document.getElementById('loc_text').innerHTML);
+  }
 }
 
 $(document).ready(function() {
