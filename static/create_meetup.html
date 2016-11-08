@@ -87,7 +87,7 @@
 		  <div class="row content">
 			  <!-- Friends List Select -->
         <div class="btn-group" id="friend_select">
-          <h3 id="friend_title">Select Study Buddies! (Max: 5)</h3>
+          <h3 id="friend_title">Select Study Buddies:</h3>
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="friend_dropdown">Choose here<span class="caret"></span></button>
           <ul class="dropdown-menu scrollable-menu" role="menu" id="friend_scroll">
               <li>
@@ -169,12 +169,15 @@
 
         <hr>
 
-        <h3 id="date_text"> Select study date and time: </h3>
+        <h3 id="date_text"> Select Study Date and Time: </h3>
         <input id="datetimepicker" type="text" value="">
 
+        <hr>
+
+        <h3 id="loc_header">Select a Study Location:</h3>
         <div class="dropdown" id="loc_dropdown">
 
-          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select a study location...<span class="caret"></span></button>
+          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Choose here<span class="caret"></span></button>
           <ul class="dropdown-menu scrollable-menu" role="menu" id="location_drop">
             <!-- Study locations on campus -->
             <li>
@@ -220,9 +223,7 @@
           </ul>
         </div>
 
-        <hr>
-
-        <h3 id="loc_text">Selected location</h3>
+        <h4 id="loc_text">Selected location</h4>
         <div id="map"></div>
 
         <div id="loc_stats">
