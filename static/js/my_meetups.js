@@ -4,160 +4,59 @@ $(document).ready(function(){
   $("#meet3").hide();
   $("#meet4").hide();
   $("#meet5").hide();
-  var emptyMeetup = 0;
-  var id = 1;
-  while(document.getElementById('a' + id).innerHTML != "N/A"){
-    emptyMeetup++;
-    id++;
-  }
   for(var i = 1; i <= 21; i = i + 5){
-    if(localStorage.getItem('f' + i) != null){
-      switch(emptyMeetup){
-        case 0:
-          if(localStorage.getItem('f' + i) != null && localStorage.getItem('f' + i) != "null"){
-            if(localStorage.getItem('f' + i) != "null"){
-              document.getElementById("a1").innerHTML = localStorage.getItem('f' + i);
-            }
-            if(localStorage.getItem('f' + (i + 1)) != "null"){
-              $("#a1").append(", " + localStorage.getItem('f' + (i + 1)));
-            }
-            if(localStorage.getItem('f' + (i + 2)) != "null"){
-              $("#a1").append(", " + localStorage.getItem('f' + (i + 2)));
-            }
-            if(localStorage.getItem('f' + (i + 3)) != "null"){
-              $("#a1").append(", " + localStorage.getItem('f' + (i + 3)));
-            }
-            if(localStorage.getItem('f' + (i + 4)) != "null"){
-              $("#a1").append(", " + localStorage.getItem('f' + (i + 4)));
-            }
-            document.getElementById("l1").innerHTML = localStorage.location1;
-            document.getElementById("d1").innerHTML = localStorage.meeting_time1;
-            $("#meet1").show();
-          }
-          else{
-            document.getElementById("a1").innerHTML = "N/A";
-            document.getElementById("l1").innerHTML = "N/A";
-            document.getElementById("d1").innerHTML = "N/A";
-            $("#meet1").hide();
-          }
-          break;
-        case 1:
-          if(localStorage.getItem('f' + i) != null && localStorage.getItem('f' + i) != "null"){
-            if(localStorage.getItem('f' + i) != "null"){
-              document.getElementById("a2").innerHTML = localStorage.getItem('f' + i);
-            }
-            if(localStorage.getItem('f' + (i + 1)) != "null"){
-              $("#a2").append(", " + localStorage.getItem('f' + (i + 1)));
-            }
-            if(localStorage.getItem('f' + (i + 2)) != "null"){
-              $("#a2").append(", " + localStorage.getItem('f' + (i + 2)));
-            }
-            if(localStorage.getItem('f' + (i + 3)) != "null"){
-              $("#a2").append(", " + localStorage.getItem('f' + (i + 3)));
-            }
-            if(localStorage.getItem('f' + (i + 4)) != "null"){
-              $("#a2").append(", " + localStorage.getItem('f' + (i + 4)));
-            }
-            document.getElementById("l2").innerHTML = localStorage.location1;
-            document.getElementById("d2").innerHTML = localStorage.meeting_time1;
-            $("#meet2").show();
-          }
-          else{
-            document.getElementById("a2").innerHTML = "N/A";
-            document.getElementById("l2").innerHTML = "N/A";
-            document.getElementById("d2").innerHTML = "N/A";
-            $("#meet2").hide();
-          }
-          break;
-        case 2:
-          if(localStorage.getItem('f' + i) != null && localStorage.getItem('f' + i) != "null"){
-            if(localStorage.getItem('f' + i) != "null"){
-              document.getElementById("a3").innerHTML = localStorage.getItem('f' + i);
-            }
-            if(localStorage.getItem('f' + (i + 1)) != "null"){
-              $("#a3").append(", " + localStorage.getItem('f' + (i + 1)));
-            }
-            if(localStorage.getItem('f' + (i + 2)) != "null"){
-              $("#a3").append(", " + localStorage.getItem('f' + (i + 2)));
-            }
-            if(localStorage.getItem('f' + (i + 3)) != "null"){
-              $("#a3").append(", " + localStorage.getItem('f' + (i + 3)));
-            }
-            if(localStorage.getItem('f' + (i + 4)) != "null"){
-              $("#a3").append(", " + localStorage.getItem('f' + (i + 4)));
-            }
-            document.getElementById("l3").innerHTML = localStorage.location1;
-            document.getElementById("d3").innerHTML = localStorage.meeting_time1;
-            $("#meet3").show();
-          }
-          else{
-            document.getElementById("a3").innerHTML = "N/A";
-            document.getElementById("l3").innerHTML = "N/A";
-            document.getElementById("d3").innerHTML = "N/A";
-            $("#meet3").hide();
-          }
-          break;
-        case 3:
-          if(localStorage.getItem('f' + i) != null && localStorage.getItem('f' + i) != "null"){
-            if(localStorage.getItem('f' + i) != "null"){
-              document.getElementById("a4").innerHTML = localStorage.getItem('f' + i);
-            }
-            if(localStorage.getItem('f' + (i + 1)) != "null"){
-              $("#a4").append(", " + localStorage.getItem('f' + (i + 1)));
-            }
-            if(localStorage.getItem('f' + (i + 2)) != "null"){
-              $("#a4").append(", " + localStorage.getItem('f' + (i + 2)));
-            }
-            if(localStorage.getItem('f' + (i + 3)) != "null"){
-              $("#a4").append(", " + localStorage.getItem('f' + (i + 3)));
-            }
-            if(localStorage.getItem('f' + (i + 4)) != "null"){
-              $("#a4").append(", " + localStorage.getItem('f' + (i + 4)));
-            }
-            document.getElementById("l4").innerHTML = localStorage.location1;
-            document.getElementById("d4").innerHTML = localStorage.meeting_time1;
-            $("#meet4").show();
-          }
-          else{
-            document.getElementById("a4").innerHTML = "N/A";
-            document.getElementById("l4").innerHTML = "N/A";
-            document.getElementById("d4").innerHTML = "N/A";
-            $("#meet4").hide();
-          }
-          break;
-        case 4:
-          if(localStorage.getItem('f' + i) != null && localStorage.getItem('f' + i) != "null"){
-            if(localStorage.getItem('f' + i) != "null"){
-              document.getElementById("a5").innerHTML = localStorage.getItem('f' + i);
-            }
-            if(localStorage.getItem('f' + (i + 1)) != "null"){
-              $("#a5").append(", " + localStorage.getItem('f' + (i + 1)));
-            }
-            if(localStorage.getItem('f' + (i + 2)) != "null"){
-              $("#a5").append(", " + localStorage.getItem('f' + (i + 2)));
-            }
-            if(localStorage.getItem('f' + (i + 3)) != "null"){
-              $("#a5").append(", " + localStorage.getItem('f' + (i + 3)));
-            }
-            if(localStorage.getItem('f' + (i + 4)) != "null"){
-              $("#a5").append(", " + localStorage.getItem('f' + (i + 4)));
-            }
-            document.getElementById("l1").innerHTML = localStorage.location1;
-            document.getElementById("d1").innerHTML = localStorage.meeting_time1;
-            $("#meet5").show();
-          }
-          else{
-            document.getElementById("a1").innerHTML = "N/A";
-            document.getElementById("l1").innerHTML = "N/A";
-            document.getElementById("d1").innerHTML = "N/A";
-            $("#meet5").hide();
-          }
+    if(localStorage.getItem('f' + i) != null && localStorage.getItem('f' + i) != "null"){
+      if(localStorage.getItem('f' + i) != "null"){
+        document.getElementById("a" + (i + 4) / 5).innerHTML = localStorage.getItem('f' + i);
       }
-      emptyMeetup++;
+      if(localStorage.getItem('f' + (i + 1)) != "null"){
+        $("#a" + (i + 4) / 5).append(", " + localStorage.getItem('f' + (i + 1)));
+      }
+      if(localStorage.getItem('f' + (i + 2)) != "null"){
+        $("#a" + (i + 4) / 5).append(", " + localStorage.getItem('f' + (i + 2)));
+      }
+      if(localStorage.getItem('f' + (i + 3)) != "null"){
+        $("#a" + (i + 4) / 5).append(", " + localStorage.getItem('f' + (i + 3)));
+      }
+      if(localStorage.getItem('f' + (i + 4)) != "null"){
+        $("#a" + (i + 4) / 5).append(", " + localStorage.getItem('f' + (i + 4)));
+      }
+      document.getElementById("l" + (i + 4) / 5).innerHTML = localStorage.getItem("location" + (i + 4) / 5);
+      document.getElementById("d" + (i + 4) / 5).innerHTML = localStorage.getItem("meeting_time" + (i + 4) / 5);
+      $("#meet" + (i + 4) / 5).show();
+    }
+    else{
+      document.getElementById("a" + (i + 4) / 5).innerHTML = "N/A";
+      document.getElementById("l" + (i + 4) / 5).innerHTML = "N/A";
+      document.getElementById("d" + (i + 4) / 5).innerHTML = "N/A";
+      $("#meet" + (i + 4) / 5).hide();
     }
   }
 });
 
+function deleteMeetup(meetNum){
+  for(var i = (5 * meetNum - 4); i <= 21; i = i + 5){
+    if(localStorage.getItem("f" + i) != null && localStorage.getItem("f" + (i + 5)) != null){
+      localStorage.setItem("f" + i, localStorage.getItem("f" + (i + 5)));
+      localStorage.setItem("f" + (i + 1), localStorage.getItem("f" + (i + 6)));
+      localStorage.setItem("f" + (i + 2), localStorage.getItem("f" + (i + 7)));
+      localStorage.setItem("f" + (i + 3), localStorage.getItem("f" + (i + 8)));
+      localStorage.setItem("f" + (i + 4), localStorage.getItem("f" + (i + 9)));
+      localStorage.setItem("location" + (i + 4) / 5, localStorage.getItem("location" + (i + 9) / 5));
+      localStorage.setItem("meeting_time" + (i + 4) / 5, localStorage.getItem("meeting_time" + (i + 9) / 5));
+    }
+    else if(localStorage.getItem("f" + i) != null && localStorage.getItem("f" + (i + 5)) == null){
+      localStorage.removeItem("f" + i);
+      localStorage.removeItem("f" + (i + 1));
+      localStorage.removeItem("f" + (i + 2));
+      localStorage.removeItem("f" + (i + 3));
+      localStorage.removeItem("f" + (i + 4));
+      localStorage.removeItem("location" + (i + 4) / 5);
+      localStorage.removeItem("meeting_time" + (i + 4) / 5);
+    }
+  }
+  document.location.href = ("my_meetups.html")
+}
 
 /*$.ajax({
   url: 'data.json',

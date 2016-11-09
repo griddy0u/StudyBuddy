@@ -28,10 +28,16 @@ function addFriend(){
   while(friendCount < 15 && localStorage.getItem("friend" + (friendCount + 1)) != null){
       friendCount++;
   }
+  if(friendCount == 0){
+    $("#noFriends").hide();
+  }
   if(friendCount < 15){
     localStorage.setItem("friend" + (friendCount + 1), $('#addFr').val());
+    document.getElementById("friend" + (friendCount + 1)).innerHTML = localStorage.getItem("friend" + (friendCount + 1));
+    $('#addFr').val("");
+    $(document.getElementById('addFriend')).prop('disabled', true);
   }
-  document.location.href = ("homepage.html");
+  /*document.location.href = ("homepage.html");*/
 }
 /*$.ajax({
     url: 'data.json',
