@@ -52,12 +52,14 @@ function deleteFriend(friendNum) {
   for (var i = friendNum; i <= 15; i++){
     if (localStorage.getItem("friend" + i) != null && localStorage.getItem("friend" + (i + 1)) != null){
       localStorage.setItem("friend" + i, localStorage.getItem("friend" + (i + 1)));
+      document.getElementById("friend" + i).innerHTML = localStorage.getItem("friend" + i);
     }
     else if (localStorage.getItem("friend" + i) != null && localStorage.getItem("friend" + (i + 1)) == null){
       localStorage.removeItem("friend" + i);
+      document.getElementById("friend" + i).innerHTML = "";
+      $(document.getElementById("fr" + i)).hide();
     }
   }
-  document.location.href = ("homepage.html");
 }
 
 /*$.ajax({
