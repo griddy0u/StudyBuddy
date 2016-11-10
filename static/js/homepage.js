@@ -1,5 +1,11 @@
 $(document).ready(function(){
   var numOfFriends = 0;
+
+  /* Hides All Delete Friends Buttons */
+  for (var i = 1; i <= 15; i++) {
+    $(document.getElementById("fr" + i)).hide();
+  }
+
   for(var i = 1; i <= 15; i++){
     if(localStorage.getItem("friend" + i) != null){
       if(i == 1){
@@ -7,6 +13,7 @@ $(document).ready(function(){
       }
       ++numOfFriends;
       document.getElementById('friend' + i).innerHTML = localStorage.getItem("friend" + i);
+      $(document.getElementById("fr" + i)).show();
     }
   }
 
@@ -34,11 +41,25 @@ function addFriend(){
   if(friendCount < 15){
     localStorage.setItem("friend" + (friendCount + 1), $('#addFr').val());
     document.getElementById("friend" + (friendCount + 1)).innerHTML = localStorage.getItem("friend" + (friendCount + 1));
+    $(document.getElementById("fr" + (friendCount + 1))).show();
     $('#addFr').val("");
     $(document.getElementById('addFriend')).prop('disabled', true);
   }
   /*document.location.href = ("homepage.html");*/
 }
+
+function deleteFriend(friendNum) {
+  for (var i = friendNum; i <= 15; i++){
+    if (localStorage.getItem("friend" + i) != null && localStorage.getItem("friend" + (i + 1)) != null){
+      localStorage.setItem("friend" + i, localStorage.getItem("friend" + (i + 1)));
+    }
+    else if (localStorage.getItem("friend" + i) != null && localStorage.getItem("friend" + (i + 1)) == null){
+      localStorage.removeItem("friend" + i);
+    }
+  }
+  document.location.href = ("homepage.html");
+}
+
 /*$.ajax({
     url: 'data.json',
     dataType: 'json',

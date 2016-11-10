@@ -55,7 +55,7 @@ function deleteMeetup(meetNum){
       localStorage.removeItem("meeting_time" + (i + 4) / 5);
     }
   }
-  document.location.href = ("my_meetups.html")
+  document.location.href = ("my_meetups.html");
 }
 
 /*$.ajax({
