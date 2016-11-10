@@ -11,13 +11,15 @@ $(document).ready(function(){
       if(i == 1){
         $("#noFriends").hide();
       }
-      ++numOfFriends;
       document.getElementById('friend' + i).innerHTML = localStorage.getItem("friend" + i);
       $(document.getElementById("fr" + i)).show();
     }
   }
-
-  document.getElementById("numOfFriends").innerHTML = "(" + numOfFriends + "/15)";
+  while(localStorage.getItem("friend" + (numOfFriends + 1)) != null){
+    numOfFriends++;
+  }
+  localStorage.friendCount = numOfFriends;
+  document.getElementById("numOfFriends").innerHTML = "(" + localStorage.getItem("friendCount") + "/15)";
 });
 
 $(document).keyup(function(){
@@ -40,12 +42,16 @@ function addFriend(){
   }
   if(friendCount < 15){
     localStorage.setItem("friend" + (friendCount + 1), $('#addFr').val());
+    /* Increments friend count on top of list */
+    localStorage.setItem("friendCount", "" + (parseInt(localStorage.friendCount) + 1));
+    document.getElementById("numOfFriends").innerHTML = "(" + localStorage.getItem("friendCount") + "/15)";
     document.getElementById("friend" + (friendCount + 1)).innerHTML = localStorage.getItem("friend" + (friendCount + 1));
     $(document.getElementById("fr" + (friendCount + 1))).show();
+    /* Empties add friend search bar */
     $('#addFr').val("");
+    /* Disables add friend button */
     $(document.getElementById('addFriend')).prop('disabled', true);
   }
-  /*document.location.href = ("homepage.html");*/
 }
 
 function deleteFriend(friendNum) {
@@ -59,6 +65,13 @@ function deleteFriend(friendNum) {
       document.getElementById("friend" + i).innerHTML = "";
       $(document.getElementById("fr" + i)).hide();
     }
+  }
+  /* Decrements friend count on top of list */
+  localStorage.setItem("friendCount", "" + (parseInt(localStorage.friendCount) - 1));
+  document.getElementById("numOfFriends").innerHTML = "(" + localStorage.getItem("friendCount") + "/15)";
+  /* Checks if no friends now */
+  if(parseInt(localStorage.friendCount) == 0){
+    $("#noFriends").show();
   }
 }
 

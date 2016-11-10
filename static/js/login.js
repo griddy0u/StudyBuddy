@@ -8,7 +8,7 @@ $(document).ready(function() {
     }
 
     if (emailFilled > 0 && pwdFilled > 0) {
-      $((document).getElementById("login")).prop('disabled', false); 
+      $((document).getElementById("login")).prop('disabled', false);
     }
   });
 
@@ -18,7 +18,7 @@ $(document).ready(function() {
     }
 
     if (emailFilled > 0 && pwdFilled > 0) {
-      $((document).getElementById("login")).prop('disabled', false); 
+      $((document).getElementById("login")).prop('disabled', false);
     }
   });
  });
@@ -28,8 +28,11 @@ function loginToHome() {
   $(document.getElementById("login")).attr("type", "button");
 
   if (localStorage.getItem("accountEmail") != null) {
-    if (localStorage.accountEmail == $(document.getElementById("email")).val()) { 
+    if (localStorage.accountEmail == $(document.getElementById("email")).val()) {
       if (localStorage.accountPwd == $(document.getElementById("pwd")).val()) {
+        if(localStorage.getItem("friendCount") == null){
+          localStorage.setItem("friendCount", "0");
+        }
         document.location.href = ("homepage.html");
         return;
       }
