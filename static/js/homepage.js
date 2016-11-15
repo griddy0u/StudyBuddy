@@ -20,6 +20,40 @@ $(document).ready(function(){
   }
   localStorage.friendCount = numOfFriends;
   document.getElementById("numOfFriends").innerHTML = "(" + localStorage.getItem("friendCount") + "/15)";
+
+  $("#meet1").hide();
+  $("#meet2").hide();
+  $("#meet3").hide();
+  $("#meet4").hide();
+  $("#meet5").hide();
+  for(var i = 1; i <= 21; i = i + 5){
+    if(localStorage.getItem('f' + i) != null && localStorage.getItem('f' + i) != "null"){
+      if(localStorage.getItem('f' + i) != "null"){
+        document.getElementById("a" + (i + 4) / 5).innerHTML = localStorage.getItem('f' + i);
+      }
+      if(localStorage.getItem('f' + (i + 1)) != "null"){
+        $("#a" + (i + 4) / 5).append(", " + localStorage.getItem('f' + (i + 1)));
+      }
+      if(localStorage.getItem('f' + (i + 2)) != "null"){
+        $("#a" + (i + 4) / 5).append(", " + localStorage.getItem('f' + (i + 2)));
+      }
+      if(localStorage.getItem('f' + (i + 3)) != "null"){
+        $("#a" + (i + 4) / 5).append(", " + localStorage.getItem('f' + (i + 3)));
+      }
+      if(localStorage.getItem('f' + (i + 4)) != "null"){
+        $("#a" + (i + 4) / 5).append(", " + localStorage.getItem('f' + (i + 4)));
+      }
+      document.getElementById("l" + (i + 4) / 5).innerHTML = localStorage.getItem("location" + (i + 4) / 5);
+      document.getElementById("d" + (i + 4) / 5).innerHTML = localStorage.getItem("meeting_time" + (i + 4) / 5);
+      $("#meet" + (i + 4) / 5).show();
+    }
+    else{
+      document.getElementById("a" + (i + 4) / 5).innerHTML = "N/A";
+      document.getElementById("l" + (i + 4) / 5).innerHTML = "N/A";
+      document.getElementById("d" + (i + 4) / 5).innerHTML = "N/A";
+      $("#meet" + (i + 4) / 5).hide();
+    }
+  }
 });
 
 $(document).keyup(function(){
@@ -75,171 +109,93 @@ function deleteFriend(friendNum) {
   }
 }
 
-/*$.ajax({
-    url: 'data.json',
-    dataType: 'json',
-    type: 'get',
-    cache: true,
-    success: function(data){*/
-
-      /* Loads friends list in */
-      /*$(data.accounts[sessionStorage.getItem("accountIndex")].friends).each(function(index, value) {
-        var numOfFriends = 0;
-        switch(index) {
-          case 0:
-            if(value.name == null){
-              document.getElementById("friend1").style.display='none';
-            }
-            else{
-              $("#friend1").append(value.name);
-              ++numOfFriends;
-            }
-            break;
-
-          case 1:
-            if(value.name == null){
-              document.getElementById("friend2").style.display='none';
-            }
-            else{
-              $("#friend2").append(value.name);
-              ++numOfFriends;
-            }
-            break;
-
-          case 2:
-            if(value.name == null){
-              document.getElementById("friend3").style.display='none';
-            }
-            else{
-              $("#friend3").append(value.name);
-              ++numOfFriends;
-            }
-            break;
-
-          case 3:
-            if(value.name == null){
-              document.getElementById("friend4").style.display='none';
-            }
-            else{
-              $("#friend4").append(value.name);
-              ++numOfFriends;
-            }
-            break;
-
-          case 4:
-            if(value.name == null){
-              document.getElementById("friend5").style.display='none';
-            }
-            else{
-              $("#friend5").append(value.name);
-              ++numOfFriends;
-            }
-            break;
-
-          case 5:
-            if(value.name == null){
-              document.getElementById("friend6").style.display='none';
-            }
-            else{
-              $("#friend6").append(value.name);
-              ++numOfFriends;
-            }
-            break;
-
-          case 6:
-            if(value.name == null){
-              document.getElementById("friend7").style.display='none';
-            }
-            else{
-              $("#friend7").append(value.name);
-              ++numOfFriends;
-            }
-            break;
-
-          case 7:
-            if(value.name == null){
-              document.getElementById("friend8").style.display='none';
-            }
-            else{
-              $("#friend8").append(value.name);
-              ++numOfFriends;
-            }
-            break;
-
-          case 8:
-            if(value.name == null){
-              document.getElementById("friend9").style.display='none';
-            }
-            else{
-              $("#friend9").append(value.name);
-              ++numOfFriends;
-            }
-            break;
-
-          case 9:
-            if(value.name == null){
-              document.getElementById("friend10").style.display='none';
-            }
-            else{
-              $("#friend10").append(value.name);
-              ++numOfFriends;
-            }
-            break;
-
-          case 10:
-            if(value.name == null){
-              document.getElementById("friend11").style.display='none';
-            }
-            else{
-              $("#friend11").append(value.name);
-              ++numOfFriends;
-            }
-            break;
-
-          case 11:
-            if(value.name == null){
-              document.getElementById("friend12").style.display='none';
-            }
-            else{
-              $("#friend12").append(value.name);
-              ++numOfFriends;
-            }
-            break;
-
-          case 12:
-            if(value.name == null){
-              document.getElementById("friend13").style.display='none';
-            }
-            else{
-              $("#friend13").append(value.name);
-              ++numOfFriends;
-            }
-            break;
-
-          case 13:
-            if(value.name == null){
-              document.getElementById("friend14").style.display='none';
-            }
-            else{
-              $("#friend14").append(value.name);
-              ++numOfFriends;
-            }
-            break;
-
-          case 14:
-            if(value.name == null){
-              document.getElementById("friend15").style.display='none';
-            }
-            else{
-              $("#friend15").append(value.name);
-              ++numOfFriends;
-            }
-            break;
-        }
-
-        if (numOfFriends != 0) {
-          document.getElementById("noFriends").style.display='none';
-        }
-      });
+function deleteMeetup(meetNum){
+  for(var i = (5 * meetNum - 4); i <= 21; i = i + 5){
+    if(localStorage.getItem("f" + i) != null && localStorage.getItem("f" + (i + 5)) != null){
+      localStorage.setItem("f" + i, localStorage.getItem("f" + (i + 5)));
+      localStorage.setItem("f" + (i + 1), localStorage.getItem("f" + (i + 6)));
+      localStorage.setItem("f" + (i + 2), localStorage.getItem("f" + (i + 7)));
+      localStorage.setItem("f" + (i + 3), localStorage.getItem("f" + (i + 8)));
+      localStorage.setItem("f" + (i + 4), localStorage.getItem("f" + (i + 9)));
+      localStorage.setItem("location" + (i + 4) / 5, localStorage.getItem("location" + (i + 9) / 5));
+      localStorage.setItem("meeting_time" + (i + 4) / 5, localStorage.getItem("meeting_time" + (i + 9) / 5));
     }
+    else if(localStorage.getItem("f" + i) != null && localStorage.getItem("f" + (i + 5)) == null){
+      localStorage.removeItem("f" + i);
+      localStorage.removeItem("f" + (i + 1));
+      localStorage.removeItem("f" + (i + 2));
+      localStorage.removeItem("f" + (i + 3));
+      localStorage.removeItem("f" + (i + 4));
+      localStorage.removeItem("location" + (i + 4) / 5);
+      localStorage.removeItem("meeting_time" + (i + 4) / 5);
+    }
+  }
+  document.location.href = ("homepage.html");
+}
+
+/*$.ajax({
+  url: 'data.json',
+  dataType: 'json',
+  type: 'get',
+  cache: true,
+  success: function(data){*/
+    /* Loads meetups to webpage */
+    /*$(data.accounts[sessionStorage.accountIndex].meetups).each(function(index,value){
+      switch(index){
+        case 0:
+          if(value.location != null){
+            var friendCount = 0;
+            if(value.friends[friendCount] != null){
+              document.getElementById("a1").innerHTML = value.friends[friendCount];
+              friendCount++;
+              while((friendCount < 5) && value.friends[friendCount] !=null){
+                $("#a1").append(", " + value.friends[friendCount]);
+                friendCount++;
+              }
+            }
+            document.getElementById("l1").innerHTML = value.location;
+            document.getElementById("d1").innerHTML = value.meeting_time;
+          }
+          else{
+            $("#meet1").hide();
+          }
+          break;
+        case 1:
+          if(value.location != null){
+
+          }
+          else{
+
+            $("#meet2").hide();
+          }
+          break;
+        case 2:
+          if(value.location != null){
+
+          }
+          else{
+
+            $("#meet3").hide();
+          }
+          break;
+        case 3:
+          if(value.location != null){
+
+          }
+          else{
+
+            $("#meet4").hide();
+          }
+          break;
+        case 4:
+          if(value.location != null){
+
+          }
+          else{
+
+            $("#meet5").hide();
+          }
+      }
+    });
+  }
 });*/

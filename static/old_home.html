@@ -11,6 +11,7 @@
 
 	<!-- Corresponding CSS File -->
 	<link href="css/top_nav_bar.css" rel="stylesheet"/>
+	<link href="css/responsive-calendar.css" rel="stylesheet" media="screen"/>
 	<link href="css/homepage.css" rel="stylesheet"/>
 
 	<!-- Font -->
@@ -95,7 +96,7 @@
 				</script>
 
 				<!-- Sidenav Content -->
-		    <div id="mySidenav" class="sidenav text-left">
+		    	<div id="mySidenav" class="sidenav text-left">
 		    		<span id="numOfFriends" style="cursor:default"></span>
 					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					<span id="insideSideNav" style="cursor:default">
@@ -165,24 +166,16 @@
 						</div>
 					</span>
 
-					<hr style="margin: 0; padding: 0">
-
 					<!-- Add Friends Button -->
-					<div id="add">
-						<div class="form-group">
-
-							<!-- Textbox to Enter Name -->
-							<label class="control-label" for="addFr"></label>
-							<div>
-								<input type="text" id="addFr" class="form-control" placeholder="Enter Friend's Username">
-							</div>
+					<div class="form-group">
+						<label class="control-label" for="addFr"></label>
+						<div>
+							<input type="text" id="addFr" class="form-control" placeholder="Enter Friend's Username">
 						</div>
-
-						<!-- Submit Button to Add Friend -->
-						<input value = "+ Add Friend" type="submit" id="addFriend" class="btn btn-primary btn-lg" onclick="addFriend()" disabled>
 					</div>
+					<input value = "+ Add Friend" type="submit" id="addFriend" class="btn btn-primary btn-lg" onclick="addFriend()" disabled>
 				</div>
-	    </div>
+	    	</div>
 
 			<!-- Right Create Meetup Button -->
 			<div class="text-left">
@@ -191,104 +184,46 @@
 		    	</a>
 			</div>
 
-			<!-- Main Screen -->
-			<div id="mainscreen" class="container-fluid text-center">
-				<div class="row content">
-					<h1>My Meetups</h1>
-					<br>
-					<ul class="scrollable-menu" role="menu" id="meetings_scroll">
-						<li>
-							<div class="container-fluid text-center meeting" id="meet1">
-								<h2>Meeting 1:</h2>
-								<div class="col-sm-4">
-									<h4>Attendees:</h4>
-									<h5 id="a1">N/A</h5>
-								</div>
-								<div class="col-sm-4">
-									<h4>Location:</h4>
-									<h5 id="l1">N/A</h5>
-								</div>
-								<div class="col-sm-4">
-									<h4>Date/Time:</h4>
-									<h5 id="d1">N/A</h5>
-								</div>
-								<input value="Cancel Meetup" type="button" id="cancel1" class="btn btn-danger pull-right" onclick="deleteMeetup(1)">
-							</div>
-						</li>
-						<li>
-							<div class="container-fluid text-center meeting" id="meet2">
-								<h2>Meeting 2:</h2>
-								<div class="col-sm-4">
-									<h4>Attendees:</h4>
-									<h5 id="a2">N/A</h5>
-								</div>
-								<div class="col-sm-4">
-									<h4>Location:</h4>
-									<h5 id="l2">N/A</h5>
-								</div>
-								<div class="col-sm-4">
-									<h4>Date/Time:</h4>
-									<h5 id="d2">N/A</h5>
-								</div>
-								<input value="Cancel Meetup" type="button" id="cancel2" class="btn btn-danger pull-right" onclick="deleteMeetup(2)">
-							</div>
-						</li>
-						<li>
-							<div class="container-fluid text-center meeting" id="meet3">
-								<h2>Meeting 3:</h2>
-								<div class="col-sm-4">
-									<h4>Attendees:</h4>
-									<h5 id="a3">N/A</h5>
-								</div>
-								<div class="col-sm-4">
-									<h4>Location:</h4>
-									<h5 id="l3">N/A</h5>
-								</div>
-								<div class="col-sm-4">
-									<h4>Date/Time:</h4>
-									<h5 id="d3">N/A</h5>
-								</div>
-								<input value="Cancel Meetup" type="button" id="cancel3" class="btn btn-danger pull-right" onclick="deleteMeetup(3)">
-							</div>
-						</li>
-						<li>
-							<div class="container-fluid text-center meeting" id="meet4">
-								<h2>Meeting 4:</h2>
-								<div class="col-sm-4">
-									<h4>Attendees:</h4>
-									<h5 id="a4">N/A</h5>
-								</div>
-								<div class="col-sm-4">
-									<h4>Location:</h4>
-									<h5 id="l4">N/A</h5>
-								</div>
-								<div class="col-sm-4">
-									<h4>Date/Time:</h4>
-									<h5 id="d4">N/A</h5>
-								</div>
-								<input value="Cancel Meetup" type="button" id="cancel4" class="btn btn-danger pull-right" onclick="deleteMeetup(4)">
-							</div>
-						</li>
-						<li>
-							<div class="container-fluid text-center meeting" id="meet5">
-								<h2>Meeting 5:</h2>
-								<div class="col-sm-4">
-									<h4>Attendees:</h4>
-									<h5 id="a5">N/A</h5>
-								</div>
-								<div class="col-sm-4">
-									<h4>Location:</h4>
-									<h5 id="l5">N/A</h5>
-								</div>
-								<div class="col-sm-4">
-									<h4>Date/Time:</h4>
-									<h5 id="d5">N/A</h5>
-								</div>
-								<input value="Cancel Meetup" type="button" id="cancel5" class="btn btn-danger pull-right" onclick="deleteMeetup(5)">
-							</div>
-						</li>
+			<!-- Center Calendar -->
+			<div class="container calendar">
+
+				<!-- Responsive calendar - START -->
+				<div class="responsive-calendar">
+
+					<div class="controls">
+						<!-- Prev Button -->
+						<a id="prev" class="pull-left" data-go="prev">
+							<div id="prevButton" class="btn btn-primary">&#10094;</div>
+						</a>
+
+						<!-- Month -->
+						<span id="monthAndYear">
+							<span id="month" data-head-month></span>
+							<span id="year" data-head-year></span>
+						</span>
+
+						<!-- Next Button -->
+						<a id="next" class="pull-right" data-go="next">
+							<div id="nextButton" class="btn btn-primary">&#10095;</div>
+						</a>
 					</div>
-			</div>
+
+					<!-- Weekdays -->
+					<div class="day-headers">
+						<div class="day header">Mon</div>
+						<div class="day header">Tue</div>
+						<div class="day header">Wed</div>
+						<div class="day header">Thu</div>
+						<div class="day header">Fri</div>
+						<div class="day header">Sat</div>
+						<div class="day header">Sun</div>
+					</div>
+
+					<!-- Days, Populated by JS -->
+					<div class="days" data-group="days">
+					</div>
+				</div>
+			<!-- Responsive calendar - END -->
 		</div>
 	</div>
 
@@ -301,5 +236,28 @@
 	<!-- Corresponding JS File -->
 	<script src="js/top_nav_bar.js"></script>
 	<script src="js/homepage.js"></script>
+	<script src="js/responsive-calendar.js"></script>
+
+	<!-- Toggle Popovers -->
+	<script>
+		$(document).ready(function(){
+		$('[data-toggle="popover"]').popover();
+		});
+	</script>
+
+	<!-- Initialize Responsive Calendar -->
+	<script>
+		$( document ).ready( function() {
+			$('.responsive-calendar').responsiveCalendar();
+		});
+
+		$(document).ready(function () {
+			var date = "2016-11-06";
+			$('.responsive-calendar').responsiveCalendar('edit', {
+	      		date: {"number": 1}
+	    	});
+    	});
+	</script>
+
 </body>
 </html>

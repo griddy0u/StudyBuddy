@@ -1,4 +1,3 @@
-/* Top NavBar Home Button is Highlighted */
 #homeButton {
   background-color: #70A4FF;
 }
@@ -19,12 +18,10 @@
   z-index: 1;
 }
 
-/* Friends List Button Hover */
 #friendsList:hover {
   color: #FFE5B8;
 }
 
-/* Add Friend Button */
 #addFr {
   width: 95%;
   margin-left: .25rem;
@@ -46,7 +43,6 @@
   z-index: 2;
 }
 
-/* Side Nav Popout */
 .closebtn, #noFriends, #insideSideNav div {
   margin-bottom: 0;
   padding: 8px 8px 8px 32px;
@@ -57,18 +53,15 @@
   transition: 0.3s;
 }
 
-/* Side Nav Popout */
 #insideSideNav input {
   padding: 0px 5px;
   margin-top: 8px;
 }
 
-/* Side Nav Popout */
 .sidenav a:hover, .offcanvas a:focus, #insideSideNav div:hover, .offcanvas label:focus{
   color: #96BCFF;
 }
 
-/* Side Nav Popout */
 .sidenav #numOfFriends {
   position: absolute;
   top: 0;
@@ -82,7 +75,6 @@
   transition: 0.3s;
 }
 
-/* Side Nav Popout */
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -91,15 +83,6 @@
   margin-left: 50px;
 }
 
-.sidenav .closebtn:hover {
-  text-decoration: none;
-}
-
-#add {
-  bottom: 10px;
-}
-
-/* Side Nav Popout Add Friend Button */
 #addFriend {
   margin-top: 5%;
 	margin-left: 5%;
@@ -126,67 +109,70 @@
   color: #FFD996;
 }
 
-#mainscreen {
-  background-color: #FFFFFF;
-  border: 1px solid #FFFFFF;
+.calendar {
+  float: left;
+  padding-left: 0px;
+  padding-right: 0px;
   border-radius: 1rem;
+  width: 100%;
+  background-color: #FFD996;
 }
 
-.meeting{
-  border-style: solid;
+.controls {
+  margin: 10px 0px;
+  margin-bottom: 30px;
+  max-height: 50px;
+  width: 100%;
+  color: #FFFFFF;
+}
+
+#prev, #next {
+  padding-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#prevButton, #nextButton {
+  background-color: #FFD996;
+  border-color: #FFD996;
+  transition: 0.3s;
+}
+
+#prevButton:hover, #nextButton:hover {
+  background-color: #96BCFF;
   border-color: #96BCFF;
-  border-width: 0.25rem;
-  border-radius: 1rem;
+}
+
+#monthAndYear {
+  word-spacing: 5px;
+}
+
+#month {
+  font-size: 4rem;
+}
+
+#year {
+  font-size: 2rem;
+}
+
+.responsive-calendar .day-headers {
+  padding: 10px 0px;
+  background-color: #70A4FF;
+  color: #FFFFFF;
+}
+
+.days {
   background-color: #FFFFFF;
+
 }
 
-ul{
-  padding-left: 0;
-  list-style-type: none;
-}
-
-ul.scroll-menu {
-  position:relative;
-  display:inherit;
-  overflow-x:auto;
-  -webkit-overflow-scrolling:touch;
-  -moz-overflow-scrolling:touch;
-  -ms-overflow-scrolling:touch;
-  -o-overflow-scrolling:touch;
-  overflow-scrolling:touch;
-  top:0;
-  left:0;
-  width:100%;
-  height:auto;
-  max-height:500px;
-  margin:0;
-  border-left:none;
-  border-right:none;
-  -webkit-border-radius:0;
-  -moz-border-radius:0;
-  -ms-border-radius:0;
-  -o-border-radius:0;
-  border-radius:0;
-  -webkit-box-shadow:none;
-  -moz-box-shadow:none;
-  -ms-box-shadow:none;
-  -o-box-shadow:none;
-  box-shadow:none
-}
-
-input .btn .btn-danger .pull-right {
-}
-
-.scrollable-menu {
-  height: auto;
-  max-height: 50rem;
-  overflow-x: hidden;
-
-  background-color: #FFFFFF;
+body > div > div > div.container.calendar > div > div.days > div.day.mon.past.not-current.active > a {
+  color: #FFFFFF;
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 770px) {
+
   .sidenav {
     padding-top: 60px;
   }
@@ -201,5 +187,31 @@ input .btn .btn-danger .pull-right {
   #friendsList, #createMeetup {
     height: auto;
     width: 100%;
+  }
+
+  .calendar {
+    height: auto;
+  }
+
+  .controls {
+    margin-bottom: 10px;
+  }
+
+  #monthAndYear {
+    padding-top: 20px;
+  }
+
+  #month {
+    font-size: 2rem;
+  }
+
+  #year {
+    font-size: 2rem;
+  }
+
+  #prev, #next {
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
