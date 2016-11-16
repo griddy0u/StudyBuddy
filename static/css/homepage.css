@@ -1,4 +1,8 @@
 /* Top NavBar Home Button is Highlighted */
+html{
+  overflow: -moz-scrollbars-vertical;
+  overflow-y:scroll;
+}
 #homeButton {
   background-color: #70A4FF;
 }
@@ -29,7 +33,15 @@
   width: 95%;
   margin-left: .25rem;
 }
+#friend_scroll{
+  height: 40rem;
+}
 
+#add{
+  bottom: 0;
+  left: 3rem;
+  position: absolute;
+}
 /* Side Nav Popout */
 .sidenav {
   position: fixed;
@@ -179,7 +191,7 @@ input .btn .btn-danger .pull-right {
 
 .scrollable-menu {
   height: auto;
-  max-height: 50rem;
+  max-height: 40rem;
   overflow-x: hidden;
 
   background-color: #FFFFFF;

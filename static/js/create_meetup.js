@@ -38,6 +38,9 @@ $.ajax({
 });
 
 $(document).ready(function(){
+  if(localStorage.getItem("friend1") != null){
+    $("#noFr").hide();
+  }
   for(var i = 1; i <= 15; i++){
     if(localStorage.getItem("friend" + i) != null){
       $("#friend" + i).append(localStorage.getItem("friend" + i));
