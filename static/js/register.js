@@ -9,7 +9,7 @@ $(document).ready(function() {
     }
 
     if (emailFilled > 0 & usernameFilled > 0 && pwdFilled > 0) {
-      $((document).getElementById("signup")).prop('disabled', false); 
+      $((document).getElementById("signup")).prop('disabled', false);
     }
   });
 
@@ -19,7 +19,7 @@ $(document).ready(function() {
     }
 
     if (emailFilled > 0 && usernameFilled > 0 && pwdFilled > 0) {
-      $((document).getElementById("signup")).prop('disabled', false); 
+      $((document).getElementById("signup")).prop('disabled', false);
     }
   });
 
@@ -29,7 +29,7 @@ $(document).ready(function() {
     }
 
     if (emailFilled > 0 & usernameFilled > 0 && pwdFilled > 0) {
-      $((document).getElementById("signup")).prop('disabled', false); 
+      $((document).getElementById("signup")).prop('disabled', false);
     }
   });
  });
@@ -38,6 +38,26 @@ function storeAccount() {
   localStorage.setItem("accountEmail", $(document.getElementById("email")).val());
   localStorage.setItem("accountUsername", $(document.getElementById("username")).val());
   localStorage.setItem("accountPwd", $(document.getElementById("pwd")).val());
+  localStorage.setItem("friendCount", 0);
+
+  for (var i = 1; i <= 15; i++) {
+    if (localStorage.getItem("friend" + i) != null) {
+      localStorage.removeItem("friend" + i);
+    }
+  }
+
+  for (var i = 1; i <= 5; i++) {
+    if (localStorage.getItem("location" + i) != null) {
+      localStorage.removeItem("location" + i);
+      localStorage.removeItem("meeting_time" + i);
+    }
+  }
+
+  for (var i = 1; i <= 25; i++) {
+    if (localStorage.getItem("f" + i) != null) {
+      localStorage.removeItem("f" + i);
+    }
+  }
 }
 
 function login() {
