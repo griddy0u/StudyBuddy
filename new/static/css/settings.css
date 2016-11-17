@@ -1,0 +1,33 @@
+#mainscreen {
+	padding-bottom: 15px;
+	background-color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	border-radius: 1rem;
+	width: 95%;
+}
+
+.btn {
+	margin-top: 20px;
+}
+
+input {
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
+
+#accEmail, #accUsername, #accPwd {
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 770px) {
+	.text-right {
+		text-align: center;
+	}
+
+	#accEmail, #accUsername, #accPwd {
+		margin-top: 10px;
+		margin-bottom: 0px;
+		text-align: center;
+	}
+}

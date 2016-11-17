@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link href="datetime/jquery.datetimepicker.css" rel="stylesheet"/>
+
+  <!-- Corresponding CSS File -->
+  <link href="css/top_nav_bar.css" rel="stylesheet"/>
+  <link href="css/create_meetup.css" rel="stylesheet"/>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+  <style>
+      body {
+        font-family: 'Coiny', cursive;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse row">
+      <div class="container-fluid col-sm-12">
+        <div class="navbar-header">
+
+            <!-- Collapse Button -->
+          <button type="button" id="navbarCollapseToggle" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- Title/Logo -->
+            <a class="navbar-brand" href="homepage.html">
+              <span id="title">StudyBuddy</span>
+            </a>
+          </div>
+
+          <!-- Home/User/Options -->
+          <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+          <ul class="nav navbar-nav">
+
+            <!-- Home -->
+            <li class="active menu">
+              <a id="homeButton" class="rightMenu" href="homepage.html">
+                Home
+              </a>
+            </li>
+
+            <li>
+  						<a id="options" class="rightMenu" href="my_meetups.html">
+  							<span>My Meetups</span>
+  						</a>
+  					</li>
+
+            <!-- User/Options -->
+            <li>
+              <a id="options" class="dropdown-toggle rightMenu" data-toggle="dropdown" href="">
+                <span id="username"></span>
+                <span class="caret "> </span>
+              </a>
+              <ul class="dropdown-menu text-center">
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="help.html">Help</a></li>
+                <hr>
+                <li><a href="login.html">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Screen -->
+    <div class="container-fluid text-center" id="mainscreen">
+      <div>
+        <h1 id="page_name">Create a Meetup!</h1>
+        <h5> Max: 5 </h5>
+      </div>
+
+      <hr>
+
+		  <div class="row content">
+			  <!-- Friends List Select -->
+        <div class="btn-group" id="friend_select">
+          <h3 id="friend_title">Select Study Buddies: (Max: 5)</h3>
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="friend_dropdown">Choose here<span class="caret"></span></button>
+          <ul class="dropdown-menu scrollable-menu" role="menu" id="friend_scroll">
+              <li>
+                <div id="noFr"> No Friends Added? Add From the Homepage! </div>
+              </li>
+              <li>
+                <div class="checkbox">
+                  <label id="friend1"><input type="checkbox" value="" id="check1"></label>
+                </div>
+              </li>
+              <li>
+                <div class="checkbox">
+                  <label id="friend2"><input type="checkbox" value="" id="check2"></label>
+                </div>
+              </li>
+              <li>
+                <div class="checkbox">
+                  <label id="friend3"><input type="checkbox" value="" id="check3"></label>
+                </div>
+              </li>
+              <li>
+                <div class="checkbox">
+                  <label id="friend4"><input type="checkbox" value="" id="check4"></label>
+                </div>
+              </li>
+              <li>
+                <div class="checkbox">
+                  <label id="friend5"><input type="checkbox" value="" id="check5"></label>
+                </div>
+              </li>
+              <li>
+                <div class="checkbox">
+                  <label id="friend6"><input type="checkbox" value="" id="check6"></label>
+                </div>
+              </li>
+              <li>
+                <div class="checkbox">
+                  <label id="friend7"><input type="checkbox" value="" id="check7"></label>
+                </div>
+              </li>
+              <li>
+                <div class="checkbox">
+                  <label id="friend8"><input type="checkbox" value="" id="check8"></label>
+                </div>
+              </li>
+              <li>
+                <div class="checkbox">
+                  <label id="friend9"><input type="checkbox" value="" id="check9"></label>
+                </div>
+              </li>
+              <li>
+                <div class="checkbox">
+                  <label id="friend10"><input type="checkbox" value="" id="check10"></label>
+                </div>
+              </li>
+              <li>
+                <div class="checkbox">
+                  <label id="friend11"><input type="checkbox" value="" id="check11"></label>
+                </div>
+              </li>
+              <li>
+                <div class="checkbox">
+                  <label id="friend12"><input type="checkbox" value="" id="check12"></label>
+                </div>
+              </li>
+              <li>
+                <div class="checkbox">
+                  <label id="friend13"><input type="checkbox" value="" id="check13"></label>
+                </div>
+              </li>
+              <li>
+                <div class="checkbox">
+                  <label id="friend14"><input type="checkbox" value="" id="check14"></label>
+              </li>
+              <li>
+                <div class="checkbox">
+                  <label id="friend15"><input type="checkbox" value="" id="check15"></label>
+                </div>
+              </li>
+          </ul>
+        </div>
+
+        <hr>
+
+        <h3 id="date_text"> Select Study Date and Time: </h3>
+        <input id="datetimepicker" type="text" value="">
+
+        <hr>
+
+        <h3 id="loc_header">Select a Study Location:</h3>
+        <div class="dropdown" id="loc_dropdown">
+
+          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Choose here<span class="caret"></span></button>
+          <ul class="dropdown-menu scrollable-menu" role="menu" id="location_drop">
+            <!-- Study locations on campus -->
+            <li>
+              <div class="radio">
+                <label id="loc1"><input type="radio" onclick="modifyLocInfo(document.getElementById('loc1').textContent)" name="study_loc"></label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <label id="loc2"><input type="radio" onclick="modifyLocInfo(document.getElementById('loc2').textContent)" name="study_loc"></label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <label id="loc3"><input type="radio" onclick="modifyLocInfo(document.getElementById('loc3').textContent)" name="study_loc"></label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <label id="loc4"><input type="radio" onclick="modifyLocInfo(document.getElementById('loc4').textContent)" name="study_loc"></label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <label id="loc5"><input type="radio" onclick="modifyLocInfo(document.getElementById('loc5').textContent)" name="study_loc"></label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <label id="loc6"><input type="radio" onclick="modifyLocInfo(document.getElementById('loc6').textContent)" name="study_loc"></label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <label id="loc7"><input type="radio" onclick="modifyLocInfo(document.getElementById('loc7').textContent)" name="study_loc"></label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <label id="loc8"><input type="radio" onclick="modifyLocInfo(document.getElementById('loc8').textContent)" name="study_loc"></label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <label id="loc9"><input type="radio" onclick="modifyLocInfo(document.getElementById('loc9').textContent)" name="study_loc"></label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <label id="loc10"><input type="radio" onclick="modifyLocInfo(document.getElementById('loc10').textContent)" name="study_loc"></label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <label id="loc11"><input type="radio" onclick="modifyLocInfo(document.getElementById('loc11').textContent)" name="study_loc"></label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <label id="loc12"><input type="radio" onclick="modifyLocInfo(document.getElementById('loc12').textContent)" name="study_loc"></label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <label id="loc13"><input type="radio" onclick="modifyLocInfo(document.getElementById('loc13').textContent)" name="study_loc"></label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <label id="loc14"><input type="radio" onclick="modifyLocInfo(document.getElementById('loc14').textContent)" name="study_loc"></label>
+              </div>
+            </li>
+            <li>
+              <div class="radio">
+                <label id="loc15"><input type="radio" onclick="modifyLocInfo(document.getElementById('loc15').textContent)" name="study_loc"></label>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <h4 id="loc_text">Selected location</h4>
+        <div id="map"></div>
+
+        <div id="loc_stats">
+          <h3 id="stats">Location stats</h3>
+
+          <h4>Noise Level: <h4 id="quiet">N/A</h4></h4>
+          <h4>Crowd Level: <h4 id="crowded">N/A</h4></h4>
+        </div>
+
+        <div class="row">
+          <input value="Create Meetup!" type="submit" id="create" class="btn btn-success btn-lg col-sm-offset-1 col-sm-4" onclick="addEvent(); returnToHome(); createMeetup();" disabled>
+
+          <input value="Cancel Meetup" type="button" id="cancel" class="btn btn-danger btn-lg col-sm-offset-2 col-sm-4" onclick="returnToHome()">
+        </div>
+      </div>
+    </div>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtN1_XktTqXV4vg_Jcnuon9KXrFykAnlc&callback=initMap"></script>
+
+    <!-- DateTimePicker -->
+    <script src="datetime/build/jquery.datetimepicker.full.min.js"></script>
+
+    <!-- Corresponding JS File -->
+    <script src="js/top_nav_bar.js"></script>
+    <script src="js/create_meetup.js"></script>
+    <script src="js/responsive-calendar.js"></script>
+
+    <script>
+      function addEvent() {
+        var val, date, num;
+        val = $(document.getElementById("datetimepicker")).val();
+        date = val.substr(0, 4) + "-" + val.substr(5, 2) + "-" + val.substr(8, 2);
+        num = 1;
+        date = "\"" + date + "\"";
+        console.log(date);
+
+        $('.responsive-calendar').responsiveCalendar ('edit', {
+          date: {"number": num}
+        });
+      }
+    </script>
+  </body>
+</html>

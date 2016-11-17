@@ -2,9 +2,13 @@ var express = require('express');
 var http = require('http');
 var app = express();
 
-app.use(express.static('static'));
-
 app.get('/', function (req, res) {
+  app.use(express.static('static'));
+  res.sendfile('static/login.html');
+});
+
+app.get('/new', function (req, res){
+  app.use(express.static('new/static'));
   res.sendfile('static/login.html');
 });
 

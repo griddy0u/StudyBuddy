@@ -33,7 +33,7 @@ function loginToHome() {
         if(localStorage.getItem("friendCount") == null){
           localStorage.setItem("friendCount", "0");
         }
-        document.location.href = ("homepage.html");
+        document.location.href = ("old_home.html");
         return;
       }
     }
@@ -53,7 +53,7 @@ function loginToHome() {
             localStorage.setItem("accountEmail", data.accounts[index].email);
             localStorage.setItem("accountUsername", data.accounts[index].username);
             localStorage.setItem("accountPwd", data.accounts[index].password);
-            document.location.href = ("homepage.html");
+            document.location.href = ("old_home.html");
             return;
           }
         }

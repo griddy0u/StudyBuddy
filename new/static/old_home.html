@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+	<!-- Corresponding CSS File -->
+	<link href="css/top_nav_bar.css" rel="stylesheet"/>
+	<link href="css/responsive-calendar.css" rel="stylesheet" media="screen"/>
+	<link href="css/old_home.css" rel="stylesheet"/>
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+	<style>
+      body {
+        font-family: 'Coiny', cursive;
+      }
+    </style>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse row">
+		<div class="container-fluid col-sm-12">
+			<div class="navbar-header">
+
+		    	<!-- Collapse Button -->
+				<button type="button" id="navbarCollapseToggle" class="navbar-toggle" data-toggle="collapse"
+				data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<!-- Title/Logo -->
+	    		<a class="navbar-brand" href="homepage.html">
+	    			<span id="title">StudyBuddy</span>
+	    		</a>
+	    	</div>
+
+		    <!-- Home/User/Options -->
+		    <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+				<ul class="nav navbar-nav">
+
+					<!-- Home -->
+					<li class="active menu">
+						<a id="homeButton" class="rightMenu" href="homepage.html">
+							Home
+						</a>
+					</li>
+
+					<li>
+						<a id="options" class="rightMenu" href="my_meetups.html">
+							<span>My Meetups</span>
+						</a>
+					</li>
+
+					<!-- User/Options -->
+					<li>
+						<a id="options" class="dropdown-toggle rightMenu" data-toggle="dropdown" href="">
+							<span id="username"></span>
+							<span class="caret "> </span>
+						</a>
+						<ul class="dropdown-menu text-center">
+							<li><a href="settings.html">Settings</a></li>
+							<li><a href="contact_us.html">Contact Us</a></li>
+							<li><a href="help.html">Help</a></li>
+							<hr>
+							<li><a href="login.html">Sign Out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Main Screen -->
+	<div class="container text-center">
+		<div class="row content">
+
+			<!-- Left Friends List SideNav -->
+			<div class="text-left">
+
+				<!-- SideNav Button -->
+				<span id="friendsList" onclick="openNav()">
+					Friends List <i style="font-size:2rem" class="fa">&#xf138;</i>
+				</span>
+
+				<!-- Opens SideNav -->
+				<script>
+					function openNav() {
+					    document.getElementById("mySidenav").style.width="250px";
+					}
+
+					function closeNav() {
+					    document.getElementById("mySidenav").style.width="0";
+					}
+				</script>
+
+				<!-- Sidenav Content -->
+		    <div id="mySidenav" class="sidenav text-left">
+		    		<span id="numOfFriends" style="cursor:default"></span>
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					<span id="insideSideNav" style="cursor:default">
+						<label id="noFriends">
+							<p>You have no friends :(</p>
+							<p>Why not go add some?</p>
+						</label>
+						<ul class="scrollable-menu" role="menu" id="friend_scroll">
+							<li>
+								<div id="fr1">
+									<input value="X" type="submit" class="btn btn-danger pull-right" onclick="deleteFriend(1)" hidden>
+									<label id="friend1"></label>
+								</div>
+							</li>
+							<li>
+								<div id="fr2">
+									<input value="X" type="submit" class="btn btn-danger pull-right" onclick="deleteFriend(2)">
+									<label id="friend2"></label>
+								</div>
+							</li>
+							<li>
+								<div id="fr3">
+									<input value="X" type="submit" class="btn btn-danger pull-right" onclick="deleteFriend(3)">
+									<label id="friend3"></label>
+								</div>
+							</li>
+							<li>
+								<div id="fr4">
+									<input value="X" type="submit" class="btn btn-danger pull-right" onclick="deleteFriend(4)">
+									<label id="friend4"></label>
+								</div>
+							</li>
+							<li>
+								<div id="fr5">
+									<input value="X" type="submit" class="btn btn-danger pull-right" onclick="deleteFriend(5)">
+									<label id="friend5"></label>
+								</div>
+							</li>
+							<li>
+								<div id="fr6">
+									<input value="X" type="submit" class="btn btn-danger pull-right" onclick="deleteFriend(6)">
+									<label id="friend6"></label>
+								</div>
+							</li>
+							<li>
+								<div id="fr7">
+									<input value="X" type="submit" class="btn btn-danger pull-right" onclick="deleteFriend(7)">
+									<label id="friend7"></label>
+								</div>
+							</li>
+							<li>
+								<div id="fr8">
+									<input value="X" type="submit" class="btn btn-danger pull-right" onclick="deleteFriend(8)">
+									<label id="friend8"></label>
+								</div>
+							</li>
+							<li>
+								<div id="fr9">
+									<input value="X" type="submit" class="btn btn-danger pull-right" onclick="deleteFriend(9)">
+									<label id="friend9"></label>
+								</div>
+							</li>
+							<li>
+								<div id="fr10">
+									<input value="X" type="submit" class="btn btn-danger pull-right" onclick="deleteFriend(10)">
+									<label id="friend10"></label>
+								</div>
+							</li>
+							<li>
+								<div id="fr11">
+									<input value="X" type="submit" class="btn btn-danger pull-right" onclick="deleteFriend(11)">
+									<label id="friend11"></label>
+								</div>
+							</li>
+							<li>
+								<div id="fr12">
+									<input value="X" type="submit"  class="btn btn-danger pull-right" onclick="deleteFriend(12)">
+									<label id="friend12"></label>
+								</div>
+							</li>
+							<li>
+								<div id="fr13">
+									<input value="X" type="submit" class="btn btn-danger pull-right" onclick="deleteFriend(13)">
+									<label id="friend13"></label>
+								</div>
+							</li>
+							<li>
+								<div id="fr14">
+									<input value="X" type="submit" class="btn btn-danger pull-right" onclick="deleteFriend(14)">
+									<label id="friend14"></label>
+								</div>
+							</li>
+							<li>
+								<div id="fr15">
+									<input value="X" type="submit" class="btn btn-danger pull-right" onclick="deleteFriend(15)">
+									<label id="friend15"></label>
+								</div>
+							</li>
+						</ul>
+					</span>
+
+
+					<!-- Add Friends Button -->
+					<div id="add">
+						<hr style="margin: 0; padding: 0">
+						<div class="form-group">
+
+							<!-- Textbox to Enter Name -->
+							<label class="control-label" for="addFr"></label>
+							<div>
+								<input type="text" id="addFr" class="form-control" placeholder="Enter a Username">
+							</div>
+						</div>
+
+						<!-- Submit Button to Add Friend -->
+						<input value = "+ Add Friend" type="submit" id="addFriend" class="btn btn-primary btn-lg" onclick="addFriend()" disabled>
+					</div>
+				</div>
+	    </div>
+
+			<!-- Right Create Meetup Button -->
+			<div class="text-left">
+		    	<a type="button" id="createMeetup" class="btn btn-success" href="create_meetup.html">
+		    		<span>+ Create Meetup</span>
+		    	</a>
+			</div>
+
+			<!-- Center Calendar -->
+			<div class="container calendar">
+
+				<!-- Responsive calendar - START -->
+				<div class="responsive-calendar">
+
+					<div class="controls">
+						<!-- Prev Button -->
+						<a id="prev" class="pull-left" data-go="prev">
+							<div id="prevButton" class="btn btn-primary">&#10094;</div>
+						</a>
+
+						<!-- Month -->
+						<span id="monthAndYear">
+							<span id="month" data-head-month></span>
+							<span id="year" data-head-year></span>
+						</span>
+
+						<!-- Next Button -->
+						<a id="next" class="pull-right" data-go="next">
+							<div id="nextButton" class="btn btn-primary">&#10095;</div>
+						</a>
+					</div>
+
+					<!-- Weekdays -->
+					<div class="day-headers">
+						<div class="day header">Mon</div>
+						<div class="day header">Tue</div>
+						<div class="day header">Wed</div>
+						<div class="day header">Thu</div>
+						<div class="day header">Fri</div>
+						<div class="day header">Sat</div>
+						<div class="day header">Sun</div>
+					</div>
+
+					<!-- Days, Populated by JS -->
+					<div class="days" data-group="days">
+					</div>
+				</div>
+			<!-- Responsive calendar - END -->
+		</div>
+	</div>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Corresponding JS File -->
+	<script src="js/top_nav_bar.js"></script>
+	<script src="js/old_home.js"></script>
+	<script src="js/responsive-calendar.js"></script>
+
+	<!-- Toggle Popovers -->
+	<script>
+		$(document).ready(function(){
+		$('[data-toggle="popover"]').popover();
+		});
+	</script>
+
+	<!-- Initialize Responsive Calendar -->
+	<script>
+		$( document ).ready( function() {
+			$('.responsive-calendar').responsiveCalendar();
+		});
+
+		$(document).ready(function () {
+			var date = "2016-11-06";
+			$('.responsive-calendar').responsiveCalendar('edit', {
+	      		date: {"number": 1}
+	    	});
+    	});
+	</script>
+
+</body>
+</html>

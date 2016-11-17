@@ -1,0 +1,22 @@
+.home:hover {
+  text-decoration: none;
+}
+
+#mainscreen {
+	background-color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	border-radius: 1rem;
+	width: 85%;
+}
+
+.faq {
+	margin: auto;
+	padding: auto;
+	width: 75%;
+	border: 1px solid #FFFFFF;
+	border-radius: 1rem;
+}
+
+.btn {
+	margin: 1rem;
+}

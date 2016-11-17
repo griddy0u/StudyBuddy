@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/homepage.css" rel="stylesheet"/>
+</head>
+
+<body>
+	<!-- TOP -->
+	<div id="Top">
+
+		<!-- Links to Homepage, Title and Corgi Logo -->
+		<span>
+			<a href="homepage.html" id="TopLeft">
+				<span id="Title">StudyBuddy</span>
+				<img src="http://i.imgur.com/8nF4920.png" id="TitleLogo">
+			</a>
+		</span>
+
+		<!-- Shows signed in user and their profile picture -->
+		<span id="TopRight">
+			<span id="User">
+				Welcome Home!
+
+				<!-- User Name and Profile Picture, LINK to Profile Page -->
+				<img src="http://i.imgur.com/mGhsq0V.png" id="UserPhoto">
+				<a href="profile.html" id="UserName">Corgi</a>
+			</span>
+
+			<!-- Shows sign out option -->
+			<!-- Bar Separator -->
+			<span id="BarSeparator">|</span>
+
+			<!-- Sign Out Button LINK to Login page -->
+			<a href="login.html" id="SignOut">Sign Out</a>
+		</span>
+	</div>
+
+	<!-- TOP MENU BAR -->
+	<div id="MenuBar">
+		<span id="LeftMenuBar">
+			Friends
+		</span>
+
+		<span id="RightMenuBar">
+			<a href="settings.html">Settings</a>
+			<a href="contact_us.html" id="ContactUs">Contact Us</a>
+			<a href="help.html">Help</a>
+		</span>
+	</div>
+
+	<!-- FRIENDS LIST -->
+	<div id="FriendsList">
+		<span id="FriendsMessage">
+			You have no friends, why not try getting some?
+			<p>(When the feature becomes available!)</p>
+		</span>
+		<button  type="button" onclick="alert('Sorry, No Adding Friends At This Time')" id="AddFriendButton">
+			+ Add Friend
+		</button>
+	</div>
+
+	<!-- MAIN BOX -->
+	<div id="MainBox">
+
+		<!-- Paw Pad doesn't need to be linked to My Meetups,
+			 instead information should be shown as a popup when
+			 clicked -->
+		<span>
+			<img src="http://i.imgur.com/tK0R51e.png" id="BigPaw">
+		</span>
+
+		<span id="PawMessage">
+			No Meetups to Show
+		</span>
+		<!-- My/Create Meetup Buttons -->
+		<span>
+
+			<!-- My Meetups Button (Top)-->
+			<a href="my_meetups.html" class="Bones">
+				<img src="http://i.imgur.com/iDGB34j.png" id="MyMeetups">
+				<span id="MyMeetupsMessage">My Meetups</span>
+			</a>
+
+			<!-- Create Meetup Button (Bottom) -->
+			<a href="create_meetups.html" class="Bones">
+				<img src="http://i.imgur.com/iDGB34j.png" id="CreateMeetup">
+				<span id="CreateMeetupMessage">+ Create Meetup</span>
+			</a>
+		</span>
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

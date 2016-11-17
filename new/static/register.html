@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sign Up</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <!-- Corresponding CSS File -->
+  <link href="css/register.css" rel="stylesheet"/>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+  <style>
+      body {
+        font-family: 'Coiny', cursive;
+      }
+    </style>
+</head>
+
+<body>
+  <div id="title" class="container-fluid">
+    <p>StudyBuddy</sp>
+  </div>
+  <div class="container">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-offset-2 col-sm-2 leftText" for="email">Email:</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="email" placeholder="Enter Your Email">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-offset-2 col-sm-2 leftText" for="email">Username:</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="username" placeholder="Enter Desired Username">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-offset-2 col-sm-2 leftText" for="pwd">Password:</label>
+        <div class="col-sm-5">
+          <input type="password" class="form-control" id="pwd" placeholder="Enter Desired Password">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-5">
+          <input id="signup" class="btn btn-primary btn-block" value="Sign Up" type="button" onclick="storeAccount(); login()" disabled>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Corresponding JS File -->
+  <script src="js/register.js"></script>
+</body>
+</html>

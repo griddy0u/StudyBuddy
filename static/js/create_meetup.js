@@ -32,6 +32,26 @@ $.ajax({
           case 7:
             $("#loc8").append(value.name);
             break;
+          case 8:
+            $("#loc9").append(value.name);
+            break;
+          case 9:
+            $("#loc10").append(value.name);
+            break;
+          case 10:
+            $("#loc11").append(value.name);
+            break;
+          case 11:
+            $("#loc12").append(value.name);
+            break;
+          case 12:
+            $("#loc13").append(value.name);
+            break;
+          case 13:
+            $("#loc14").append(value.name);
+            break;
+          case 14:
+            $("#loc15").append(value.name);
         }
       });
     }
@@ -125,6 +145,42 @@ function modifyLocInfo(str){
           updateMap(data.locations[7].coord.lat, data.locations[7].coord.lng);
           document.getElementById('quiet').innerHTML = data.locations[7].quiet;
           document.getElementById('crowded').innerHTML = data.locations[7].crowded;
+          break;
+        case data.locations[8].name:
+          updateMap(data.locations[8].coord.lat, data.locations[8].coord.lng);
+          document.getElementById('quiet').innerHTML = data.locations[8].quiet;
+          document.getElementById('crowded').innerHTML = data.locations[8].crowded;
+          break;
+        case data.locations[9].name:
+          updateMap(data.locations[9].coord.lat, data.locations[9].coord.lng);
+          document.getElementById('quiet').innerHTML = data.locations[9].quiet;
+          document.getElementById('crowded').innerHTML = data.locations[9].crowded;
+          break;
+        case data.locations[10].name:
+          updateMap(data.locations[10].coord.lat, data.locations[10].coord.lng);
+          document.getElementById('quiet').innerHTML = data.locations[10].quiet;
+          document.getElementById('crowded').innerHTML = data.locations[10].crowded;
+          break;
+        case data.locations[11].name:
+          updateMap(data.locations[11].coord.lat, data.locations[11].coord.lng);
+          document.getElementById('quiet').innerHTML = data.locations[11].quiet;
+          document.getElementById('crowded').innerHTML = data.locations[11].crowded;
+          break;
+        case data.locations[12].name:
+          updateMap(data.locations[12].coord.lat, data.locations[12].coord.lng);
+          document.getElementById('quiet').innerHTML = data.locations[12].quiet;
+          document.getElementById('crowded').innerHTML = data.locations[12].crowded;
+          break;
+        case data.locations[13].name:
+          updateMap(data.locations[13].coord.lat, data.locations[13].coord.lng);
+          document.getElementById('quiet').innerHTML = data.locations[13].quiet;
+          document.getElementById('crowded').innerHTML = data.locations[13].crowded;
+          break;
+        case data.locations[14].name:
+          updateMap(data.locations[14].coord.lat, data.locations[14].coord.lng);
+          document.getElementById('quiet').innerHTML = data.locations[14].quiet;
+          document.getElementById('crowded').innerHTML = data.locations[14].crowded;
+          break;
       }
     }
   });
@@ -302,5 +358,5 @@ $(document).ready(function() {
  });
 
 function returnToHome() {
-  document.location.href = ("homepage.html");
+  document.location.href = ("old_home.html");
 }

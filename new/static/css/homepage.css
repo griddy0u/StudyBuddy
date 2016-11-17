@@ -1,0 +1,218 @@
+/* Top NavBar Home Button is Highlighted */
+html{
+  overflow: -moz-scrollbars-vertical;
+  overflow-y:scroll;
+}
+
+#homeButton {
+  background-color: #70A4FF;
+}
+
+/* Friends List Button */
+#friendsList {
+  float: left;
+  background-color: #96BCFF;
+  border: 0.75rem solid #96BCFF;
+  border-radius: 1rem;
+
+  color: #FFFFFF;
+  font-size:2rem;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+/* Friends List Button Hover */
+#friendsList:hover {
+  color: #FFE5B8;
+}
+
+/* Add Friend Button */
+#addFr {
+  width: 95%;
+  margin-left: .25rem;
+}
+#friend_scroll{
+  height: 40rem;
+}
+
+#add{
+  bottom: 0;
+  left: 3rem;
+  position: absolute;
+}
+/* Side Nav Popout */
+.sidenav {
+  position: fixed;
+  padding-top: 60px;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+
+  background-color: #FFFFFF;
+
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+/* Side Nav Popout */
+.closebtn, #noFriends, #insideSideNav div {
+  margin-bottom: 0;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #FFD996;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Side Nav Popout */
+#insideSideNav input {
+  padding: 0px 5px;
+  margin-top: 8px;
+}
+
+/* Side Nav Popout */
+.sidenav a:hover, .offcanvas a:focus, #insideSideNav div:hover, .offcanvas label:focus{
+  color: #96BCFF;
+}
+
+/* Side Nav Popout */
+.sidenav #numOfFriends {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px 8px 8px 32px;
+
+  text-decoration: none;
+  font-size: 36px;
+  color: #FFD996;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Side Nav Popout */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidenav .closebtn:hover {
+  text-decoration: none;
+}
+
+#add {
+  bottom: 10px;
+}
+
+/* Side Nav Popout Add Friend Button */
+#addFriend {
+  margin-top: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
+	vertical-align: 100%;
+}
+
+#createMeetup {
+  float: right;
+  background-color: #86D472;
+  border-color: #86D472;
+  border-radius: 1rem;
+
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#createMeetup:hover {
+  color: #FFD996;
+}
+
+#mainscreen {
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 1rem;
+}
+
+.meeting{
+  border-style: solid;
+  border-color: #96BCFF;
+  border-width: 0.25rem;
+  border-radius: 1rem;
+  background-color: #FFFFFF;
+}
+
+ul{
+  padding-left: 0;
+  list-style-type: none;
+}
+
+ul.scroll-menu {
+  position:relative;
+  display:inherit;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  -moz-overflow-scrolling:touch;
+  -ms-overflow-scrolling:touch;
+  -o-overflow-scrolling:touch;
+  overflow-scrolling:touch;
+  top:0;
+  left:0;
+  width:100%;
+  height:auto;
+  max-height:500px;
+  margin:0;
+  border-left:none;
+  border-right:none;
+  -webkit-border-radius:0;
+  -moz-border-radius:0;
+  -ms-border-radius:0;
+  -o-border-radius:0;
+  border-radius:0;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  -ms-box-shadow:none;
+  -o-box-shadow:none;
+  box-shadow:none
+}
+
+input .btn .btn-danger .pull-right {
+}
+
+.scrollable-menu {
+  height: auto;
+  max-height: 40rem;
+  overflow-x: hidden;
+
+  background-color: #FFFFFF;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 770px) {
+  .sidenav {
+    padding-top: 60px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+
+  #friendsList {
+    text-align: center;
+  }
+
+  #friendsList, #createMeetup {
+    height: auto;
+    width: 100%;
+  }
+}

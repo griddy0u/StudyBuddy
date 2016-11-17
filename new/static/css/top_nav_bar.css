@@ -1,0 +1,146 @@
+/*Applies background image and color of website */
+body {
+  background-image: url("http://i.imgur.com/qnQNLyt.png");
+  background-color: #FFFFFF;
+
+  /* Setting margins for all content */
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: auto;
+}
+
+/* Set All Header Fonts */
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Coiny', cursive;
+}
+
+/* Top Nav Bar */
+.navbar-inverse {
+  background-color: #96BCFF;
+  border-color: #96BCFF;
+}
+
+/* Top Left */
+.navbar-brand {
+  margin-top: 0.67rem;
+  margin-bottom: 0.67rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#navbarCollapseToggle {
+  margin-top: 1.67rem;
+  border-color: #96BCFF;
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+
+#navbarCollapseToggle:hover, #navbarCollapseToggle:focus {
+  background-color: #70A4FF;
+}
+
+/* Title Styling */
+#title {
+  color: #FFFFFF;
+  font-size: 4rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Color of Title while Hovering */
+#title:hover {
+  color: #FFE5B8;
+}
+
+/* Top Right */
+.rightMenu {
+  font-size: 2rem;
+  margin-top: 0.67rem;
+  margin-bottom: 0.67rem;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Sets Inactive Home Button */
+#homeButton {
+  background-color: #96BCFF;
+  border-radius: 1rem;
+}
+
+/* Sets Home Button Styling */
+#homeButton:hover, #homeButton:focus {
+  background-color: #70A4FF;
+  color: #FFE5B8;
+}
+
+/* Sets Username Color and Rounded Background Border */
+#options {
+  border-radius: 1rem;
+  color: #FFFFFF;
+}
+
+/* Colors Background */
+#options:visited {
+  background-color: #70A4FF;
+}
+
+/* Colors Background/Text */
+#options:hover, #options:active {
+  background-color: #70A4FF;
+  color: #FFE5B8;
+}
+
+/* Sets Color of Text for the Drop Down Menu */
+.dropdown-menu > li > a {
+  color: #96BCFF;
+  transition: 0.3s;
+}
+
+/* Sets Color of Text while Hovering for the Drop Down Menu */
+.dropdown-menu > li > a:hover {
+  color: #FFD996;
+  background-color: #96BCFF;
+}
+
+/* Sets Color of Text for the Drop Down Menu */
+.dropdown-menu > li > a {
+  color: #96BCFF;
+  transition: 0.3s;
+}
+
+/* No Bullet Styles for ULs */
+ul {
+  list-style-type: none;
+}
+
+/* Bar Separation on DropDown */
+ul hr {
+  margin: 1%;
+  padding: 0;
+  text-align: center;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  height: 450px
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .row.content {
+  	height:auto;
+  }
+
+  /* Sets Color of Text for Drop Down Menu when Collapsed */
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+    color: #FFFFFF;
+  }
+
+  /* Sets color of Textwhile Hovering for Drop Down Menu when Collapsed */
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
+    color: #FFD996;
+  }
+}
