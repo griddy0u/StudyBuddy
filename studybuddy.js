@@ -1,16 +1,11 @@
 var express = require('express');
 var http = require('http');
 var app = express();
-
-app.get('/', function (req, res) {
-  app.use(express.static('static'));
-  res.sendfile('static/login.html');
-});
-
-app.get('/new', function (req, res){
-  app.use(express.static('new/static'));
-  res.sendfile('static/login.html');
-});
+var index1 = require('./routes/index1');
+var index2 = require('./routes/index2');
+app.use(express.static('static'));
+app.get('/', index1.view1);
+app.get('/new', index2.view2);
 
 app.listen(process.env.PORT || 3000, function () {
   console.log('Listening on port 3000');

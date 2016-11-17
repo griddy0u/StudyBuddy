@@ -23,6 +23,22 @@ $(document).ready(function() {
   });
  });
 
+function returnToHome(){
+  $.ajax({
+    url: 'data.json',
+    dataType: 'json',
+    type: 'get',
+    cache: true,
+    success: function(data){
+      if(data.new){
+        document.location.href = ("homepage.html");
+      }
+      else{
+        document.location.href = ("old_home.html")
+      }
+    }
+  });
+}
 function loginToHome() {
   var index = 0;
   $(document.getElementById("login")).attr("type", "button");
@@ -33,7 +49,7 @@ function loginToHome() {
         if(localStorage.getItem("friendCount") == null){
           localStorage.setItem("friendCount", "0");
         }
-        document.location.href = ("old_home.html");
+        returnToHome();
         return;
       }
     }
@@ -53,7 +69,7 @@ function loginToHome() {
             localStorage.setItem("accountEmail", data.accounts[index].email);
             localStorage.setItem("accountUsername", data.accounts[index].username);
             localStorage.setItem("accountPwd", data.accounts[index].password);
-            document.location.href = ("old_home.html");
+            returnToHome();
             return;
           }
         }
