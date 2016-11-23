@@ -160,3 +160,15 @@ function deleteMeetup(meetNum){
   }
   document.location.href = ("homepage.html");
 }
+
+function abExperiment(){
+  if(localStorage.visited.localeCompare("no") == 0){
+    if(localStorage.getItem("friend1") !== null){
+      ga('send', 'event', 'createMeetup', 'correct');
+    }
+    else{
+      ga('send', 'event', 'createMeetup', 'mistake');
+    }
+    localStorage.setItem("visited", "yes");
+  }
+}

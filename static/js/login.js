@@ -49,6 +49,9 @@ function loginToHome() {
         if(localStorage.getItem("friendCount") == null){
           localStorage.setItem("friendCount", "0");
         }
+        if(localStorage.getItem("visited") == null){
+          localStorage.setItem("visited", "no");
+        }
         returnToHome();
         return;
       }
@@ -69,6 +72,9 @@ function loginToHome() {
             localStorage.setItem("accountEmail", data.accounts[index].email);
             localStorage.setItem("accountUsername", data.accounts[index].username);
             localStorage.setItem("accountPwd", data.accounts[index].password);
+            if(localStorage.getItem("visited") == null){
+              localStorage.setItem("visited", "no");
+            }
             returnToHome();
             return;
           }

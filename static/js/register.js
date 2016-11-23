@@ -58,6 +58,9 @@ function storeAccount() {
       localStorage.removeItem("f" + i);
     }
   }
+  if(localStorage.getItem("visitCount") != null){
+    localStorage.removeItem("visitCount");
+  }
 }
 
 function login() {
