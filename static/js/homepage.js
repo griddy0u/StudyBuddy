@@ -163,7 +163,7 @@ function deleteMeetup(meetNum){
 
 function abExperiment(){
   if(localStorage.visited.localeCompare("no") == 0){
-    if(localStorage.getItem("friend1") !== null){
+    if(localStorage.getItem("friend1") != null){
       ga('send', 'event', 'createMeetup', 'correct');
     }
     else{
