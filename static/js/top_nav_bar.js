@@ -20,7 +20,7 @@ function returnToHome(){
         document.location.href = ("homepage.html");
       }
       else{
-        document.location.href = ("old_home.html")
+        document.location.href = ("old_home.html");
       }
     }
   });

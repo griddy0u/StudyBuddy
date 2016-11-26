@@ -85,14 +85,15 @@
 			<div class="text-left">
 
 				<!-- SideNav Button -->
-				<span id="friendsList" onclick="openNav()">
+				<button type="button" class="btn" id="friendsList" data-toggle="tooltip" data-placement="right" title="Add Friends Here First" onclick="openNav()">
 					Friends List <i style="font-size:2rem" class="fa">&#xf138;</i>
-				</span>
+				</button>
 
 				<!-- Opens SideNav -->
 				<script>
 					function openNav() {
 					    document.getElementById("mySidenav").style.width="250px";
+							$(document.getElementById("friendsList")).tooltip("hide");
 					}
 
 					function closeNav() {
@@ -224,33 +225,36 @@
 
 			<!-- Right Create Meetup Button -->
 			<div class="text-left">
-		    	<a type="button" id="createMeetup" class="btn btn-success" href="create_meetup.html" onclick="abExperiment();">
-		    		<span>+ Create Meetup</span>
-		    	</a>
+		    	<input value = "+ Create Meetup" type="button" id="createMeetup" class="btn btn-success" onclick="toCreateMeetup(); abExperiment();">
 			</div>
 
 			<!-- Main Screen -->
-			<div id="mainscreen" class="container-fluid text-center">
+			<div id="mainscreen" class="container-fluid">
 				<div class="row content">
-					<br>
-					<br>
-					<br>
-					<h2 class="noM"> No meetups currently scheduled. <br> Go schedule some! <br> <h4 class="noM">(Note: Be sure to have added friends before)</h4></h2>
+					<div id="noMeetups">
+						<h2 class="noM"> No meetups currently scheduled.
+						<br>
+						Go schedule some!
+						<br>
+						<h4 class="noM">(Note: Be sure to have added friends before)</h4></h2>
+					</div>
 					<div class="container-fluid text-center meeting" id="meet1">
-						<h2>Next Scheduled Meeting</h2>
-						<div class="col-sm-4">
-							<h4>Attendees:</h4>
-							<h5 id="a1">N/A</h5>
+						<div class="col-sm-12 text-center" id="nextScheduledMeet">
+							<h1>Next Scheduled Meeting:</h1>
 						</div>
-						<div class="col-sm-4">
-							<h4>Location:</h4>
-							<h5 id="l1">N/A</h5>
+						<div class="col-sm-4 text-center">
+							<h2>Attendees:</h2>
+							<h3 id="a1">N/A</h3>
 						</div>
-						<div class="col-sm-4">
-							<h4>Date/Time:</h4>
-							<h5 id="d1">N/A</h5>
+						<div class="col-sm-4 text-center info">
+							<h2>Location:</h2>
+							<h3 id="l1">N/A</h3>
 						</div>
-						<input value="Cancel Meetup" type="button" id="cancel1" class="btn btn-danger pull-right" onclick="deleteMeetup(1)">
+						<div class="col-sm-4 text-center">
+							<h2>Date/Time:</h2>
+							<h3 id="d1">N/A</h3>
+						</div>
+						<input value="X" type="button" id="cancel1" class="btn btn-danger pull-right" onclick="deleteMeetup(1)">
 					</div>
 					<!--
 					<ul class="scrollable-menu" role="menu" id="meetings_scroll">

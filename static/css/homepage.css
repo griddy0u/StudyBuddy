@@ -11,8 +11,8 @@ html{
 /* Friends List Button */
 #friendsList {
   float: left;
-  background-color: #96BCFF;
-  border: 0.75rem solid #96BCFF;
+  background-color: #FAAB5C;
+  border-color: #FAAB5C;
   border-radius: 1rem;
 
   color: #FFFFFF;
@@ -24,9 +24,33 @@ html{
   z-index: 1;
 }
 
-/* Friends List Button Hover */
-#friendsList:hover {
-  color: #FFE5B8;
+/* Tooltip */
+.tooltip > .tooltip-inner {
+    background-color: #E03838;
+    color: #FFFFFF;
+    border: 1px solid #E03838;
+    padding: 5px 10px;
+    font-size: 2rem;
+}
+
+/* Tooltip on top */
+.tooltip.top > .tooltip-arrow {
+    border-top: 5px solid red;
+}
+
+/* Tooltip on bottom */
+.tooltip.bottom > .tooltip-arrow {
+    border-bottom: 5px solid red;
+}
+
+/* Tooltip on left */
+.tooltip.left > .tooltip-arrow {
+    border-left: 5px solid red;
+}
+
+/* Tooltip on right */
+.tooltip.right > .tooltip-arrow {
+    border-right: 5px solid red;
 }
 
 /* Add Friend Button */
@@ -135,22 +159,60 @@ html{
   transition: 0.3s;
 }
 
-#createMeetup:hover {
-  color: #FFD996;
+#createMeetup .disabled {
+    cursor: default;
 }
 
 #mainscreen {
-  background-color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-  border-radius: 1rem;
+  clear: both;
 }
 
 .meeting{
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px;
   border-style: solid;
   border-color: #96BCFF;
   border-width: 0.25rem;
   border-radius: 1rem;
   background-color: #FFFFFF;
+}
+
+#noMeetups {
+  width: 100%;
+  border-radius: 1rem;
+  background-color: #96BCFF;
+  color: #FFFFFF;
+}
+
+#noMeetups > h2, #noMeetups > h4 {
+  margin: 0;
+  padding: 5px;
+}
+
+#nextScheduledMeet {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  background-color: #96BCFF;
+  color: #FFFFFF;
+}
+
+#nextScheduledMeet > h1 {
+  margin: 0px;
+}
+
+.info {
+  border-left: 5px solid #FFD996;
+  border-right: 5px solid #FFD996;
+}
+
+#meet1 > div.col-sm-4 {
+  padding-bottom: 10px;
+}
+
+#cancel1 {
+  position: fixed;
 }
 
 ul{
@@ -214,5 +276,12 @@ input .btn .btn-danger .pull-right {
   #friendsList, #createMeetup {
     height: auto;
     width: 100%;
+  }
+
+  .info {
+    border-top: 5px solid #FFD996;
+    border-bottom: 5px solid #FFD996;
+    border-left: none;
+    border-right: none;
   }
 }

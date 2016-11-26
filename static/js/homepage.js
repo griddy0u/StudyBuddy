@@ -82,6 +82,12 @@ $(document).ready(function(){
     }
   }
   */
+
+  /* Enables Tooltips */
+  $('[data-toggle="tooltip"]').tooltip();
+
+  /* Checks if Create Meetup should be disabled */
+  allowCreateMeetup();
 });
 
 $(document).keyup(function(){
@@ -93,6 +99,21 @@ $(document).keyup(function(){
     $(document.getElementById('addFriend')).prop('disabled', false);
   }
 });
+
+/* Greys Out Create Meetup Button While User Has 0 Friends */
+function allowCreateMeetup() {
+
+  /* No Friends */
+  if (localStorage.getItem("friendCount") < 1) {
+    $(document.getElementById('createMeetup')).prop('disabled', true);
+    $(document.getElementById("friendsList")).tooltip({trigger: "manual"}).tooltip("show");
+  }
+
+  else {
+    $(document.getElementById('createMeetup')).prop('disabled', false);
+    $(document.getElementById("friendsList")).tooltip("destroy");
+  }
+}
 
 function addFriend(){
   var friendCount = 0;
@@ -114,6 +135,8 @@ function addFriend(){
     /* Disables add friend button */
     $(document.getElementById('addFriend')).prop('disabled', true);
   }
+
+  allowCreateMeetup();
 }
 
 function deleteFriend(friendNum) {
@@ -135,6 +158,8 @@ function deleteFriend(friendNum) {
   if(parseInt(localStorage.friendCount) == 0){
     $("#noFriends").show();
   }
+
+  allowCreateMeetup();
 }
 
 function deleteMeetup(meetNum){
@@ -171,4 +196,8 @@ function abExperiment(){
     }
     localStorage.setItem("visited", "yes");
   }
+}
+
+function toCreateMeetup() {
+  document.location.href = ("create_meetup.html");
 }
