@@ -240,7 +240,10 @@
 					</div>
 					<div class="container-fluid text-center meeting" id="meet1">
 						<div class="col-sm-12 text-center" id="nextScheduledMeet">
-							<h1>Next Scheduled Meeting:</h1>
+							<h1>
+								Next Scheduled Meeting:
+								<input value="Cancel Meetup" type="button" id="cancel1" class="btn btn-danger pull-right" onclick="deleteMeetup(1)">
+							</h1>
 						</div>
 						<div class="col-sm-4 text-center">
 							<h2>Attendees:</h2>
@@ -254,7 +257,6 @@
 							<h2>Date/Time:</h2>
 							<h3 id="d1">N/A</h3>
 						</div>
-						<input value="X" type="button" id="cancel1" class="btn btn-danger pull-right" onclick="deleteMeetup(1)">
 					</div>
 					<!--
 					<ul class="scrollable-menu" role="menu" id="meetings_scroll">
